@@ -42,3 +42,10 @@ export function ArticleFilter() { const [filter, setFilter] = useState('All'); c
 export function GalleryIntro() { return null }
 export function CloseButton() { return null }
 
+export function ReviewCarousel({ reviews }: { reviews: { quote: string; name: string; detail: string }[] }) {
+  const [active, setActive] = useState(0)
+  const review = reviews[active]
+  const move = (direction: number) => setActive((current) => (current + direction + reviews.length) % reviews.length)
+  return <div className="review-carousel"><div className="review-card"><span className="review-mark">“</span><blockquote>{review.quote}</blockquote><p className="review-name">{review.name}</p><p className="review-detail">{review.detail}</p></div><div className="review-controls"><button aria-label="Previous review" onClick={() => move(-1)}>←</button><span>{String(active + 1).padStart(2, '0')} / {String(reviews.length).padStart(2, '0')}</span><button aria-label="Next review" onClick={() => move(1)}>→</button></div></div>
+}
+

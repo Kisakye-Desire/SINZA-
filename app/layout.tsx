@@ -1,14 +1,14 @@
 import { Analytics } from '@vercel/analytics/next'
-import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
+import { Cormorant_Garamond, Geist } from 'next/font/google'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], variable: '--font-cormorant' })
-const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans' })
+const geist = Geist({ subsets: ['latin'], variable: '--font-geist' })
 
 export const metadata: Metadata = {
-  title: 'Sinza Safaris | Meaningful Ugandan Safaris',
-  description: 'Discover Uganda through wildlife, nature, culture and unforgettable experiences designed around you.',
+  title: 'Sinza Safaris | Wild places, deeply felt',
+  description: 'Private safari journeys through Uganda and East Africa, shaped around your pace, your people and the moments you came to find.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${geist.variable}`}>
       <body className="antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
