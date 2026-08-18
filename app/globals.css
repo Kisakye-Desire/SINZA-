@@ -201,7 +201,7 @@ footer { align-items:start; background:#20342b; color:#f3f0e8; display:grid; gap
 .journey-feature-card h3,.intel-home-card h3 { font-size:36px; margin:3px 0 12px; }
 .journey-feature-card>div>p:not(.eyebrow),.intel-home-card>div>p:not(.eyebrow) { color:var(--muted-foreground); margin:0 0 24px; }
 .journey-feature-card .card-link,.intel-home-card .card-link { margin-top:auto; }
-.review-home { background:url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=85') center/cover; color:#f3f0e8; min-height:680px; position:relative; }
+  .review-home { background:url('/images/lions-ridge.jpg') center/cover; color:#f3f0e8; min-height:680px; position:relative; }
 .review-home::before { background:#071b13c4; content:''; inset:0; position:absolute; }
 .review-overlay { padding:clamp(80px,10vw,145px) clamp(20px,7vw,116px); position:relative; }
 .review-overlay h2 { font-size:clamp(55px,7vw,100px); }
@@ -226,3 +226,65 @@ footer { align-items:start; background:#20342b; color:#f3f0e8; display:grid; gap
 @keyframes partner-scroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
 @media (max-width:800px) { .escape-section { display:block; } .escape-copy { padding:75px 20px; } .escape-image { min-height:430px; } .escape-image span { font-size:23px; left:22px; } .destination-home-grid { grid-template-columns:repeat(2,1fr); } .destination-home-card h3 { font-size:28px; } .experience-mosaic { display:block; } .experience-mosaic-card,.experience-mosaic-0 { min-height:340px; margin-bottom:16px; } .journey-feature-grid,.intel-home-grid { grid-template-columns:1fr; } .review-home { min-height:580px; } .review-overlay { padding:78px 20px; } .scroll-cue { display:none; } }
 @media (prefers-reduced-motion: reduce) { .partner-marquee-track { animation:none; transform:none; } }
+
+/* ============ Interactive polish ============ */
+
+/* Image zoom + overlay lift on every image card across the site */
+.destination-home-card,.experience-mosaic-card,.journey-feature-card,.intel-home-card,.article-card,.country-journey-card,.destination-card { overflow:hidden; position:relative; }
+.destination-home-card img,.experience-mosaic-card img,.journey-feature-card img,.intel-home-card img,.article-card img,.country-journey-card img,.destination-card img,.gallery-collage-tile img,.gallery-tile img,.escape-image img {
+  transition:transform 1.05s cubic-bezier(.16,.7,.2,1), filter .6s ease;
+  will-change:transform;
+}
+.destination-home-card:hover img,.experience-mosaic-card:hover img,.journey-feature-card:hover img,.intel-home-card:hover img,.article-card:hover img,.country-journey-card:hover img,.destination-card:hover img,.gallery-collage-tile:hover img,.gallery-tile:hover img,.escape-image:hover img { transform:scale(1.07); }
+.gallery-collage-tile:hover img,.gallery-tile:hover img { filter:brightness(.82); }
+
+/* Card lift */
+.journey-feature-card,.intel-home-card,.article-card,.safari-card { transition:transform .5s cubic-bezier(.16,.7,.2,1); }
+.journey-feature-card:hover,.intel-home-card:hover,.article-card:hover,.safari-card:hover { transform:translateY(-6px); }
+
+/* Gallery tile label slide-up reveal */
+.gallery-collage-tile span,.gallery-tile span { transition:transform .5s cubic-bezier(.16,.7,.2,1), opacity .4s ease; }
+.gallery-collage-tile:hover span,.gallery-tile:hover span { transform:translateY(-4px); }
+
+/* Animated underline for text links */
+.text-link,.card-link,.mega-arrow { position:relative; }
+.text-link::after,.card-link::after,.mega-arrow::after {
+  content:''; position:absolute; left:0; bottom:-4px; height:1.5px; width:100%;
+  background:currentColor; transform:scaleX(0); transform-origin:right; transition:transform .45s cubic-bezier(.16,.7,.2,1);
+}
+.text-link:hover::after,.card-link:hover::after,.mega-arrow:hover::after,
+.journey-feature-card:hover .card-link::after,.intel-home-card:hover .card-link::after,.article-card:hover .card-link::after { transform:scaleX(1); transform-origin:left; }
+.text-link svg,.card-link svg,.button svg,.nav-cta svg,.hero-text-link svg { transition:transform .35s cubic-bezier(.16,.7,.2,1); }
+.text-link:hover svg,.card-link:hover svg,.button:hover svg,.nav-cta:hover svg,.hero-text-link:hover svg { transform:translate(3px,-1px); }
+
+/* Buttons: subtle press + shadow */
+.button { transition:transform .3s cubic-bezier(.16,.7,.2,1), box-shadow .3s ease, background .3s ease, color .3s ease; }
+.button:hover { transform:translateY(-2px); box-shadow:0 12px 28px #20342b30; }
+.button:active { transform:translateY(0); }
+
+/* Country / arrow accents */
+.country-journey-card span svg,.destination-home-card span svg { transition:transform .4s cubic-bezier(.16,.7,.2,1); }
+.country-journey-card:hover span svg,.destination-home-card:hover span svg { transform:translateX(5px); }
+
+/* Reveal-on-load animations */
+@keyframes v0-rise { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
+@keyframes v0-fade { from { opacity:0; } to { opacity:1; } }
+
+.home-hero .hero-copy .eyebrow { animation:v0-rise .8s .1s both; }
+.home-hero .hero-copy h1 { animation:v0-rise .9s .22s both; }
+.home-hero .hero-copy .hero-lede { animation:v0-rise .9s .38s both; }
+.home-hero .hero-copy .button-row { animation:v0-rise .9s .52s both; }
+
+/* Emphasised italic words gently shift colour + float on hover */
+h1 em,h2 em { transition:color .4s ease, letter-spacing .4s ease; }
+h1:hover em,h2:hover em { color:#d69a6a; letter-spacing:.005em; }
+
+/* Section headings quietly rise into view on hover-capable pointers */
+.scroll-cue span { will-change:transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  .destination-home-card img,.experience-mosaic-card img,.journey-feature-card img,.intel-home-card img,.article-card img,.country-journey-card img,.destination-card img,.gallery-collage-tile img,.gallery-tile img,.escape-image img { transition:none; }
+  .destination-home-card:hover img,.experience-mosaic-card:hover img,.journey-feature-card:hover img,.intel-home-card:hover img,.article-card:hover img,.country-journey-card:hover img,.destination-card:hover img,.gallery-collage-tile:hover img,.gallery-tile:hover img,.escape-image:hover img { transform:none; }
+  .journey-feature-card:hover,.intel-home-card:hover,.article-card:hover,.safari-card:hover,.button:hover { transform:none; }
+  .home-hero .hero-copy .eyebrow,.home-hero .hero-copy h1,.home-hero .hero-copy .hero-lede,.home-hero .hero-copy .button-row { animation:none; }
+}

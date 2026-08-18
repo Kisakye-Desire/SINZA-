@@ -7,9 +7,9 @@ import { safaris, articles, type Safari } from '@/lib/safari-data'
 
 export function HeroCarousel() {
   const slides = [
-    { image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1800&q=90', caption: 'Meaningful journeys across East Africa' },
-    { image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=90', caption: 'Into ancient forests' },
-    { image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1800&q=90', caption: 'Wildlife, your way' },
+    { image: '/images/elephants-wetland.jpg', caption: 'Meaningful journeys across East Africa' },
+    { image: '/images/lion-lioness-resting.jpg', caption: 'Wildlife, your way' },
+    { image: '/images/rhino-single.jpg', caption: 'Into the wild, up close' },
   ]
   const [active, setActive] = useState(0)
   useEffect(() => { const timer = window.setInterval(() => setActive((value) => (value + 1) % slides.length), 6000); return () => window.clearInterval(timer) }, [slides.length])
