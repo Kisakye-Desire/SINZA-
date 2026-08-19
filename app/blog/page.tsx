@@ -1,0 +1,6 @@
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import { SiteShell, PageHero, EnquiryCta } from '@/components/site-shell'
+import { ArticleFilter } from '@/components/safari-ui'
+import { articles } from '@/lib/safari-data'
+export default function BlogPage() { const featured = articles[0]; return <SiteShell><main><PageHero eyebrow="The field journal" title={<>Stories from<br/><em>the journey.</em></>} intro="Planning notes, field stories and thoughtful reasons to travel through East Africa." image="/images/sinza-zebra-family.jpg"/><section className="blog-feature-wrap section-wrap"><div className="blog-feature"><img src={featured.image} alt={featured.title}/><div className="blog-feature-copy"><p className="eyebrow">Featured story · {featured.category}</p><h2>{featured.title}</h2><p>{featured.excerpt}</p><Link href={`/blog/${featured.slug}`} className="button dark">Read the story <ArrowRight size={15}/></Link></div></div><div className="blog-section-head"><div><p className="eyebrow">From the journal</p><h2>Take the<br/><em>long way.</em></h2></div><p>Stories, practical notes and ideas for seeing East Africa with more time and attention.</p></div><ArticleFilter/></section><EnquiryCta/></main></SiteShell> }

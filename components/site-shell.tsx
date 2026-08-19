@@ -1,0 +1,53 @@
+'use client'
+
+import Link from 'next/link'
+import { useState } from 'react'
+import { ArrowRight, ArrowUp, ChevronDown, Menu, MessageCircle, X } from 'lucide-react'
+import { destByRegion, journeysByRegion, navItems } from '@/lib/safari-data'
+
+const intelLinks = [['Safari Pricing', '/safari-pricing'], ['Safari FAQs', '/safari-intel/faqs'], ['Packing List', '/packing-list'], ['Safari Guide', '/safari-guide'], ['Booking Terms', '/terms-conditions'], ['Privacy Policy', '/privacy-policy'], ['The Team', '/team'], ['How We Work', '/how-we-work']]
+const companyLinks = [['About Sinza', '/company'], ['Our Story', '/company/our-story'], ['Conservation', '/company/conservation'], ['The Team', '/company/team'], ['DMC', '/dmc']]
+
+function MenuGroup({ label, children }: { label: string; children: React.ReactNode }) {
+  const [open, setOpen] = useState(false)
+  const desktopHover = () => { if (typeof window !== 'undefined' && window.innerWidth > 700) setOpen(true) }
+  const desktopLeave = () => { if (typeof window !== 'undefined' && window.innerWidth > 700) setOpen(false) }
+  return <div className="menu-group" onMouseEnter={desktopHover} onMouseLeave={desktopLeave}><button aria-expanded={open} className={open ? 'menu-trigger active' : 'menu-trigger'} onClick={() => setOpen((value) => !value)}>{label}<ChevronDown size={13} className={open ? 'rotate-180' : ''} /></button>{open && <div className="mega-menu compact-menu">{children}</div>}</div>
+}
+
+function CompactRegion({ region, items, hrefBase, labelKey = 'title' }: { region: string; items: { slug: string; title?: string; name?: string }[]; hrefBase: string; labelKey?: 'title' | 'name' }) {
+  const [open, setOpen] = useState(false)
+  return <div className="compact-region"><button className="compact-region-trigger" aria-expanded={open} onClick={() => setOpen((value) => !value)}><span>{region}</span><ChevronDown size={13} className={open ? 'rotate-180' : ''} /></button>{open && <div className="compact-region-links">{items.map((item) => <Link key={item.slug} href={`${hrefBase}/${item.slug}`}>{labelKey === 'name' ? item.name : item.title}<ArrowRight size={12} /></Link>)}</div>}</div>
+}
+
+export function Header() {
+  const [mobile, setMobile] = useState(false)
+  const [mobileSection, setMobileSection] = useState<string | null>(null)
+  const toggle = (label: string) => setMobileSection((value) => value === label ? null : label)
+  return <header className="site-header">
+    <Link href="/" className="brand brand-with-logo" onClick={() => setMobile(false)}><img src="/images/sinza-logo.png" alt="" /> <span>SINZA SAFARIS</span></Link>
+    <nav className={mobile ? 'nav-links open' : 'nav-links'}>
+      <MenuGroup label="Our Journeys"><div className="compact-menu-inner"><p className="mega-heading">Explore journeys</p><Link className="compact-all-link" href="/safaris">All Safaris <ArrowRight size={14} /></Link>{Object.entries(journeysByRegion).map(([region, items]) => <CompactRegion key={region} region={`${region} Safaris`} items={items.slice(0, 4)} hrefBase="/safaris" />)}<Link className="compact-plan-link" href="/contact">Start planning <ArrowRight size={14} /></Link></div></MenuGroup>
+      <MenuGroup label="Destinations"><div className="compact-menu-inner"><p className="mega-heading">Choose a country</p><Link className="compact-all-link" href="/destinations">All Destinations <ArrowRight size={14} /></Link>{Object.entries(destByRegion).map(([region, items]) => <CompactRegion key={region} region={region} items={items.slice(0, 5)} hrefBase="/destinations" labelKey="name" />)}<Link className="compact-plan-link" href="/contact">Plan around me <ArrowRight size={14} /></Link></div></MenuGroup>
+      <Link href="/offers" onClick={() => setMobile(false)}>Special Offers</Link><Link href="/gallery" onClick={() => setMobile(false)}>Gallery</Link>
+      <MenuGroup label="Company"><div className="mega-columns compact"><div><p className="mega-heading">Our story</p>{companyLinks.slice(0, 4).map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</div><div><p className="mega-heading">Plan your safari</p>{companyLinks.slice(4).map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}<Link href="/contact">Contact our team</Link></div></div></MenuGroup>
+      <MenuGroup label="Safari Intel"><div className="mega-columns compact"><div><p className="mega-heading">Useful information</p>{intelLinks.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</div><div className="mega-feature"><p className="mega-heading">The field notes</p><p>Practical answers and thoughtful context for your time in East Africa.</p><Link href="/safari-intel">Explore Safari Intel <ArrowRight size={14} /></Link></div></div></MenuGroup>
+      <Link href="/blog" onClick={() => setMobile(false)}>Blog</Link><Link className="nav-cta" href="/contact" onClick={() => setMobile(false)}>Enquire <ArrowRight size={15} /></Link>
+    </nav>
+    <a className="header-phone" href="https://wa.me/256702970065">+256 702 970065</a>
+    <button className="menu-button" aria-label="Toggle navigation" onClick={() => setMobile((value) => !value)}>{mobile ? <X /> : <Menu />}</button>
+  </header>
+}
+
+export function Footer() { return <>
+  <section className="footer-enquire"><p>We build private gorilla trekking safaris in Uganda and Rwanda, wildlife journeys in Kenya and Tanzania, and multi-country itineraries, because no two people want the same safari.</p><div><Link href="/contact" className="button dark">Enquire <ArrowRight size={15} /></Link><a href="https://wa.me/256702970065?text=Hello%20Sinza%20Safaris%2C%20I%27d%20like%20to%20plan%20a%20meaningful%20safari%20in%20Uganda." className="whatsapp-link"><MessageCircle size={22} /> +256 702 970065</a></div></section>
+  <section className="partner-strip"><div className="partner-marquee-block"><p className="eyebrow">Partners & associations</p><div className="partner-marquee" aria-label="Sinza Safaris partners"><div className="partner-marquee-track"><span>UR SEASONS</span><span>LABA LABA</span><span>AMREF</span><span>ASILIA</span><span>EXPLORE UGANDA</span><span>UWA</span><span>YOUR AFRICAN SAFARI</span><span>UR SEASONS</span><span>LABA LABA</span><span>AMREF</span><span>ASILIA</span><span>EXPLORE UGANDA</span><span>UWA</span><span>YOUR AFRICAN SAFARI</span></div></div></div></section>
+  <footer><div className="footer-brand"><Link className="brand brand-with-logo" href="/"><img src="/images/sinza-logo.png" alt="" /> <span>SINZA SAFARIS</span></Link><p>Meaningful journeys through East Africa.</p><a href="mailto:sinzasafaris@gmail.com">sinzasafaris@gmail.com</a><a href="tel:+256702970065">+256 702 970065</a><a href="https://www.google.com/maps/search/?api=1&query=Bwebajja%2C%20Entebbe%20Road%2C%20Kampala%2C%20Uganda" target="_blank" rel="noreferrer">Bwebajja, Kampala →</a><div className="social-links"><a href="https://instagram.com/SinzaSafaris" target="_blank" rel="noreferrer" aria-label="Sinza Safaris on Instagram"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/instagram/default.svg" alt="" width="18" height="18" /></a><a href="https://www.tiktok.com/@sinzasafaris" target="_blank" rel="noreferrer" aria-label="Sinza Safaris on TikTok"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/tiktok/default.svg" alt="" width="18" height="18" /></a><a href="https://www.facebook.com/SinzaSafaris" target="_blank" rel="noreferrer" aria-label="Sinza Safaris on Facebook"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/facebook/default.svg" alt="" width="18" height="18" /></a></div></div><div className="footer-column"><p>Discover</p><Link href="/about">About Sinza</Link><Link href="/company/team">The Team</Link><Link href="/company/conservation">Conservation</Link><Link href="/dmc">DMC</Link><Link href="/offers">Special Offers</Link><Link href="/gallery">Gallery</Link></div><div className="footer-column"><p>Plan</p><Link href="/safaris">Our Journeys</Link><Link href="/contact">Plan a Safari</Link><Link href="/safari-intel/faqs">Safari FAQs</Link><Link href="/safari-pricing">Safari Pricing</Link><Link href="/packing-list">Packing List</Link><Link href="/blog">Safari Journal</Link></div><div className="footer-column footer-contact"><p>Get in touch</p><span>Email</span><a href="mailto:sinzasafaris@gmail.com">sinzasafaris@gmail.com</a><span>WhatsApp</span><a className="footer-whatsapp" href="https://wa.me/256702970065?text=Hello%20Sinza%20Safaris%2C%20I%27d%20like%20to%20plan%20a%20meaningful%20safari%20in%20Uganda.">+256 702 970065</a><small>Usually replies within minutes</small><span>Location</span><a href="https://www.google.com/maps/search/?api=1&query=Bwebajja%2C%20Entebbe%20Road%2C%20Kampala%2C%20Uganda" target="_blank" rel="noreferrer">Kampala, Uganda ↗</a></div><small>© 2026 Sinza Safaris Ltd. All rights reserved. Travel with purpose.</small></footer>
+  <a href="https://wa.me/256702970065?text=Hello%20Sinza%20Safaris%2C%20I%27d%20like%20to%20plan%20a%20meaningful%20safari%20in%20Uganda." target="_blank" rel="noreferrer" className="floating-chat" aria-label="Chat with Sinza Safaris on WhatsApp"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/whatsapp/default.svg" alt="" width="27" height="27" /></a>
+</> }
+
+function ScrollToTop() { return <button className="scroll-top" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><ArrowUp size={18} /></button> }
+export function SiteShell({ children }: { children: React.ReactNode }) { return <><Header />{children}<Footer /><ScrollToTop /></> }
+export function PageHero({ eyebrow, title, intro, image }: { eyebrow: string; title: React.ReactNode; intro?: string; image?: string }) { return <section className="page-hero"><div><p className="eyebrow">{eyebrow}</p><h1>{title}</h1>{intro && <p className="hero-lede">{intro}</p>}</div>{image && <img src={image} alt="" />}</section> }
+export function SectionHeading({ eyebrow, title, intro }: { eyebrow: string; title: React.ReactNode; intro?: string }) { return <div className="section-heading"><div><p className="eyebrow">{eyebrow}</p><h2>{title}</h2></div>{intro && <p className="section-intro">{intro}</p>}</div> }
+export function EnquiryCta() { return <section className="statement"><p className="eyebrow">Start with a conversation</p><h2>Let&apos;s make<br /><em>your journey.</em></h2><p>Tell us what you&apos;re imagining and our Uganda-based team will shape thoughtful ideas around you.</p><Link href="/contact" className="button light">Plan my safari <ArrowRight size={16} /></Link></section> }
