@@ -63,24 +63,18 @@ export const destinationDetails = [
 ]
 
 export const galleryImages = [
-  { src: '/images/elephants-wetland.jpg', alt: 'Elephant herd with a calf crossing a green wetland', label: 'The family walk' },
-  { src: '/images/rhino-single.jpg', alt: 'White rhino grazing in black and white', label: 'Ancient guardian' },
-  { src: '/images/lions-ridge.jpg', alt: 'A lion and lioness walking along a grassy ridge', label: 'On the move' },
-  { src: '/images/giraffe-portrait.jpg', alt: 'Portrait of a giraffe against a soft sky', label: 'Eye to eye' },
-  { src: '/images/lioness-stalking.jpg', alt: 'Lioness stalking through the grass with an antelope behind', label: 'Read the tracks' },
-  { src: '/images/baboon.jpg', alt: 'A baboon framed by forest leaves in black and white', label: 'Into the forest' },
-  { src: '/images/lion-lioness-resting.jpg', alt: 'A lion standing beside a resting lioness in open grass', label: 'The pride at rest' },
-  { src: '/images/elephants-palms.jpg', alt: 'A line of elephants moving through palm savannah in black and white', label: 'The long line' },
-  { src: '/images/giraffe-trees.jpg', alt: 'A giraffe browsing among acacia trees in black and white', label: 'Higher branches' },
-  { src: '/images/lions-tree.jpg', alt: 'Two lionesses resting in the branches of a tree', label: 'Tree climbers' },
-  { src: '/images/rhinos-pair.jpg', alt: 'A pair of rhinos beneath a tree in black and white', label: 'A quiet pair' },
-  { src: '/images/lioness-walking.jpg', alt: 'A lioness walking across the plains in black and white', label: 'First light' },
-  { src: '/images/lions-pair-grass.jpg', alt: 'A lion and lioness meeting in tall green grass', label: 'The greeting' },
-  { src: '/images/elephants-family-bw.jpg', alt: 'An elephant family with oxpecker birds in black and white', label: 'Close company' },
-  { src: '/images/lions-resting-pair.jpg', alt: 'A lion and lioness resting side by side in the grass', label: 'Watchful eyes' },
-  { src: '/images/lions-tree-tall.jpg', alt: 'Two lions perched in a tall tree over the savannah', label: 'A room with a view' },
-  { src: '/images/lioness-antelope.jpg', alt: 'A lioness moving through green country toward an antelope', label: 'The long game' },
-  { src: '/images/lion-lioness-ridge.jpg', alt: 'A lion and lioness silhouetted on a ridge', label: 'Skyline' },
+  { src: '/images/sinza-lions-horizon.jpeg', alt: 'A lion and lioness walking along a green horizon', label: 'The family walk' },
+  { src: '/images/sinza-lion-portrait.jpeg', alt: 'A lioness moving through open grassland', label: 'Ancient guardian' },
+  { src: '/images/sinza-lion-walking.jpeg', alt: 'A lion walking across a Ugandan landscape', label: 'On the move' },
+  { src: '/images/sinza-lion-landscape.jpeg', alt: 'A lioness crossing a green landscape', label: 'Read the tracks' },
+  { src: '/images/sinza-lion-family.jpeg', alt: 'A lion and lioness resting together on the ridge', label: 'The pride at rest' },
+  { src: '/images/sinza-giraffe.jpeg', alt: 'A giraffe framed by green woodland', label: 'Higher branches' },
+  { src: '/images/sinza-rhinos.jpeg', alt: 'Two rhinos beneath a tree in tall grass', label: 'A quiet pair' },
+  { src: '/images/sinza-baboons.jpeg', alt: 'A baboon family moving through forest grass', label: 'Into the forest' },
+  { src: '/images/sinza-elephants.jpeg', alt: 'An elephant family crossing open wetland', label: 'The long line' },
+  { src: '/images/sinza-tree-lions.jpeg', alt: 'Lions resting in a broad savannah tree', label: 'Tree climbers' },
+  { src: '/images/sinza-baboon-portrait.jpeg', alt: 'A baboon watching through forest leaves', label: 'Wild country' },
+  { src: '/images/sinza-rhino-group.png', alt: 'A group of rhinos resting in lush green woodland', label: 'Quiet giants' },
 ]
 
 export const destByRegion = {
