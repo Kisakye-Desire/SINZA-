@@ -25,9 +25,14 @@ export const experiences = [
 ]
 
 export const articles = [
-  { slug: 'when-to-go-uganda', category: 'Planning', title: 'When is the best time to visit Uganda?', excerpt: 'A month-by-month guide to rainforests, savannah and gorilla trekking.', image: '/images/elephants-family-bw.jpg' },
-  { slug: 'why-travel-with-purpose', category: 'Responsible travel', title: 'Why meaningful travel matters', excerpt: 'How a safari can leave something good behind for landscapes and communities.', image: '/images/lion-lioness-ridge.jpg' },
-  { slug: 'packing-for-uganda', category: 'Planning', title: 'What to pack for a Uganda safari', excerpt: 'Practical notes from our journey designers for a lighter, more comfortable trip.', image: '/images/lioness-antelope.jpg' },
+  { slug: 'when-to-go-uganda', category: 'Planning', title: 'When is the best time to visit Uganda?', excerpt: 'A month-by-month guide to rainforests, savannah and gorilla trekking.', image: '/images/sinza-zebra-family.jpg' },
+  { slug: 'why-travel-with-purpose', category: 'Responsible travel', title: 'Why meaningful travel matters', excerpt: 'How a safari can leave something good behind for landscapes and communities.', image: '/images/sinza-boat-safari.jpg' },
+  { slug: 'packing-for-uganda', category: 'Safari tips', title: 'What to pack for a Uganda safari', excerpt: 'Practical notes from our journey designers for a lighter, more comfortable trip.', image: '/images/sinza-lion-grass.jpg' },
+  { slug: 'gorilla-trekking-guide', category: 'Wildlife', title: 'A respectful guide to gorilla trekking', excerpt: 'What the forest asks of you, and what the encounter gives back.', image: '/images/sinza-gorilla.jpg' },
+  { slug: 'tree-climbing-lions', category: 'Wildlife', title: 'The lions who climb trees', excerpt: 'A closer look at Queen Elizabeth’s remarkable Ishasha lions.', image: '/images/sinza-tree-lions-tall.jpg' },
+  { slug: 'first-safari', category: 'Travel inspiration', title: 'What your first safari feels like', excerpt: 'The sounds, stillness and small surprises that make a day in the wild.', image: '/images/sinza-lion-walk.jpg' },
+  { slug: 'safari-photography', category: 'Photography', title: 'Making space for the light', excerpt: 'Simple fieldcraft for photographing wildlife without rushing the moment.', image: '/images/sinza-baboon-monochrome.jpg' },
+  { slug: 'rwanda-uganda', category: 'Destinations', title: 'Two forests, one extraordinary journey', excerpt: 'Pair Uganda’s rainforest with Rwanda’s volcanic landscapes.', image: '/images/sinza-gorilla.jpg' },
 ]
 
 export const journeyCountries = [
@@ -56,10 +61,10 @@ export const journeyCountries = [
 export const journeysByRegion = Object.fromEntries(journeyCountries.map((country) => [country.name + ' Safaris', country.journeys.map(({ slug, title }) => ({ slug, title }))]))
 
 export const destinationDetails = [
-  { slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/elephants-wetland.jpg', copy: 'Rainforest, savannah, crater lakes and the source of the Nile — Uganda is a country that rewards curious travellers.' },
-  { slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/rhino-single.jpg', copy: 'Volcanoes, thoughtful conservation and warm hospitality come together in one beautifully compact country.' },
-  { slug: 'kenya', name: 'Kenya', tagline: 'Where Safari Was Born', image: '/images/lioness-stalking.jpg', copy: 'Open plains, big skies and enduring wildlife stories across the Masai Mara and the Great Rift Valley.' },
-  { slug: 'tanzania', name: 'Tanzania', tagline: "Africa's Greatest Stage", image: '/images/lions-tree.jpg', copy: 'Follow the Serengeti rhythm from Ngorongoro to the coast, with time to look beyond the headline moments.' },
+  { slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/sinza-lion-grass.jpg', copy: 'Rainforest, savannah, crater lakes and the source of the Nile — Uganda is a country that rewards curious travellers.' },
+  { slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/sinza-gorilla.jpg', copy: 'Volcanoes, thoughtful conservation and warm hospitality come together in one beautifully compact country.' },
+  { slug: 'kenya', name: 'Kenya', tagline: 'Where Safari Was Born', image: '/images/sinza-zebra-family.jpg', copy: 'Open plains, big skies and enduring wildlife stories across the Masai Mara and the Great Rift Valley.' },
+  { slug: 'tanzania', name: "Tanzania", tagline: "Africa's Greatest Stage", image: '/images/sinza-lion-walk.jpg', copy: 'Follow the Serengeti rhythm from Ngorongoro to the coast, with time to look beyond the headline moments.' },
 ]
 
 export const galleryImages = [
@@ -75,6 +80,18 @@ export const galleryImages = [
   { src: '/images/sinza-tree-lions.jpeg', alt: 'Lions resting in a broad savannah tree', label: 'Tree climbers' },
   { src: '/images/sinza-baboon-portrait.jpeg', alt: 'A baboon watching through forest leaves', label: 'Wild country' },
   { src: '/images/sinza-rhino-group.png', alt: 'A group of rhinos resting in lush green woodland', label: 'Quiet giants' },
+  { src: '/images/sinza-zebra-family.jpg', alt: 'A family of zebras gathered closely in warm grassland light', label: 'Striped together' },
+  { src: '/images/sinza-lion-grass.jpg', alt: 'A lioness moving through Uganda’s green plains', label: 'Across the plain' },
+  { src: '/images/sinza-boat-safari.jpg', alt: 'A family enjoying a guided boat safari on the Nile', label: 'On the river' },
+  { src: '/images/sinza-baboon-forest.jpg', alt: 'A baboon watching from a leafy forest canopy', label: 'Forest watch' },
+  { src: '/images/sinza-tree-lions-tall.jpg', alt: 'Two lions resting high in a broad tree', label: 'A room with a view' },
+  { src: '/images/sinza-gorilla.jpg', alt: 'A mountain gorilla surrounded by lush forest leaves', label: 'Into the green' },
+  { src: '/images/sinza-lion-walk.jpg', alt: 'A lion walking across a sunlit savannah', label: 'The long walk' },
+  { src: '/images/sinza-baboon-monochrome.jpg', alt: 'A baboon framed by forest branches in monochrome', label: 'Quiet intelligence' },
+  { src: '/images/sinza-rhino-pair.jpg', alt: 'Two rhinos resting together beneath woodland trees', label: 'Gentle giants' },
+  { src: '/images/sinza-giraffe-landscape.jpg', alt: 'A giraffe browsing beneath a wide acacia tree', label: 'Higher branches' },
+  { src: '/images/sinza-baboon-family.jpg', alt: 'A baboon family moving through tall green grass', label: 'Close company' },
+  { src: '/images/sinza-giraffe-monochrome.jpg', alt: 'A giraffe emerging through a monochrome savannah canopy', label: 'The quiet height' },
 ]
 
 export const destByRegion = {
