@@ -11,21 +11,8 @@ export const metadata: Metadata = {
   description: 'Private safari journeys through Uganda and East Africa, shaped around your pace, your people and the moments you came to find.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/images/sinza-logo.png',
+    apple: '/images/sinza-logo.png',
   },
 }
 

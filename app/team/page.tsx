@@ -1,12 +1,6 @@
-import { SiteShell, EnquiryCta } from '@/components/site-shell'
+import { SiteShell, PageHero, EnquiryCta } from '@/components/site-shell'
+import { TeamSection } from '@/components/team-section'
 
-const team = [
-  { name: 'Amina Namukasa', role: 'Journey designer', image: '/images/giraffe-portrait.jpg', copy: 'Amina turns first conversations into routes with feeling, balancing the iconic with the unexpected.' },
-  { name: 'Daniel Okello', role: 'Lead field guide', image: '/images/lion-lioness-ridge.jpg', copy: 'Daniel reads tracks, weather and the mood of a landscape with the calm confidence of someone who knows the road.' },
-  { name: 'Grace Atim', role: 'Guest experience', image: '/images/baboon.jpg', copy: 'Grace is the thoughtful voice behind the details, from the first welcome to the final airport goodbye.' },
-  { name: 'Moses Kato', role: 'Conservation partner', image: '/images/elephants-family-bw.jpg', copy: 'Moses helps connect our journeys to practical work that supports wildlife, communities and protected places.' },
-  { name: 'Sarah Nanyonga', role: 'Operations lead', image: '/images/lioness-walking.jpg', copy: 'Sarah keeps moving parts moving, making every handover, lodge and transfer feel effortless.' },
-  { name: 'Joseph Muwanga', role: 'Cultural host', image: '/images/giraffe-trees.jpg', copy: 'Joseph opens doors to local stories, food and creative traditions with warmth and respect.' },
-]
-
-export default function TeamPage() { return <SiteShell><main><section className="intel-article-hero"><p className="eyebrow">The people behind the journeys</p><h1>Meet the team</h1><p>Local knowledge, patient planning and a shared belief in meaningful travel.</p></section><section className="section-wrap"><div className="section-heading"><div><p className="eyebrow">One team, many perspectives</p><h2>People who know<br /><em>the way in.</em></h2></div><p className="section-intro">We are a small, locally rooted team supported by guides, hosts and conservation partners across East Africa.</p></div><div className="team-grid team-people">{team.map((person) => <article className="team-card" key={person.name}><img src={person.image} alt={person.name} /><p className="eyebrow">{person.role}</p><h2>{person.name}</h2><p>{person.copy}</p></article>)}</div></section><section className="statement"><p className="eyebrow">Our promise</p><h2>Good journeys<br /><em>start with listening.</em></h2><p>Tell us what brings you here. We will bring the local knowledge, honest advice and care for the details.</p></section><EnquiryCta /></main></SiteShell> }
+export default function TeamPage() {
+  return <SiteShell><main><PageHero eyebrow="Our team" title={<>The people who make<br /><em>the difference.</em></>} intro="A small, deeply local team with the patience to listen, the experience to guide and the care to make your time in Uganda feel entirely your own." image="/images/sinza-gorilla.jpg" /><TeamSection /><section className="team-note section-wrap"><p className="eyebrow">What you can expect</p><h2>Clear advice. Warm welcome.<br /><em>No hand-offs.</em></h2><p>From your first message to your final goodbye, you will always know who is looking after your journey.</p></section><EnquiryCta /></main></SiteShell>
+}
