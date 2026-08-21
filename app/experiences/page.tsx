@@ -1,0 +1,5 @@
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import { SiteShell, PageHero, SectionHeading, EnquiryCta } from '@/components/site-shell'
+import { experiences } from '@/lib/safari-data'
+export default function ExperiencesPage() { return <SiteShell><main><PageHero eyebrow="Find your feeling" title={<>Travel for the<br /><em>experience.</em></>} intro="The best journeys are not just places. They are feelings, encounters and stories you carry home." image="/images/giraffe-portrait.jpg" /><section className="section-wrap"><SectionHeading eyebrow="Choose your feeling" title={<>What will you<br /><em>remember?</em></>} /><div className="experience-cards">{experiences.map((item) => <Link className="experience-feature" href={`/experiences/${item.slug}`} key={item.slug}><img src={item.image} alt={item.title} /><div><p className="eyebrow">Experience</p><h3>{item.title}</h3><p>{item.description}</p><span className="card-link">Explore <ArrowRight size={15} /></span></div></Link>)}</div></section><EnquiryCta /></main></SiteShell> }
