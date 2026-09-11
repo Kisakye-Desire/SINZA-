@@ -79,6 +79,10 @@ export default function CommunityPage() {
           image={communityHeroImage}
         />
 
+        <section className="community-hero-slot" aria-label="Community photography slot">
+          {communityHeroImage ? <img src={communityHeroImage} alt="Community development project" /> : <div><p className="eyebrow">Community photography</p><h2>A place for a verified story.</h2><p>This image slot is ready for an approved outreach or community-development photograph. No stock wildlife image is used here.</p></div>}
+        </section>
+
         <section className="section-wrap">
           <SectionHeading
             eyebrow="Why we do this"
