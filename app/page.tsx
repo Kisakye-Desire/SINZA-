@@ -6,12 +6,12 @@ import { ReviewMarquee } from '@/components/review-marquee'
 import { articles, destinations, experiences, journeyCountries } from '@/lib/safari-data'
 
 const reviews = [
-  { quote: 'Sinza made every day feel considered, unhurried and completely ours.', name: 'Maya & Daniel', detail: 'Private Uganda journey', rating: 5 },
-  { quote: 'The forest, the guides, the small details — a trip we will talk about forever.', name: 'Amara Lewis', detail: 'Gorilla and chimpanzee safari', rating: 5 },
-  { quote: 'A thoughtful team with a real feel for place, people and the rhythm of travel.', name: 'The Okello family', detail: 'East Africa escape', rating: 5 },
-  { quote: 'Every moment was intentional. The guides knew the animals, the land, and how to move through it all with respect.', name: 'Sarah Mitchell', detail: 'Bwindi gorilla trekking', rating: 5 },
-  { quote: 'This wasn't a safari brochure come to life. It was real, genuine, and deeply moving.', name: 'James & Rebecca', detail: 'Kibale chimpanzee tracking', rating: 5 },
-  { quote: 'The community encounters were the most meaningful part. Not staged, not rushed — just real connection.', name: 'Dr. Kamau', detail: 'Multi-country journey', rating: 5 },
+  { quote: "Sinza made every day feel considered, unhurried and completely ours.", name: 'Maya & Daniel', detail: 'Private Uganda journey', rating: 5 },
+  { quote: "The forest, the guides, the small details — a trip we will talk about forever.", name: 'Amara Lewis', detail: 'Gorilla and chimpanzee safari', rating: 5 },
+  { quote: "A thoughtful team with a real feel for place, people and the rhythm of travel.", name: 'The Okello family', detail: 'East Africa escape', rating: 5 },
+  { quote: "Every moment was intentional. The guides knew the animals, the land, and how to move through it all with respect.", name: 'Sarah Mitchell', detail: 'Bwindi gorilla trekking', rating: 5 },
+  { quote: "This wasn't a safari brochure come to life. It was real, genuine, and deeply moving.", name: 'James & Rebecca', detail: 'Kibale chimpanzee tracking', rating: 5 },
+  { quote: "The community encounters were the most meaningful part. Not staged, not rushed — just real connection.", name: 'Dr. Kamau', detail: 'Multi-country journey', rating: 5 },
 ]
 
 export default function Home() {
