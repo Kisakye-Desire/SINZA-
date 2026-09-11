@@ -173,8 +173,6 @@ export const articles = [
   { slug: 'why-travel-with-purpose', category: 'Responsible travel', title: 'Why Meaningful Travel Matters', excerpt: 'How a safari can leave something good behind for landscapes and communities.', image: '/images/wildlife-chimp-rainforest.jpg' },
 ]
 
-export const getSafari = (slug: string) => safaris.find((s) => s.slug === slug)
-
 export const journeyCountries = [
   {
     slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/wildlife-giraffe-safari.jpg',
@@ -270,7 +268,6 @@ export const navItems = [
   ['Safaris', '/safaris'], ['Destinations', '/destinations'], ['Experiences', '/experiences'], ['About us', '/about'], ['Community', '/community'], ['Special packages', '/offers'], ['Blog', '/blog'], ['Contact', '/contact'],
 ]
 
-export function getSafari(slug: string) { return safaris.find((item) => item.slug === slug) }
 export function getDestination(slug: string) { return destinations.find((item) => item.slug === slug) ?? destinationDetails.find((item) => item.slug === slug) }
 export function getExperience(slug: string) { return experiences.find((item) => item.slug === slug) }
 export function getArticle(slug: string) { return articles.find((item) => item.slug === slug) }
