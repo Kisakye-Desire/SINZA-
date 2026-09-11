@@ -6,7 +6,7 @@ import { ArrowRight, ArrowUp, ChevronDown, Menu, X } from 'lucide-react'
 import { destByRegion, journeysByRegion, navItems } from '@/lib/safari-data'
 
 const intelLinks = [['Safari Pricing', '/safari-pricing'], ['Safari FAQs', '/safari-intel/faqs'], ['Packing List', '/packing-list'], ['Safari Guide', '/safari-guide'], ['Booking Terms', '/terms-conditions'], ['Privacy Policy', '/privacy-policy'], ['The Team', '/team'], ['How We Work', '/how-we-work']]
-const companyLinks = [['About Sinza', '/company'], ['Our Story', '/company/our-story'], ['Conservation', '/company/conservation'], ['The Team', '/company/team'], ['DMC', '/dmc']]
+const companyLinks = [['About Sinza', '/company'], ['Our Story', '/company/our-story'], ['Community Development', '/community'], ['Conservation', '/company/conservation'], ['The Team', '/company/team'], ['DMC', '/dmc']]
 
 function MenuGroup({ label, children }: { label: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false)

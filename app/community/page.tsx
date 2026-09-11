@@ -14,7 +14,7 @@ const communityProjects = [
     title: 'Primate Conservation',
     location: 'Bwindi, Kibale, Murchison Falls',
     description: 'Partnering with conservation organizations to protect habitats, support anti-poaching efforts, and ensure sustainable wildlife management across Uganda's protected areas.',
-    image: '/images/wildlife-gorilla.jpg',
+    image: '/images/wildlife-chimpanzee-close.jpg',
     impact: 'Hectares protected',
   },
   {
