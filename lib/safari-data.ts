@@ -218,6 +218,8 @@ export const destinationDetails = [
   { slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/wildlife-chimpanzee-close.jpg', copy: 'Volcanoes, thoughtful conservation and warm hospitality come together in one beautifully compact country.' },
 ]
 
+export const galleryCategories = ['Gorilla trekking', 'Chimpanzee tracking', 'Savannah wildlife', 'Big cats', 'Elephants', 'Birdlife', 'Rivers and wetlands', 'Forest landscapes', 'Mountain horizons', 'Cultural encounters', 'Safari roads', 'Conservation stories']
+
 export const galleryImages = [
   { src: '/images/wildlife-lion-tree.jpg', alt: 'A lion resting in an acacia tree', label: 'The watchful guardian' },
   { src: '/images/wildlife-chimp-forest.jpg', alt: 'A chimpanzee in the forest canopy', label: 'Forest intelligence' },
