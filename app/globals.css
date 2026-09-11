@@ -48,6 +48,48 @@ footer { align-items:start; background:#20342b; color:#f3f0e8; display:grid; gap
 .team-socials a { align-items:center; border:1px solid var(--border); border-radius:50%; color:var(--primary); display:flex; height:32px; justify-content:center; transition:background .2s,color .2s; width:32px; }
 .team-socials a:hover { background:#d27f2d; border-color:#d27f2d; color:#f5f1e7; }
 .team-socials svg { height:14px; width:14px; }
+
+/* Community Development Page Styles */
+.community-intro-text { display: grid; gap: 1.5rem; max-width: 840px; }
+.community-intro-text p { color: var(--muted-foreground); font-size: 1.05rem; line-height: 1.8; margin: 0; }
+.community-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 3rem; }
+.community-card { background: var(--card); border-radius: 8px; overflow: hidden; transition: transform 0.3s ease; }
+.community-card:hover { transform: translateY(-4px); }
+.community-card img { aspect-ratio: 1.2; object-fit: cover; width: 100%; height: 200px; }
+.community-card-content { padding: 1.75rem; }
+.community-card h3 { font-size: 1.25rem; margin: 0 0 0.5rem; }
+.community-location { color: var(--primary); font-size: 0.9rem; font-weight: 600; margin: 0.5rem 0; text-transform: uppercase; letter-spacing: 0.05em; }
+.community-description { color: var(--muted-foreground); font-size: 0.95rem; line-height: 1.6; margin: 0.75rem 0; }
+.community-impact-label { color: var(--primary); display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; margin-top: 1rem; text-transform: uppercase; }
+.impact-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 3rem; }
+.impact-item { text-align: center; padding: 2rem 1.5rem; border: 1px solid var(--border); border-radius: 8px; }
+.impact-number { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 500; color: var(--primary); margin: 0 0 0.5rem; }
+.impact-label { color: var(--muted-foreground); font-size: 0.95rem; line-height: 1.5; margin: 0; }
+.partners-list { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 3rem; }
+.partner-item { background: var(--card); padding: 2rem; border-radius: 8px; }
+.partner-item h4 { font-size: 1.1rem; margin: 0 0 0.75rem; color: var(--foreground); }
+.partner-item p { color: var(--muted-foreground); margin: 0; font-size: 0.95rem; line-height: 1.6; }
+.stories-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 3rem; }
+.story-card { background: var(--card); border-radius: 8px; overflow: hidden; }
+.story-image { aspect-ratio: 1.2; overflow: hidden; }
+.story-image img { height: 100%; object-fit: cover; width: 100%; }
+.story-card h4 { font-size: 1.15rem; margin: 1.5rem 1.5rem 0.75rem; color: var(--foreground); }
+.story-card p { color: var(--muted-foreground); font-size: 0.95rem; line-height: 1.6; margin: 0 1.5rem 1.5rem; }
+.transparency-content { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-top: 3rem; }
+.transparency-block { background: var(--card); padding: 2rem; border-radius: 8px; }
+.transparency-block h4 { font-size: 1.1rem; margin: 0 0 0.75rem; color: var(--foreground); }
+.transparency-block p { color: var(--muted-foreground); margin: 0; font-size: 0.95rem; line-height: 1.6; }
+.cta-block { text-align: center; background: var(--card); padding: clamp(3rem, 8vw, 6rem) 2rem; border-radius: 8px; margin-top: 3rem; }
+.cta-block h2 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1.5rem; }
+.cta-block p { color: var(--muted-foreground); font-size: 1.05rem; line-height: 1.7; margin: 0 auto 2rem; max-width: 600px; }
+.cta-block .button-row { margin-top: 2rem; }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .community-grid, .impact-grid, .partners-list, .stories-grid, .transparency-content { grid-template-columns: 1fr; }
+  .community-card img { height: 180px; }
+  .impact-number { font-size: 2rem; }
+}
 .team-card h3 { font-family:var(--font-serif); font-size:2rem; font-weight:500; margin:.35rem 0 .5rem; }
 .team-card p:last-child { color:var(--muted-foreground); line-height:1.6; }
 .team-note { background:#e7eadc; margin-bottom:clamp(3rem,7vw,7rem); padding-bottom:clamp(3rem,7vw,7rem); padding-top:clamp(3rem,7vw,7rem); }

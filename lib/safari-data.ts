@@ -2,8 +2,8 @@ export type SafariDay = { day: string; title: string; details: string[] }
 export type Safari = { slug: string; title: string; duration: string; category: string; summary: string; image: string; destinations: string[]; highlights: string[]; itinerary?: SafariDay[] }
 
 export const safaris: Safari[] = [
-  { slug: 'gorilla-chimpanzee-big-five', title: 'Gorilla, Chimpanzee & Big Five Safari', duration: '11 days / 10 nights', category: 'Wildlife', summary: 'Uganda at its most complete: primates, savannah wildlife, the Nile and misty forests.', image: '/images/lion-lioness-resting.jpg', destinations: ['Kibale', 'Queen Elizabeth', 'Bwindi', 'Murchison Falls'], highlights: ['Gorilla trekking in Bwindi', 'Chimpanzee tracking in Kibale', 'Game drives and boat safaris', 'Local community encounters'] },
-  { slug: 'chimpanzees-queen-elizabeth', title: 'Chimpanzees & Queen Elizabeth', duration: '4 days / 3 nights', category: 'Primates', summary: 'A compact forest and savannah escape for curious travellers who want two worlds in one journey.', image: '/images/baboon.jpg', destinations: ['Kibale', 'Queen Elizabeth'], highlights: ['Chimpanzee tracking', 'Kasenyi plains game drive', 'Kazinga Channel cruise', 'Crater lake scenery'] },
+  { slug: 'gorilla-chimpanzee-big-five', title: 'Gorilla, Chimpanzee & Big Five Safari', duration: '11 days / 10 nights', category: 'Wildlife', summary: 'Uganda at its most complete: primates, savannah wildlife, the Nile and misty forests.', image: '/images/wildlife-chimp-rainforest.jpg', destinations: ['Kibale', 'Queen Elizabeth', 'Bwindi', 'Murchison Falls'], highlights: ['Gorilla trekking in Bwindi', 'Chimpanzee tracking in Kibale', 'Game drives and boat safaris', 'Local community encounters'] },
+  { slug: 'chimpanzees-queen-elizabeth', title: 'Chimpanzees & Queen Elizabeth', duration: '4 days / 3 nights', category: 'Primates', summary: 'A compact forest and savannah escape for curious travellers who want two worlds in one journey.', image: '/images/wildlife-chimp-forest.jpg', destinations: ['Kibale', 'Queen Elizabeth'], highlights: ['Chimpanzee tracking', 'Kasenyi plains game drive', 'Kazinga Channel cruise', 'Crater lake scenery'] },
   { slug: 'east-uganda-waterfalls', title: 'East Uganda Waterfalls & Culture', duration: '6 days / 5 nights', category: 'Nature & Culture', summary: 'Waterfalls, coffee, sacred sites and warm eastern hospitality, shaped into an easy-going route.', image: '/images/giraffe-trees.jpg', destinations: ['Jinja', 'Sipi Falls', 'Sezibwa Falls', 'Kagulu Hill'], highlights: ['Source of the Nile', 'Sipi coffee experience', 'Cultural storytelling', 'Scenic hill walks'] },
   { slug: 'murchison-falls-wilderness', title: 'Murchison Falls Wilderness', duration: '5 days / 4 nights', category: 'Wildlife', summary: 'The Nile narrows through the park, creating one of Uganda’s most powerful wilderness spectacles.', image: '/images/rhino-single.jpg', destinations: ['Murchison Falls', 'Ziwa Rhino Sanctuary'], highlights: ['Rhino tracking', 'Nile boat safari', 'Top of the falls hike', 'Savannah game drives'] },
   { slug: 'chimpanzee-wildlife-adventure', title: 'Chimpanzee & Wildlife Adventure', duration: '4 days / 3 nights', category: 'Primates', summary: 'Track chimpanzees in Kibale, cruise the Kazinga Channel and search the plains of Queen Elizabeth National Park.', image: '/images/sinza-baboon-forest.jpg', destinations: ['Kibale', 'Queen Elizabeth'], highlights: ['Bigodi wetlands walk', 'Chimpanzee tracking', 'Kasenyi plains game drive', 'Kazinga Channel cruise', 'Lake Katwe crater lakes'], itinerary: [
@@ -25,7 +25,7 @@ export const safaris: Safari[] = [
     { day: 'Day 5', title: 'Sipi to Kampala', details: ['Drive back through Eastern Uganda with a lunch stop in Jinja or Mukono.', 'Optional Mabira Forest or Sezibwa Falls visit before Kampala.'] },
     { day: 'Day 6', title: 'Relax and depart', details: ['Leisure breakfast and optional Kampala craft markets.', 'Visit Entebbe Botanical Gardens or Lake Victoria Beach.', 'Airport transfer timed to your flight.'] },
   ] },
-  { slug: 'kidepo-wild-north', title: 'Kidepo Valley: The Wild North', duration: '7 days / 6 nights', category: 'Remote', summary: 'A remote, rugged expedition through vast valleys and a culture-rich northern landscape.', image: '/images/elephants-palms.jpg', destinations: ['Kidepo Valley', 'Karamoja'], highlights: ['Remote game drives', 'Narus Valley', 'Karamojong homestead visit', 'Dramatic mountain horizons'] },
+  { slug: 'kidepo-wild-north', title: 'Kidepo Valley: The Wild North', duration: '7 days / 6 nights', category: 'Remote', summary: 'A remote, rugged expedition through vast valleys and a culture-rich northern landscape.', image: '/images/wildlife-elephant-tree.jpg', destinations: ['Kidepo Valley', 'Karamoja'], highlights: ['Remote game drives', 'Narus Valley', 'Karamojong homestead visit', 'Dramatic mountain horizons'] },
 ]
 
 export const destinations = [
@@ -91,30 +91,22 @@ export const destinationDetails = [
 ]
 
 export const galleryImages = [
-  { src: '/images/sinza-lions-horizon.jpeg', alt: 'A lion and lioness walking along a green horizon', label: 'The family walk' },
-  { src: '/images/sinza-lion-portrait.jpeg', alt: 'A lioness moving through open grassland', label: 'Ancient guardian' },
-  { src: '/images/sinza-lion-walking.jpeg', alt: 'A lion walking across a Ugandan landscape', label: 'On the move' },
-  { src: '/images/sinza-lion-landscape.jpeg', alt: 'A lioness crossing a green landscape', label: 'Read the tracks' },
-  { src: '/images/sinza-lion-family.jpeg', alt: 'A lion and lioness resting together on the ridge', label: 'The pride at rest' },
-  { src: '/images/sinza-giraffe.jpeg', alt: 'A giraffe framed by green woodland', label: 'Higher branches' },
-  { src: '/images/sinza-rhinos.jpeg', alt: 'Two rhinos beneath a tree in tall grass', label: 'A quiet pair' },
-  { src: '/images/sinza-baboons.jpeg', alt: 'A baboon family moving through forest grass', label: 'Into the forest' },
-  { src: '/images/sinza-elephants.jpeg', alt: 'An elephant family crossing open wetland', label: 'The long line' },
-  { src: '/images/sinza-tree-lions.jpeg', alt: 'Lions resting in a broad savannah tree', label: 'Tree climbers' },
-  { src: '/images/sinza-baboon-portrait.jpeg', alt: 'A baboon watching through forest leaves', label: 'Wild country' },
-  { src: '/images/sinza-rhino-group.png', alt: 'A group of rhinos resting in lush green woodland', label: 'Quiet giants' },
-  { src: '/images/sinza-zebra-family.jpg', alt: 'A family of zebras gathered closely in warm grassland light', label: 'Striped together' },
-  { src: '/images/sinza-lion-grass.jpg', alt: 'A lioness moving through Uganda’s green plains', label: 'Across the plain' },
+  { src: '/images/wildlife-lion-tree.jpg', alt: 'A lion resting in an acacia tree', label: 'The watchful guardian' },
+  { src: '/images/wildlife-chimp-forest.jpg', alt: 'A chimpanzee in the forest canopy', label: 'Forest intelligence' },
+  { src: '/images/wildlife-chimpanzee-close.jpg', alt: 'A mountain chimpanzee in close-up', label: 'Ancient connection' },
+  { src: '/images/wildlife-chimps-eating.jpg', alt: 'Chimpanzees eating together in nature', label: 'Family bonds' },
+  { src: '/images/wildlife-elephant-tree.jpg', alt: 'An elephant beneath a wide acacia tree', label: 'Gentle giants' },
+  { src: '/images/wildlife-hippo-water.jpg', alt: 'A hippopotamus in the water', label: 'River king' },
+  { src: '/images/wildlife-hippos-water.jpg', alt: 'Hippopotamuses together in water', label: 'Water family' },
+  { src: '/images/wildlife-giraffe-safari.jpg', alt: 'A giraffe on an African safari route', label: 'Higher branches' },
+  { src: '/images/wildlife-sunset-acacia.jpg', alt: 'African sunset with acacia trees', label: 'Golden hour' },
+  { src: '/images/wildlife-chimp-bw.jpg', alt: 'A chimpanzee in black and white', label: 'Quiet strength' },
+  { src: '/images/wildlife-chimp-rainforest.jpg', alt: 'A chimpanzee in the rainforest', label: 'Into the green' },
+  { src: '/images/sinza-zebra-family.jpg', alt: 'A family of zebras gathered in grassland', label: 'Striped together' },
+  { src: '/images/sinza-lion-grass.jpg', alt: 'A lioness moving through Uganda's green plains', label: 'Across the plain' },
   { src: '/images/sinza-boat-safari.jpg', alt: 'A family enjoying a guided boat safari on the Nile', label: 'On the river' },
-  { src: '/images/sinza-baboon-forest.jpg', alt: 'A baboon watching from a leafy forest canopy', label: 'Forest watch' },
   { src: '/images/sinza-tree-lions-tall.jpg', alt: 'Two lions resting high in a broad tree', label: 'A room with a view' },
-  { src: '/images/sinza-gorilla.jpg', alt: 'A mountain gorilla surrounded by lush forest leaves', label: 'Into the green' },
-  { src: '/images/sinza-lion-walk.jpg', alt: 'A lion walking across a sunlit savannah', label: 'The long walk' },
-  { src: '/images/sinza-baboon-monochrome.jpg', alt: 'A baboon framed by forest branches in monochrome', label: 'Quiet intelligence' },
-  { src: '/images/sinza-rhino-pair.jpg', alt: 'Two rhinos resting together beneath woodland trees', label: 'Gentle giants' },
-  { src: '/images/sinza-giraffe-landscape.jpg', alt: 'A giraffe browsing beneath a wide acacia tree', label: 'Higher branches' },
-  { src: '/images/sinza-baboon-family.jpg', alt: 'A baboon family moving through tall green grass', label: 'Close company' },
-  { src: '/images/sinza-giraffe-monochrome.jpg', alt: 'A giraffe emerging through a monochrome savannah canopy', label: 'The quiet height' },
+  { src: '/images/sinza-gorilla.jpg', alt: 'A mountain gorilla surrounded by lush forest leaves', label: 'Bwindi embrace' },
 ]
 
 export const destByRegion = {
@@ -140,7 +132,7 @@ export const destByRegion = {
 }
 
 export const navItems = [
-  ['Safaris', '/safaris'], ['Destinations', '/destinations'], ['Experiences', '/experiences'], ['About us', '/about'], ['Special packages', '/offers'], ['Blog', '/blog'], ['Contact', '/contact'],
+  ['Safaris', '/safaris'], ['Destinations', '/destinations'], ['Experiences', '/experiences'], ['About us', '/about'], ['Community', '/community'], ['Special packages', '/offers'], ['Blog', '/blog'], ['Contact', '/contact'],
 ]
 
 export function getSafari(slug: string) { return safaris.find((item) => item.slug === slug) }
