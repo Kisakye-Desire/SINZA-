@@ -45,14 +45,14 @@ export const experiences = [
 ]
 
 export const articles = [
-  { slug: 'when-to-go-uganda', category: 'Planning', title: 'When is the best time to visit Uganda?', excerpt: 'A month-by-month guide to rainforests, savannah and gorilla trekking.', image: '/images/sinza-zebra-family.jpg' },
-  { slug: 'why-travel-with-purpose', category: 'Responsible travel', title: 'Why meaningful travel matters', excerpt: 'How a safari can leave something good behind for landscapes and communities.', image: '/images/sinza-boat-safari.jpg' },
-  { slug: 'packing-for-uganda', category: 'Safari tips', title: 'What to pack for a Uganda safari', excerpt: 'Practical notes from our journey designers for a lighter, more comfortable trip.', image: '/images/sinza-lion-grass.jpg' },
-  { slug: 'gorilla-trekking-guide', category: 'Wildlife', title: 'A respectful guide to gorilla trekking', excerpt: 'What the forest asks of you, and what the encounter gives back.', image: '/images/sinza-gorilla.jpg' },
-  { slug: 'tree-climbing-lions', category: 'Wildlife', title: 'The lions who climb trees', excerpt: 'A closer look at Queen Elizabeth’s remarkable Ishasha lions.', image: '/images/sinza-tree-lions-tall.jpg' },
-  { slug: 'first-safari', category: 'Travel inspiration', title: 'What your first safari feels like', excerpt: 'The sounds, stillness and small surprises that make a day in the wild.', image: '/images/sinza-lion-walk.jpg' },
-  { slug: 'safari-photography', category: 'Photography', title: 'Making space for the light', excerpt: 'Simple fieldcraft for photographing wildlife without rushing the moment.', image: '/images/sinza-baboon-monochrome.jpg' },
-  { slug: 'rwanda-uganda', category: 'Destinations', title: 'Two forests, one extraordinary journey', excerpt: 'Pair Uganda’s rainforest with Rwanda’s volcanic landscapes.', image: '/images/sinza-gorilla.jpg' },
+  { slug: 'when-to-go-uganda', category: 'Planning', title: 'When is the best time to visit Uganda?', excerpt: 'A month-by-month guide to rainforests, savannah and gorilla trekking.', image: '/images/wildlife-sunset-acacia.jpg' },
+  { slug: 'why-travel-with-purpose', category: 'Responsible travel', title: 'Why meaningful travel matters', excerpt: 'How a safari can leave something good behind for landscapes and communities.', image: '/images/wildlife-chimp-rainforest.jpg' },
+  { slug: 'packing-for-uganda', category: 'Safari tips', title: 'What to pack for a Uganda safari', excerpt: 'Practical notes from our journey designers for a lighter, more comfortable trip.', image: '/images/wildlife-chimp-forest.jpg' },
+  { slug: 'gorilla-trekking-guide', category: 'Wildlife', title: 'A respectful guide to gorilla trekking', excerpt: 'What the forest asks of you, and what the encounter gives back.', image: '/images/wildlife-chimpanzee-close.jpg' },
+  { slug: 'tree-climbing-lions', category: 'Wildlife', title: 'The lions who climb trees', excerpt: 'A closer look at Queen Elizabeth's remarkable Ishasha lions.', image: '/images/wildlife-lion-tree.jpg' },
+  { slug: 'first-safari', category: 'Travel inspiration', title: 'What your first safari feels like', excerpt: 'The sounds, stillness and small surprises that make a day in the wild.', image: '/images/wildlife-hippo-water.jpg' },
+  { slug: 'safari-photography', category: 'Photography', title: 'Making space for the light', excerpt: 'Simple fieldcraft for photographing wildlife without rushing the moment.', image: '/images/wildlife-chimp-bw.jpg' },
+  { slug: 'rwanda-uganda', category: 'Destinations', title: 'Two forests, one extraordinary journey', excerpt: 'Pair Uganda's rainforest with Rwanda's volcanic landscapes.', image: '/images/wildlife-chimps-eating.jpg' },
 ]
 
 export const journeyCountries = [
