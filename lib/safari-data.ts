@@ -32,15 +32,15 @@ export const destinations = [
   { slug: 'bwindi', name: 'Bwindi Impenetrable Forest', region: 'South-west Uganda', description: 'An ancient rainforest where gorilla trekking becomes a quiet, humbling encounter.', image: '/images/wildlife-chimp-rainforest.jpg', best: 'June to September, December to February' },
   { slug: 'kibale', name: 'Kibale National Park', region: 'Western Uganda', description: 'The primate capital of East Africa, alive with forest calls and green trails.', image: '/images/wildlife-chimp-forest.jpg', best: 'All year; drier trails June to September' },
   { slug: 'queen-elizabeth', name: 'Queen Elizabeth National Park', region: 'Western Uganda', description: 'Crater lakes, open plains, tree-climbing lions and the life-giving Kazinga Channel.', image: '/images/wildlife-lion-tree.jpg', best: 'June to September and December to February' },
-  { slug: 'murchison-falls', name: 'Murchison Falls', region: 'Northern Uganda', description: 'The Nile thunders through a narrow cleft in Uganda's largest protected area.', image: '/images/wildlife-hippo-water.jpg', best: 'December to February; June to September' },
+  { slug: 'murchison-falls', name: 'Murchison Falls', region: 'Northern Uganda', description: "The Nile thunders through a narrow cleft in Uganda's largest protected area.", image: '/images/wildlife-hippo-water.jpg', best: 'December to February; June to September' },
   { slug: 'kidepo', name: 'Kidepo Valley', region: 'North-east Uganda', description: 'Remote, rugged and deeply rewarding wilderness at the edge of the Karamoja plains.', image: '/images/wildlife-elephant-tree.jpg', best: 'June to September' },
-  { slug: 'jinja', name: 'Jinja & the Source of the Nile', region: 'Eastern Uganda', description: 'River energy, adventure and a warm welcome in Uganda's historic adventure capital.', image: '/images/sinza-boat-safari.jpg', best: 'All year' },
+  { slug: 'jinja', name: 'Jinja & the Source of the Nile', region: 'Eastern Uganda', description: "River energy, adventure and a warm welcome in Uganda's historic adventure capital.", image: '/images/sinza-boat-safari.jpg', best: 'All year' },
 ]
 
 export const experiences = [
   { slug: 'gorilla-trekking', title: 'Gorilla trekking', description: 'Walk into the ancient green of Bwindi for a rare and respectful encounter.', image: '/images/wildlife-chimpanzee-close.jpg' },
   { slug: 'chimpanzee-tracking', title: 'Chimpanzee tracking', description: 'Follow bright calls and forest trails in the primate capital of Kibale.', image: '/images/wildlife-chimps-eating.jpg' },
-  { slug: 'wildlife-safaris', title: 'Wildlife safaris', description: 'Read the tracks, follow the light and meet Uganda's wild residents.', image: '/images/wildlife-giraffe-safari.jpg' },
+  { slug: 'wildlife-safaris', title: 'Wildlife safaris', description: "Read the tracks, follow the light and meet Uganda's wild residents.", image: '/images/wildlife-giraffe-safari.jpg' },
   { slug: 'culture-community', title: 'Culture & community', description: 'Travel with curiosity through food, stories, craft and living traditions.', image: '/images/wildlife-sunset-acacia.jpg' },
 ]
 
@@ -49,10 +49,10 @@ export const articles = [
   { slug: 'why-travel-with-purpose', category: 'Responsible travel', title: 'Why meaningful travel matters', excerpt: 'How a safari can leave something good behind for landscapes and communities.', image: '/images/wildlife-chimp-rainforest.jpg' },
   { slug: 'packing-for-uganda', category: 'Safari tips', title: 'What to pack for a Uganda safari', excerpt: 'Practical notes from our journey designers for a lighter, more comfortable trip.', image: '/images/wildlife-chimp-forest.jpg' },
   { slug: 'gorilla-trekking-guide', category: 'Wildlife', title: 'A respectful guide to gorilla trekking', excerpt: 'What the forest asks of you, and what the encounter gives back.', image: '/images/wildlife-chimpanzee-close.jpg' },
-  { slug: 'tree-climbing-lions', category: 'Wildlife', title: 'The lions who climb trees', excerpt: 'A closer look at Queen Elizabeth's remarkable Ishasha lions.', image: '/images/wildlife-lion-tree.jpg' },
+  { slug: 'tree-climbing-lions', category: 'Wildlife', title: 'The lions who climb trees', excerpt: "A closer look at Queen Elizabeth's remarkable Ishasha lions.", image: '/images/wildlife-lion-tree.jpg' },
   { slug: 'first-safari', category: 'Travel inspiration', title: 'What your first safari feels like', excerpt: 'The sounds, stillness and small surprises that make a day in the wild.', image: '/images/wildlife-hippo-water.jpg' },
   { slug: 'safari-photography', category: 'Photography', title: 'Making space for the light', excerpt: 'Simple fieldcraft for photographing wildlife without rushing the moment.', image: '/images/wildlife-chimp-bw.jpg' },
-  { slug: 'rwanda-uganda', category: 'Destinations', title: 'Two forests, one extraordinary journey', excerpt: 'Pair Uganda's rainforest with Rwanda's volcanic landscapes.', image: '/images/wildlife-chimps-eating.jpg' },
+  { slug: 'rwanda-uganda', category: 'Destinations', title: 'Two forests, one extraordinary journey', excerpt: "Pair Uganda's rainforest with Rwanda's volcanic landscapes.", image: '/images/wildlife-chimps-eating.jpg' },
 ]
 
 export const journeyCountries = [
@@ -103,7 +103,7 @@ export const galleryImages = [
   { src: '/images/wildlife-chimp-bw.jpg', alt: 'A chimpanzee in black and white', label: 'Quiet strength' },
   { src: '/images/wildlife-chimp-rainforest.jpg', alt: 'A chimpanzee in the rainforest', label: 'Into the green' },
   { src: '/images/sinza-zebra-family.jpg', alt: 'A family of zebras gathered in grassland', label: 'Striped together' },
-  { src: '/images/sinza-lion-grass.jpg', alt: 'A lioness moving through Uganda's green plains', label: 'Across the plain' },
+  { src: '/images/sinza-lion-grass.jpg', alt: "A lioness moving through Uganda's green plains", label: 'Across the plain' },
   { src: '/images/sinza-boat-safari.jpg', alt: 'A family enjoying a guided boat safari on the Nile', label: 'On the river' },
   { src: '/images/sinza-tree-lions-tall.jpg', alt: 'Two lions resting high in a broad tree', label: 'A room with a view' },
   { src: '/images/sinza-gorilla.jpg', alt: 'A mountain gorilla surrounded by lush forest leaves', label: 'Bwindi embrace' },
