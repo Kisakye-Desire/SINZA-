@@ -2,9 +2,33 @@ export type SafariDay = { day: string; title: string; details: string[] }
 export type Safari = { slug: string; title: string; duration: string; category: string; summary: string; image: string; destinations: string[]; highlights: string[]; itinerary?: SafariDay[] }
 
 export const safaris: Safari[] = [
-  { slug: 'gorilla-chimpanzee-big-five', title: 'Gorilla, Chimpanzee & Big Five Safari', duration: '11 days / 10 nights', category: 'Wildlife', summary: 'Uganda at its most complete: primates, savannah wildlife, the Nile and misty forests.', image: '/images/lion-lioness-resting.jpg', destinations: ['Kibale', 'Queen Elizabeth', 'Bwindi', 'Murchison Falls'], highlights: ['Gorilla trekking in Bwindi', 'Chimpanzee tracking in Kibale', 'Game drives and boat safaris', 'Local community encounters'] },
-  { slug: 'chimpanzees-queen-elizabeth', title: 'Chimpanzees & Queen Elizabeth', duration: '4 days / 3 nights', category: 'Primates', summary: 'A compact forest and savannah escape for curious travellers who want two worlds in one journey.', image: '/images/baboon.jpg', destinations: ['Kibale', 'Queen Elizabeth'], highlights: ['Chimpanzee tracking', 'Kasenyi plains game drive', 'Kazinga Channel cruise', 'Crater lake scenery'] },
-  { slug: 'east-uganda-waterfalls', title: 'East Uganda Waterfalls & Culture', duration: '6 days / 5 nights', category: 'Nature & Culture', summary: 'Waterfalls, coffee, sacred sites and warm eastern hospitality, shaped into an easy-going route.', image: '/images/giraffe-trees.jpg', destinations: ['Jinja', 'Sipi Falls', 'Sezibwa Falls', 'Kagulu Hill'], highlights: ['Source of the Nile', 'Sipi coffee experience', 'Cultural storytelling', 'Scenic hill walks'] },
+  { slug: 'gorilla-chimpanzee-big-five', title: 'Gorilla, Chimpanzee & Big Five Safari', duration: '11 days / 10 nights', category: 'Wildlife', summary: 'Uganda at its most complete: primates, savannah wildlife, the Nile and misty forests.', image: '/images/wildlife-chimp-rainforest.jpg', destinations: ['Kibale', 'Queen Elizabeth', 'Bwindi', 'Murchison Falls'], highlights: ['Gorilla trekking in Bwindi', 'Chimpanzee tracking in Kibale', 'Game drives and boat safaris', 'Local community encounters'], itinerary: [
+    { day: 'Day 1', title: 'Arrival in Kampala', details: ['Arrive at Entebbe International Airport and transfer to Kampala.', 'Meet your guide for a journey briefing.', 'Check in at your accommodation and rest, or explore Kampala.'] },
+    { day: 'Day 2', title: 'Kibale Forest - Chimpanzee Tracking', details: ['Drive to Kibale National Park (5-6 hours).', 'Early morning chimpanzee trek with an experienced ranger.', 'Afternoon Bigodi Wetlands walk for birds and forest wildlife.', 'Evening relaxation at lodge.'] },
+    { day: 'Day 3', title: 'More Kibale Experiences', details: ['Optional early morning guided nature walk.', 'Visit local communities and learn traditional ways of life.', 'Afternoon at leisure or forest exploration.', 'Wildlife documentation and journaling.'] },
+    { day: 'Day 4', title: 'Queen Elizabeth National Park', details: ['Drive to Queen Elizabeth National Park.', 'Afternoon Kasenyi plains game drive searching for lions, leopards and buffalo.', 'Evening boat cruise on Kazinga Channel.'] },
+    { day: 'Day 5', title: 'Queen Elizabeth Game Drives', details: ['Early morning game drive on Kasenyi plains.', 'Return for breakfast and lodge time.', 'Afternoon crater lakes tour or relaxation.', 'Sunset viewing over the park.'] },
+    { day: 'Day 6', title: 'Travel to Murchison Falls', details: ['Drive north to Murchison Falls National Park.', 'Afternoon arrival and settling in.', 'Evening introduction to the park.'] },
+    { day: 'Day 7', title: 'Murchison Falls Wildlife', details: ['Early morning game drive in Northern Murchison.', 'Mid-morning Nile Delta boat safari.', 'Afternoon activity of choice or lodge time.'] },
+    { day: 'Day 8', title: 'Top of Murchison Falls Hike', details: ['Hike to the top of Murchison Falls.', 'Experience the dramatic Nile narrows.', 'Afternoon wildlife spotting.'] },
+    { day: 'Day 9', title: 'Travel to Bwindi', details: ['Drive to Bwindi Impenetrable Forest (long journey).', 'Overnight in Bwindi or nearby accommodation.'] },
+    { day: 'Day 10', title: 'Gorilla Trekking in Bwindi', details: ['Early breakfast and park headquarters briefing.', 'Full-day gorilla trekking experience with expert ranger.', 'Respectful encounter with mountain gorillas in their natural habitat.', 'Return to lodge and relaxation.'] },
+    { day: 'Day 11', title: 'Return to Kampala', details: ['Drive back to Kampala.', 'Transfer to Entebbe Airport for departure or additional accommodation in Kampala.'] },
+  ] },
+  { slug: 'chimpanzees-queen-elizabeth', title: 'Chimpanzees & Queen Elizabeth', duration: '4 days / 3 nights', category: 'Primates', summary: 'A compact forest and savannah escape for curious travellers who want two worlds in one journey.', image: '/images/wildlife-chimp-forest.jpg', destinations: ['Kibale', 'Queen Elizabeth'], highlights: ['Chimpanzee tracking', 'Kasenyi plains game drive', 'Kazinga Channel cruise', 'Crater lake scenery'], itinerary: [
+    { day: 'Day 1', title: 'Kampala to Kibale Forest', details: ['Early pickup from Kampala or Entebbe.', 'Drive west through banana plantations and scenic Uganda.', 'Stop at equator for photos and refreshments.', 'Arrive at Kibale and settle into lodge.'] },
+    { day: 'Day 2', title: 'Chimpanzee Tracking', details: ['Early breakfast (5:00am).', 'Guided trek in Kibale Forest to track wild chimpanzees.', 'Experience their natural behavior and forest habitat.', 'Afternoon Bigodi Wetlands walk for bird watching and forest life.'] },
+    { day: 'Day 3', title: 'Transfer to Queen Elizabeth', details: ['Morning at leisure or additional nature walk.', 'Transfer to Queen Elizabeth National Park (2 hours).', 'Afternoon Kasenyi plains game drive.', 'Spot lions, leopards, buffalos, and elephants.'] },
+    { day: 'Day 4', title: 'Kazinga Channel & Return', details: ['Early morning game drive in Kasenyi plains.', 'Boat cruise on Kazinga Channel with hippos and crocodiles.', 'Visit crater lakes region.', 'Return to Kampala or Entebbe Airport.'] },
+  ] },
+  { slug: 'east-uganda-waterfalls', title: 'East Uganda Waterfalls & Culture', duration: '6 days / 5 nights', category: 'Nature & Culture', summary: 'Waterfalls, coffee, sacred sites and warm eastern hospitality, shaped into an easy-going route.', image: '/images/sinza-boat-safari.jpg', destinations: ['Jinja', 'Sipi Falls', 'Sezibwa Falls', 'Kagulu Hill'], highlights: ['Source of the Nile', 'Sipi coffee experience', 'Cultural storytelling', 'Scenic hill walks'], itinerary: [
+    { day: 'Day 1', title: 'Kampala to Jinja', details: ['Drive east to Jinja (1 hour).', 'Visit the Source of the Nile at Owen Falls.', 'Explore Jinja town and waterfront.', 'Optional boat cruise or whitewater rafting activity.'] },
+    { day: 'Day 2', title: 'Jinja to Kagulu Hill', details: ['Drive to Kagulu Hill through rural Busoga region.', 'Afternoon hike up Kagulu Hill.', 'Learn about royal Buganda Kingdom migration stories.', 'Stay in Kagulu area.'] },
+    { day: 'Day 3', title: 'Kagulu Hill Experiences', details: ['Optional early morning hike or relaxation.', 'Visit local communities and markets.', 'Afternoon drumming and traditional music session.', 'Picnic lunch with local food.'] },
+    { day: 'Day 4', title: 'Kagulu to Sipi Falls', details: ['Drive to Sipi Falls region via Mount Elgon foothills.', 'Afternoon guided walk to Sipi Falls.', 'Views of the three-tier waterfalls.', 'Settle in Sipi accommodation.'] },
+    { day: 'Day 5', title: 'Sipi Coffee & Waterfalls', details: ['Full day Sipi Falls experience.', 'Trek to all three waterfalls.', 'Coffee farm visit and coffee harvest experience.', 'Roast and brew your own Arabica coffee.', 'Optional cave exploration or abseiling.'] },
+    { day: 'Day 6', title: 'Return to Kampala', details: ['Drive back to Kampala through eastern Uganda.', 'Visit Sezibwa Falls en route if time allows.', 'Arrive in Kampala or head to airport.'] },
+  ] },
   { slug: 'murchison-falls-wilderness', title: 'Murchison Falls Wilderness', duration: '5 days / 4 nights', category: 'Wildlife', summary: 'The Nile narrows through the park, creating one of Uganda’s most powerful wilderness spectacles.', image: '/images/rhino-single.jpg', destinations: ['Murchison Falls', 'Ziwa Rhino Sanctuary'], highlights: ['Rhino tracking', 'Nile boat safari', 'Top of the falls hike', 'Savannah game drives'] },
   { slug: 'chimpanzee-wildlife-adventure', title: 'Chimpanzee & Wildlife Adventure', duration: '4 days / 3 nights', category: 'Primates', summary: 'Track chimpanzees in Kibale, cruise the Kazinga Channel and search the plains of Queen Elizabeth National Park.', image: '/images/sinza-baboon-forest.jpg', destinations: ['Kibale', 'Queen Elizabeth'], highlights: ['Bigodi wetlands walk', 'Chimpanzee tracking', 'Kasenyi plains game drive', 'Kazinga Channel cruise', 'Lake Katwe crater lakes'], itinerary: [
     { day: 'Day 1', title: 'Kampala to Kibale', details: ['Pickup after breakfast and briefing with your guide.', 'Drive west with Rwenzori views and a lunch stop.', 'Check in, then explore Bigodi Wetlands for birds and forest life.'] },
@@ -25,39 +49,47 @@ export const safaris: Safari[] = [
     { day: 'Day 5', title: 'Sipi to Kampala', details: ['Drive back through Eastern Uganda with a lunch stop in Jinja or Mukono.', 'Optional Mabira Forest or Sezibwa Falls visit before Kampala.'] },
     { day: 'Day 6', title: 'Relax and depart', details: ['Leisure breakfast and optional Kampala craft markets.', 'Visit Entebbe Botanical Gardens or Lake Victoria Beach.', 'Airport transfer timed to your flight.'] },
   ] },
-  { slug: 'kidepo-wild-north', title: 'Kidepo Valley: The Wild North', duration: '7 days / 6 nights', category: 'Remote', summary: 'A remote, rugged expedition through vast valleys and a culture-rich northern landscape.', image: '/images/elephants-palms.jpg', destinations: ['Kidepo Valley', 'Karamoja'], highlights: ['Remote game drives', 'Narus Valley', 'Karamojong homestead visit', 'Dramatic mountain horizons'] },
+  { slug: 'kidepo-wild-north', title: 'Kidepo Valley: The Wild North', duration: '7 days / 6 nights', category: 'Remote', summary: 'A remote, rugged expedition through vast valleys and a culture-rich northern landscape.', image: '/images/wildlife-elephant-tree.jpg', destinations: ['Kidepo Valley', 'Karamoja'], highlights: ['Remote game drives', 'Narus Valley', 'Karamojong homestead visit', 'Dramatic mountain horizons'], itinerary: [
+    { day: 'Day 1', title: 'Kampala to Kidepo', details: ['Early flight from Kampala to Kidepo Valley National Park or long overland journey.', 'Settle into lodge in the remote north.', 'Orientation walk around the lodge area.'] },
+    { day: 'Day 2', title: 'Narus Valley Game Drive', details: ['Early morning game drive in Narus Valley.', 'Search for lions, leopards, buffalo and Kidepo giraffes.', 'Afternoon wildlife photography.', 'Evening at lodge.'] },
+    { day: 'Day 3', title: 'Kidepo Valley & Karamojong Culture', details: ['Game drive in Kidepo Valley.', 'Visit traditional Karamojong warrior community.', 'Learn about pastoralist traditions and way of life.', 'Return for sunset at lodge.'] },
+    { day: 'Day 4', title: 'Pian Upe Wildlife Reserve', details: ['Explore Pian Upe Wildlife Reserve, adjacent to Kidepo.', 'Spot zebras, hartebeest and other wildlife.', 'Scenic drives with mountain backdrop.'] },
+    { day: 'Day 5', title: 'Remote Exploration', details: ['Full day remote exploring with your guide.', 'Look for Kidepo wildlife including wild dog where present.', 'Photography and wildlife documentation.', 'Return for evening meals and stargazing.'] },
+    { day: 'Day 6', title: 'Last Wildlife & Preparation', details: ['Final morning game drive.', 'Visit a Karamojong boma (settlement).', 'Craft purchase and final cultural interactions.'] },
+    { day: 'Day 7', title: 'Departure', details: ['Flight back to Kampala or overland travel.', 'Arrive in Kampala and transfer to accommodation or airport.'] },
+  ] },
 ]
 
 export const destinations = [
-  { slug: 'bwindi', name: 'Bwindi Impenetrable Forest', region: 'South-west Uganda', description: 'An ancient rainforest where gorilla trekking becomes a quiet, humbling encounter.', image: '/images/sinza-gorilla.jpg', best: 'June to September, December to February' },
-  { slug: 'kibale', name: 'Kibale National Park', region: 'Western Uganda', description: 'The primate capital of East Africa, alive with forest calls and green trails.', image: '/images/sinza-baboon-forest.jpg', best: 'All year; drier trails June to September' },
-  { slug: 'queen-elizabeth', name: 'Queen Elizabeth National Park', region: 'Western Uganda', description: 'Crater lakes, open plains, tree-climbing lions and the life-giving Kazinga Channel.', image: '/images/sinza-tree-lions-tall.jpg', best: 'June to September and December to February' },
-  { slug: 'murchison-falls', name: 'Murchison Falls', region: 'Northern Uganda', description: 'The Nile thunders through a narrow cleft in Uganda’s largest protected area.', image: '/images/sinza-boat-safari.jpg', best: 'December to February; June to September' },
-  { slug: 'kidepo', name: 'Kidepo Valley', region: 'North-east Uganda', description: 'Remote, rugged and deeply rewarding wilderness at the edge of the Karamoja plains.', image: '/images/sinza-elephants.jpeg', best: 'June to September' },
-  { slug: 'jinja', name: 'Jinja & the Source of the Nile', region: 'Eastern Uganda', description: 'River energy, adventure and a warm welcome in Uganda’s historic adventure capital.', image: '/images/sinza-boat-safari.jpg', best: 'All year' },
+  { slug: 'bwindi', name: 'Bwindi Impenetrable Forest', region: 'South-west Uganda', description: 'An ancient rainforest where gorilla trekking becomes a quiet, humbling encounter.', image: '/images/wildlife-chimp-rainforest.jpg', best: 'June to September, December to February' },
+  { slug: 'kibale', name: 'Kibale National Park', region: 'Western Uganda', description: 'The primate capital of East Africa, alive with forest calls and green trails.', image: '/images/wildlife-chimp-forest.jpg', best: 'All year; drier trails June to September' },
+  { slug: 'queen-elizabeth', name: 'Queen Elizabeth National Park', region: 'Western Uganda', description: 'Crater lakes, open plains, tree-climbing lions and the life-giving Kazinga Channel.', image: '/images/wildlife-lion-tree.jpg', best: 'June to September and December to February' },
+  { slug: 'murchison-falls', name: 'Murchison Falls', region: 'Northern Uganda', description: "The Nile thunders through a narrow cleft in Uganda's largest protected area.", image: '/images/wildlife-hippo-water.jpg', best: 'December to February; June to September' },
+  { slug: 'kidepo', name: 'Kidepo Valley', region: 'North-east Uganda', description: 'Remote, rugged and deeply rewarding wilderness at the edge of the Karamoja plains.', image: '/images/wildlife-elephant-tree.jpg', best: 'June to September' },
+  { slug: 'jinja', name: 'Jinja & the Source of the Nile', region: 'Eastern Uganda', description: "River energy, adventure and a warm welcome in Uganda's historic adventure capital.", image: '/images/sinza-boat-safari.jpg', best: 'All year' },
 ]
 
 export const experiences = [
-  { slug: 'gorilla-trekking', title: 'Gorilla trekking', description: 'Walk into the ancient green of Bwindi for a rare and respectful encounter.', image: '/images/baboon.jpg' },
-  { slug: 'chimpanzee-tracking', title: 'Chimpanzee tracking', description: 'Follow bright calls and forest trails in the primate capital of Kibale.', image: '/images/lions-tree-tall.jpg' },
-  { slug: 'wildlife-safaris', title: 'Wildlife safaris', description: 'Read the tracks, follow the light and meet Uganda’s wild residents.', image: '/images/lioness-stalking.jpg' },
-  { slug: 'culture-community', title: 'Culture & community', description: 'Travel with curiosity through food, stories, craft and living traditions.', image: '/images/giraffe-portrait.jpg' },
+  { slug: 'gorilla-trekking', title: 'Gorilla trekking', description: 'Walk into the ancient green of Bwindi for a rare and respectful encounter.', image: '/images/wildlife-chimpanzee-close.jpg' },
+  { slug: 'chimpanzee-tracking', title: 'Chimpanzee tracking', description: 'Follow bright calls and forest trails in the primate capital of Kibale.', image: '/images/wildlife-chimps-eating.jpg' },
+  { slug: 'wildlife-safaris', title: 'Wildlife safaris', description: "Read the tracks, follow the light and meet Uganda's wild residents.", image: '/images/wildlife-giraffe-safari.jpg' },
+  { slug: 'culture-community', title: 'Culture & community', description: 'Travel with curiosity through food, stories, craft and living traditions.', image: '/images/wildlife-sunset-acacia.jpg' },
 ]
 
 export const articles = [
-  { slug: 'when-to-go-uganda', category: 'Planning', title: 'When is the best time to visit Uganda?', excerpt: 'A month-by-month guide to rainforests, savannah and gorilla trekking.', image: '/images/sinza-zebra-family.jpg' },
-  { slug: 'why-travel-with-purpose', category: 'Responsible travel', title: 'Why meaningful travel matters', excerpt: 'How a safari can leave something good behind for landscapes and communities.', image: '/images/sinza-boat-safari.jpg' },
-  { slug: 'packing-for-uganda', category: 'Safari tips', title: 'What to pack for a Uganda safari', excerpt: 'Practical notes from our journey designers for a lighter, more comfortable trip.', image: '/images/sinza-lion-grass.jpg' },
-  { slug: 'gorilla-trekking-guide', category: 'Wildlife', title: 'A respectful guide to gorilla trekking', excerpt: 'What the forest asks of you, and what the encounter gives back.', image: '/images/sinza-gorilla.jpg' },
-  { slug: 'tree-climbing-lions', category: 'Wildlife', title: 'The lions who climb trees', excerpt: 'A closer look at Queen Elizabeth’s remarkable Ishasha lions.', image: '/images/sinza-tree-lions-tall.jpg' },
-  { slug: 'first-safari', category: 'Travel inspiration', title: 'What your first safari feels like', excerpt: 'The sounds, stillness and small surprises that make a day in the wild.', image: '/images/sinza-lion-walk.jpg' },
-  { slug: 'safari-photography', category: 'Photography', title: 'Making space for the light', excerpt: 'Simple fieldcraft for photographing wildlife without rushing the moment.', image: '/images/sinza-baboon-monochrome.jpg' },
-  { slug: 'rwanda-uganda', category: 'Destinations', title: 'Two forests, one extraordinary journey', excerpt: 'Pair Uganda’s rainforest with Rwanda’s volcanic landscapes.', image: '/images/sinza-gorilla.jpg' },
+  { slug: 'when-to-go-uganda', category: 'Planning', title: 'When is the best time to visit Uganda?', excerpt: 'A month-by-month guide to rainforests, savannah and gorilla trekking.', image: '/images/wildlife-sunset-acacia.jpg' },
+  { slug: 'why-travel-with-purpose', category: 'Responsible travel', title: 'Why meaningful travel matters', excerpt: 'How a safari can leave something good behind for landscapes and communities.', image: '/images/wildlife-chimp-rainforest.jpg' },
+  { slug: 'packing-for-uganda', category: 'Safari tips', title: 'What to pack for a Uganda safari', excerpt: 'Practical notes from our journey designers for a lighter, more comfortable trip.', image: '/images/wildlife-chimp-forest.jpg' },
+  { slug: 'gorilla-trekking-guide', category: 'Wildlife', title: 'A respectful guide to gorilla trekking', excerpt: 'What the forest asks of you, and what the encounter gives back.', image: '/images/wildlife-chimpanzee-close.jpg' },
+  { slug: 'tree-climbing-lions', category: 'Wildlife', title: 'The lions who climb trees', excerpt: "A closer look at Queen Elizabeth's remarkable Ishasha lions.", image: '/images/wildlife-lion-tree.jpg' },
+  { slug: 'first-safari', category: 'Travel inspiration', title: 'What your first safari feels like', excerpt: 'The sounds, stillness and small surprises that make a day in the wild.', image: '/images/wildlife-hippo-water.jpg' },
+  { slug: 'safari-photography', category: 'Photography', title: 'Making space for the light', excerpt: 'Simple fieldcraft for photographing wildlife without rushing the moment.', image: '/images/wildlife-chimp-bw.jpg' },
+  { slug: 'rwanda-uganda', category: 'Destinations', title: 'Two forests, one extraordinary journey', excerpt: "Pair Uganda's rainforest with Rwanda's volcanic landscapes.", image: '/images/wildlife-chimps-eating.jpg' },
 ]
 
 export const journeyCountries = [
   {
-    slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/elephants-wetland.jpg',
+    slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/wildlife-giraffe-safari.jpg',
     journeys: [
       { slug: 'gorilla-chimpanzee-big-five', title: 'Gorilla, Chimpanzee & Big Five', duration: '11 days / 10 nights', image: '/images/lion-lioness-resting.jpg' },
       { slug: 'chimpanzees-queen-elizabeth', title: 'Chimpanzees & Queen Elizabeth', duration: '4 days / 3 nights', image: '/images/baboon.jpg' },
@@ -84,37 +116,29 @@ export const journeyCountries = [
 export const journeysByRegion = Object.fromEntries(journeyCountries.map((country) => [country.name + ' Safaris', country.journeys.map(({ slug, title }) => ({ slug, title }))]))
 
 export const destinationDetails = [
-  { slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/sinza-lion-grass.jpg', copy: 'Rainforest, savannah, crater lakes and the source of the Nile — Uganda is a country that rewards curious travellers.' },
-  { slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/sinza-gorilla.jpg', copy: 'Volcanoes, thoughtful conservation and warm hospitality come together in one beautifully compact country.' },
-  { slug: 'kenya', name: 'Kenya', tagline: 'Where Safari Was Born', image: '/images/sinza-zebra-family.jpg', copy: 'Open plains, big skies and enduring wildlife stories across the Masai Mara and the Great Rift Valley.' },
-  { slug: 'tanzania', name: "Tanzania", tagline: "Africa's Greatest Stage", image: '/images/sinza-lion-walk.jpg', copy: 'Follow the Serengeti rhythm from Ngorongoro to the coast, with time to look beyond the headline moments.' },
+  { slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/wildlife-chimp-rainforest.jpg', copy: 'Rainforest, savannah, crater lakes and the source of the Nile — Uganda is a country that rewards curious travellers.' },
+  { slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/wildlife-chimpanzee-close.jpg', copy: 'Volcanoes, thoughtful conservation and warm hospitality come together in one beautifully compact country.' },
+  { slug: 'kenya', name: 'Kenya', tagline: 'Where Safari Was Born', image: '/images/wildlife-giraffe-safari.jpg', copy: 'Open plains, big skies and enduring wildlife stories across the Masai Mara and the Great Rift Valley.' },
+  { slug: 'tanzania', name: "Tanzania", tagline: "Africa's Greatest Stage", image: '/images/wildlife-sunset-acacia.jpg', copy: 'Follow the Serengeti rhythm from Ngorongoro to the coast, with time to look beyond the headline moments.' },
 ]
 
 export const galleryImages = [
-  { src: '/images/sinza-lions-horizon.jpeg', alt: 'A lion and lioness walking along a green horizon', label: 'The family walk' },
-  { src: '/images/sinza-lion-portrait.jpeg', alt: 'A lioness moving through open grassland', label: 'Ancient guardian' },
-  { src: '/images/sinza-lion-walking.jpeg', alt: 'A lion walking across a Ugandan landscape', label: 'On the move' },
-  { src: '/images/sinza-lion-landscape.jpeg', alt: 'A lioness crossing a green landscape', label: 'Read the tracks' },
-  { src: '/images/sinza-lion-family.jpeg', alt: 'A lion and lioness resting together on the ridge', label: 'The pride at rest' },
-  { src: '/images/sinza-giraffe.jpeg', alt: 'A giraffe framed by green woodland', label: 'Higher branches' },
-  { src: '/images/sinza-rhinos.jpeg', alt: 'Two rhinos beneath a tree in tall grass', label: 'A quiet pair' },
-  { src: '/images/sinza-baboons.jpeg', alt: 'A baboon family moving through forest grass', label: 'Into the forest' },
-  { src: '/images/sinza-elephants.jpeg', alt: 'An elephant family crossing open wetland', label: 'The long line' },
-  { src: '/images/sinza-tree-lions.jpeg', alt: 'Lions resting in a broad savannah tree', label: 'Tree climbers' },
-  { src: '/images/sinza-baboon-portrait.jpeg', alt: 'A baboon watching through forest leaves', label: 'Wild country' },
-  { src: '/images/sinza-rhino-group.png', alt: 'A group of rhinos resting in lush green woodland', label: 'Quiet giants' },
-  { src: '/images/sinza-zebra-family.jpg', alt: 'A family of zebras gathered closely in warm grassland light', label: 'Striped together' },
-  { src: '/images/sinza-lion-grass.jpg', alt: 'A lioness moving through Uganda’s green plains', label: 'Across the plain' },
+  { src: '/images/wildlife-lion-tree.jpg', alt: 'A lion resting in an acacia tree', label: 'The watchful guardian' },
+  { src: '/images/wildlife-chimp-forest.jpg', alt: 'A chimpanzee in the forest canopy', label: 'Forest intelligence' },
+  { src: '/images/wildlife-chimpanzee-close.jpg', alt: 'A mountain chimpanzee in close-up', label: 'Ancient connection' },
+  { src: '/images/wildlife-chimps-eating.jpg', alt: 'Chimpanzees eating together in nature', label: 'Family bonds' },
+  { src: '/images/wildlife-elephant-tree.jpg', alt: 'An elephant beneath a wide acacia tree', label: 'Gentle giants' },
+  { src: '/images/wildlife-hippo-water.jpg', alt: 'A hippopotamus in the water', label: 'River king' },
+  { src: '/images/wildlife-hippos-water.jpg', alt: 'Hippopotamuses together in water', label: 'Water family' },
+  { src: '/images/wildlife-giraffe-safari.jpg', alt: 'A giraffe on an African safari route', label: 'Higher branches' },
+  { src: '/images/wildlife-sunset-acacia.jpg', alt: 'African sunset with acacia trees', label: 'Golden hour' },
+  { src: '/images/wildlife-chimp-bw.jpg', alt: 'A chimpanzee in black and white', label: 'Quiet strength' },
+  { src: '/images/wildlife-chimp-rainforest.jpg', alt: 'A chimpanzee in the rainforest', label: 'Into the green' },
+  { src: '/images/sinza-zebra-family.jpg', alt: 'A family of zebras gathered in grassland', label: 'Striped together' },
+  { src: '/images/sinza-lion-grass.jpg', alt: "A lioness moving through Uganda's green plains", label: 'Across the plain' },
   { src: '/images/sinza-boat-safari.jpg', alt: 'A family enjoying a guided boat safari on the Nile', label: 'On the river' },
-  { src: '/images/sinza-baboon-forest.jpg', alt: 'A baboon watching from a leafy forest canopy', label: 'Forest watch' },
   { src: '/images/sinza-tree-lions-tall.jpg', alt: 'Two lions resting high in a broad tree', label: 'A room with a view' },
-  { src: '/images/sinza-gorilla.jpg', alt: 'A mountain gorilla surrounded by lush forest leaves', label: 'Into the green' },
-  { src: '/images/sinza-lion-walk.jpg', alt: 'A lion walking across a sunlit savannah', label: 'The long walk' },
-  { src: '/images/sinza-baboon-monochrome.jpg', alt: 'A baboon framed by forest branches in monochrome', label: 'Quiet intelligence' },
-  { src: '/images/sinza-rhino-pair.jpg', alt: 'Two rhinos resting together beneath woodland trees', label: 'Gentle giants' },
-  { src: '/images/sinza-giraffe-landscape.jpg', alt: 'A giraffe browsing beneath a wide acacia tree', label: 'Higher branches' },
-  { src: '/images/sinza-baboon-family.jpg', alt: 'A baboon family moving through tall green grass', label: 'Close company' },
-  { src: '/images/sinza-giraffe-monochrome.jpg', alt: 'A giraffe emerging through a monochrome savannah canopy', label: 'The quiet height' },
+  { src: '/images/sinza-gorilla.jpg', alt: 'A mountain gorilla surrounded by lush forest leaves', label: 'Bwindi embrace' },
 ]
 
 export const destByRegion = {
@@ -140,7 +164,7 @@ export const destByRegion = {
 }
 
 export const navItems = [
-  ['Safaris', '/safaris'], ['Destinations', '/destinations'], ['Experiences', '/experiences'], ['About us', '/about'], ['Special packages', '/offers'], ['Blog', '/blog'], ['Contact', '/contact'],
+  ['Safaris', '/safaris'], ['Destinations', '/destinations'], ['Experiences', '/experiences'], ['About us', '/about'], ['Community', '/community'], ['Special packages', '/offers'], ['Blog', '/blog'], ['Contact', '/contact'],
 ]
 
 export function getSafari(slug: string) { return safaris.find((item) => item.slug === slug) }
