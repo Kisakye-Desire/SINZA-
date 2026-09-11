@@ -28,7 +28,7 @@ export function SafariExplorer() { const [query, setQuery] = useState(''); const
 export function FaqList({ items }: { items: string[] }) { const [active, setActive] = useState<number | null>(null); return <div className="faq-list">{items.map((item, index) => <button className="faq-item" key={item} onClick={() => setActive(active === index ? null : index)}><span>{item}</span>{active === index ? <ChevronDown /> : <ArrowRight />}{active === index && <p>Our journey designers will talk through the details with you, then provide a considered itinerary, accommodation options and transparent next steps.</p>}</button>)}</div> }
 
 const steps = ['Where', 'When', 'Who', 'Budget', 'You'] as const
-const destinations = [['Uganda', 'Gorillas, forests and wide savannahs'], ['Rwanda', 'Volcanoes, lakes and intimate encounters'], ['Kenya', 'Classic plains, big skies and wildlife'], ['Tanzania', 'The Serengeti, crater country and coast']]
+const destinations = [['Uganda', 'Gorillas, forests and wide savannahs'], ['Rwanda', 'Volcanoes, lakes and intimate encounters']]
 const interests = ['Gorilla Trekking', 'Chimp Tracking', 'Big Five', 'Birdwatching', 'Photography', 'Cultural', 'Honeymoon', 'Family', 'Fly-In', 'Beach', 'Hiking']
 const years = ['2026', '2027', '2028', 'Flexible']
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']

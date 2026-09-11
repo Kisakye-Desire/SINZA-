@@ -7,42 +7,42 @@ const communityProjects = [
     title: 'Education & Scholarship',
     location: 'Kibale and Queen Elizabeth regions',
     description: 'Supporting local youth through education initiatives, scholarship programs, and skills training that create lasting opportunity in communities near our safari destinations.',
-    image: '/images/wildlife-chimp-forest.jpg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bill-wegener-8ldqRkOk5oo-unsplash-LXQ6vz0BjZZPjYlcLvMC1wc8INJteu.jpg',
     impact: 'Scholarships awarded',
   },
   {
     title: 'Primate Conservation',
     location: 'Bwindi, Kibale, Murchison Falls',
     description: "Partnering with conservation organizations to protect habitats, support anti-poaching efforts, and ensure sustainable wildlife management across Uganda's protected areas.",
-    image: '/images/wildlife-chimpanzee-close.jpg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/roman-nguyen-TBdSTcSwXxo-unsplash-I5IvWCVddkdZUum3BiQZeZeKJz47aS.jpg',
     impact: 'Hectares protected',
   },
   {
     title: 'Healthcare Access',
     location: 'Remote communities',
     description: 'Funding medical clinics and health awareness programs in areas where safari tourism has limited infrastructure, bringing basic healthcare and emergency services to underserved populations.',
-    image: '/images/wildlife-elephant-tree.jpg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-QeEK1g70vdQ-unsplash-16YYnYnE59XpaUe2a7XWXLIb8IQAc9.jpg',
     impact: 'Communities served',
   },
   {
     title: 'Water & Sanitation',
     location: 'Village communities',
     description: 'Installing fresh water systems and sanitation facilities in villages, reducing waterborne disease and improving quality of life for families living near protected areas.',
-    image: '/images/wildlife-sunset-acacia.jpg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-qteTc4nGuc0-unsplash-EQ4jsT7Ch4hO6w0l6paju74YCMbPQI.jpg',
     impact: 'Wells installed',
   },
   {
     title: 'Local Guide Employment',
     location: 'Across Uganda',
     description: 'Training and employing local guides, rangers, and hospitality staff, creating dignified employment and ensuring communities directly benefit from tourism revenue.',
-    image: '/images/wildlife-chimps-eating.jpg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zach-wear-zOoiOzayjK4-unsplash-nAMqmgXXB9d45lBNYAZ1XxOE8GvywF.jpg',
     impact: 'Jobs created',
   },
   {
     title: "Women's Economic Groups",
     location: 'Surrounding villages',
     description: "Supporting women's cooperatives with microfinance, craft training, and market access, enabling economic independence and entrepreneurship at the grassroots level.",
-    image: '/images/wildlife-hippo-water.jpg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lisa-marie-theck-j9HZWSKAgrA-unsplash-aUSHIoeZdJhgb82QjPV05KV7gTRjxW.jpg',
     impact: 'Women entrepreneurs',
   },
 ]
@@ -74,7 +74,6 @@ export default function CommunityPage() {
             </>
           }
           intro="Every safari with Sinza supports meaningful community development, conservation, and local opportunity across East Africa."
-          image="/images/wildlife-sunset-acacia.jpg"
         />
 
         <section className="section-wrap">
@@ -93,7 +92,7 @@ export default function CommunityPage() {
               We don't believe in "corporate charity" or performative giving. Our approach is straightforward: listen to communities, partner with trusted organizations, fund practical projects, and measure real impact.
             </p>
             <p>
-              When you travel with Sinza, you're directly contributing to scholarships, healthcare, water systems, wildlife protection, and dignified employment for families in Uganda, Rwanda, Kenya, and Tanzania.
+              When you travel with Sinza, you&apos;re directly contributing to scholarships, healthcare, water systems, wildlife protection, and dignified employment for families in Uganda and Rwanda.
             </p>
           </div>
         </section>

@@ -11,7 +11,7 @@ const offers = [
   ['Nile Boat Cruises', 'Murchison Falls & Jinja', 'Spot hippos, crocodiles and waterbirds from the river, with peaceful time on Uganda’s life-giving waterways.', '/images/sinza-boat-safari.jpg', '5 days', 'River journey'],
   ['Honeymoon Safaris', 'Private lodges · Scenic views', 'Romantic escapes with slow mornings, private stays, golden-hour drives and space to celebrate together.', '/images/sinza-zebra-family.jpg', '8 days', 'Romantic journey'],
   ['Team Building Trips', 'For organisations, NGOs, churches & schools', 'Purposeful group journeys that bring people together through nature, culture and shared adventure.', '/images/sinza-baboon-family.jpg', 'Flexible', 'Group journey'],
-  ['Multi-Country Tours', 'Uganda · Rwanda · Kenya · Tanzania', 'Add a neighbouring country to your itinerary for a richer East African story and a seamless private route.', '/images/sinza-gorilla.jpg', '10+ days', 'East Africa journey'],
+  ['Multi-Country Tours', 'Uganda · Rwanda', 'Combine Uganda and Rwanda for a richer Great Lakes story and a seamless private route.', '/images/sinza-gorilla.jpg', '10+ days', 'East Africa journey'],
   ['Adventure Add-Ons', 'Hiking · Rafting · Zip-lining & more', 'Build in an active day on the Nile, in the hills or above the forest canopy when you want extra energy.', '/images/sinza-lion-grass.jpg', 'From 1 day', 'Adventure journey'],
   ['Cultural & Community Tours', 'Eastern Uganda · Busoga Kingdom', 'Village walks, school visits, cultural performances, workshops, home visits and local meals with respect.', '/images/sinza-baboon-forest.jpg', '3–6 days', 'Culture journey'],
 ]

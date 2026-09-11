@@ -58,7 +58,29 @@ export const safaris: Safari[] = [
     { day: 'Day 6', title: 'Last Wildlife & Preparation', details: ['Final morning game drive.', 'Visit a Karamojong boma (settlement).', 'Craft purchase and final cultural interactions.'] },
     { day: 'Day 7', title: 'Departure', details: ['Flight back to Kampala or overland travel.', 'Arrive in Kampala and transfer to accommodation or airport.'] },
   ] },
+  { slug: 'ziwa-rhino-tracking', title: '1 Day Ziwa Rhino Tracking Tour', duration: '1 day', category: 'Wildlife', summary: 'An intimate morning or afternoon tracking experience with Uganda\'s reintroduced rhino population at Ziwa Sanctuary.', image: '/images/big-five/giraffe-mother-calf.jpg', destinations: ['Ziwa Rhino Sanctuary'], highlights: ['Rhino tracking on foot', 'Conservation education', 'Guided walk through protected reserve', 'Stunning Uganda landscape'] },
+  { slug: 'murchison-falls-2days', title: '2 Days Murchison Falls', duration: '2 days / 1 night', category: 'Wildlife', summary: 'A quick but immersive taste of the Nile\'s dramatic power and the wildlife of Uganda\'s largest protected area.', image: '/images/wildlife/hippo-water.jpg', destinations: ['Murchison Falls'], highlights: ['Nile Delta boat safari', 'Top of Murchison Falls hike', 'Northern plains game drive', 'Nile river spectacle'] },
+  { slug: 'bwindi-gorilla-3days', title: '3 Days Bwindi Gorilla Trekking', duration: '3 days / 2 nights', category: 'Primates', summary: 'A focused journey into Bwindi\'s misty forests for the transformative experience of gorilla trekking in their natural habitat.', image: '/images/primates/chimp-bw-portrait.jpg', destinations: ['Bwindi Impenetrable Forest'], highlights: ['Full-day gorilla trekking', 'Ancient rainforest experience', 'Local community visits', 'Forest walks and nature immersion'] },
+  { slug: 'murchison-queen-elizabeth-5days', title: '5 Days Murchison Falls & Queen Elizabeth', duration: '5 days / 4 nights', category: 'Wildlife', summary: 'Combine the raw power of Murchison Falls with the diverse wildlife and tree-climbing lions of Queen Elizabeth National Park.', image: '/images/big-five/giraffe-single.jpg', destinations: ['Murchison Falls', 'Queen Elizabeth'], highlights: ['Nile boat safari', 'Falls hike', 'Kasenyi plains game drives', 'Kazinga Channel cruise', 'Lion and leopard spotting'] },
+  { slug: 'gorillas-lions-5days', title: '5 Days Gorillas & Lions Tracking', duration: '5 days / 4 nights', category: 'Wildlife', summary: 'Experience Uganda\'s most iconic primates and Big Five predators in this diverse 5-day wilderness expedition.', image: '/images/primates/young-primate.webp', destinations: ['Bwindi', 'Queen Elizabeth'], highlights: ['Gorilla trekking in Bwindi', 'Tree-climbing lions', 'Kazinga Channel cruise', 'Forest and savanna contrast', 'Expert wildlife tracking'] },
+  { slug: 'kidepo-murchison-6days', title: '6 Days Kidepo Valley & Murchison Falls', duration: '6 days / 5 nights', category: 'Remote', summary: 'Venture into Uganda\'s wildest regions: the remote Kidepo Valley and the power of Murchison Falls in one epic journey.', image: '/images/wildlife/shoebill-bird.webp', destinations: ['Kidepo Valley', 'Murchison Falls'], highlights: ['Remote Kidepo wilderness', 'Narus Valley game drives', 'Karamojong culture', 'Murchison Falls hike', 'Big game tracking'] },
+  { slug: 'best-of-uganda-11days', title: '11 Days Best of Uganda Safari', duration: '11 days / 10 nights', category: 'Wildlife', summary: 'The ultimate Uganda experience: gorillas, chimpanzees, lions, Murchison Falls, and authentic cultural encounters across the Pearl of Africa.', image: '/images/primates/chimp-with-leaves.jpg', destinations: ['Kibale', 'Queen Elizabeth', 'Murchison Falls', 'Bwindi'], highlights: ['Gorilla and chimp tracking', 'Multiple national parks', 'Tree-climbing lions', 'Boat safaris and hikes', 'Cultural immersion'] },
+  { slug: 'uganda-wildlife-14days', title: '14 Days Uganda Wildlife Safari', duration: '14 days / 13 nights', category: 'Wildlife', summary: 'The most comprehensive Uganda safari: experience all major ecosystems, wildlife, and cultural destinations from west to east.', image: '/images/primates/chimp-forest-portrait.jpg', destinations: ['Kibale', 'Queen Elizabeth', 'Murchison Falls', 'Kidepo Valley', 'Bwindi'], highlights: ['Complete wildlife diversity', 'All major national parks', 'Extended primate experiences', 'Cultural immersion', 'Remote wilderness exploration'] },
+  { slug: 'rwanda-gorilla-safari-3days', title: '3 Days Rwanda Gorilla Safari', duration: '3 days / 2 nights', category: 'Primates', summary: 'Trek mountain gorillas in Rwanda\'s Volcanoes National Park, experiencing these remarkable primates in their misty highland forest home.', image: '/images/primates/young-primate.webp', destinations: ['Volcanoes National Park'], highlights: ['Gorilla trekking in Volcanoes', 'Mountain rainforest experience', 'Golden monkey encounters', 'Kigali city experience', 'Rwanda\'s volcanic landscape'] },
+  { slug: 'rwanda-primates-5days', title: '5 Days Rwanda Primates Safari', duration: '5 days / 4 nights', category: 'Primates', summary: 'A primate-focused journey combining gorilla trekking, golden monkey experiences, and Nyungwe Forest chimpanzee tracking.', image: '/images/primates/chimp-with-leaves.jpg', destinations: ['Volcanoes National Park', 'Nyungwe Forest'], highlights: ['Mountain gorilla trekking', 'Golden monkeys', 'Chimpanzee tracking in Nyungwe', 'Forest canopy walks', 'Primate conservation insights'] },
+  { slug: 'rwanda-gorilla-wildlife-6days', title: '6 Days Rwanda Gorilla & Wildlife Safari', duration: '6 days / 5 nights', category: 'Wildlife', summary: 'Combine the intimacy of gorilla trekking with the diversity of Rwanda\'s Akagera National Park wildlife experiences.', image: '/images/wildlife/antelope-02.jpg', destinations: ['Volcanoes National Park', 'Akagera National Park'], highlights: ['Mountain gorilla encounters', 'Akagera game drives', 'Lion and elephant spotting', 'Big Five experiences', 'Rwanda\'s ecosystems'] },
+  { slug: 'nyungwe-forest-3days', title: '3 Days Nyungwe Forest Tour', duration: '3 days / 2 nights', category: 'Nature & Culture', summary: 'Immerse yourself in Rwanda\'s ancient rainforest for chimpanzee tracking, canopy walks, and pristine woodland experiences.', image: '/images/wildlife/shoebill-bird.webp', destinations: ['Nyungwe Forest'], highlights: ['Chimpanzee tracking', 'Forest canopy walks', 'Waterfall hikes', 'Birdwatching', 'Forest community encounters'] },
+  { slug: 'uganda-gorillas-kigali-3days', title: '3 Days Uganda Gorillas from Kigali, Rwanda', duration: '3 days / 2 nights', category: 'Primates', summary: 'Cross the border from Rwanda to Uganda for an intensive gorilla trekking experience in Bwindi, based from Kigali.', image: '/images/primates/chimp-forest-portrait.jpg', destinations: ['Bwindi Impenetrable Forest'], highlights: ['Gorilla trekking from Kigali base', 'Bwindi rainforest immersion', 'Cross-border adventure', 'Community visits', 'Expert gorilla encounters'] },
+  { slug: 'murchison-falls-3days', title: '3 Days Murchison Falls National Park', duration: '3 days / 2 nights', category: 'Wildlife', summary: 'A focused Nile-and-savannah escape with a game drive, boat cruise and the powerful landscapes around Murchison Falls.', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-172767887-612x612-8fEU9g0zx10FnRdqLA7JKU4pBtV7aA.jpg', destinations: ['Murchison Falls National Park'], highlights: ['Northern sector game drive', 'Victoria Nile boat cruise', 'Top of the falls viewpoint', 'Hippos, crocodiles and birdlife'], itinerary: [{ day: 'Day 1', title: 'Travel to Murchison Falls', details: ['Depart Kampala or Entebbe with your guide.', 'Arrive at the park and settle into your lodge.', 'Enjoy an evening at leisure.'] }, { day: 'Day 2', title: 'Game drive and Nile cruise', details: ['Early game drive across the northern savannah.', 'Afternoon boat cruise toward the base of the falls.', 'Look for elephants, giraffes, buffalo, hippos and crocodiles.'] }, { day: 'Day 3', title: 'The falls and return', details: ['Visit the top of Murchison Falls.', 'Begin the return journey with a picnic or local lunch stop.'] }] },
+  { slug: 'bwindi-gorilla-3days-2nights', title: '3 Days Gorilla Trekking in Bwindi', duration: '3 days / 2 nights', category: 'Primates', summary: 'A compact Bwindi journey built around one full gorilla trekking day and time to settle into the forest edge.', image: '/images/sinza-gorilla.jpg', destinations: ['Bwindi Impenetrable National Park'], highlights: ['Gorilla trekking permit guidance', 'Bwindi forest immersion', 'Community craft and culture visit', 'Small-lodge hospitality'], itinerary: [{ day: 'Day 1', title: 'Kampala to Bwindi', details: ['Travel west through Uganda\'s changing landscapes.', 'Arrive near the forest and settle into your lodge.'] }, { day: 'Day 2', title: 'Gorilla trekking', details: ['Brief at park headquarters before entering the forest.', 'Spend time with a habituated gorilla family under ranger guidance.', 'Return for a slow evening at the lodge.'] }, { day: 'Day 3', title: 'Community visit and departure', details: ['Enjoy breakfast and a local community or craft experience.', 'Transfer onward to Kampala, Entebbe or Kigali.'] }] },
+  { slug: 'kibale-chimpanzee-3days', title: '3 Days Chimpanzee Tracking in Kibale', duration: '3 days / 2 nights', category: 'Primates', summary: 'Spend two nights beside Kibale Forest with a guided chimpanzee trek and the wetlands and communities around Bigodi.', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-2206868079-612x612-sgjoA56iDANaof9IlXq1qkZ4aGDo85.jpg', destinations: ['Kibale National Park'], highlights: ['Chimpanzee tracking', 'Bigodi Wetland walk', 'Forest birding', 'Local community experience'], itinerary: [{ day: 'Day 1', title: 'Travel to Kibale', details: ['Drive to Kibale through Uganda\'s tea and crater country.', 'Check in and rest beside the forest.'] }, { day: 'Day 2', title: 'Chimpanzee tracking', details: ['Join a ranger-led morning trek to find chimpanzees.', 'Explore Bigodi Wetland or meet local community guides in the afternoon.'] }, { day: 'Day 3', title: 'Forest morning and return', details: ['Take an optional nature walk before departure.', 'Return toward Kampala or continue to Queen Elizabeth.'] }] },
+  { slug: 'queen-elizabeth-bwindi-5days', title: '5 Days Queen Elizabeth & Bwindi', duration: '5 days / 4 nights', category: 'Wildlife & Primates', summary: 'Pair Queen Elizabeth\'s savannah and Kazinga Channel with a transformative gorilla trek in Bwindi.', image: '/images/primates/young-primate.webp', destinations: ['Queen Elizabeth National Park', 'Bwindi Impenetrable National Park'], highlights: ['Kasenyi game drive', 'Kazinga Channel cruise', 'Gorilla trekking', 'Albertine Rift landscapes'] },
+  { slug: 'rwanda-parks-short-trips', title: 'Rwanda Parks & Short Trips', duration: '3–6 days', category: 'Rwanda', summary: 'Flexible short journeys through Volcanoes, Nyungwe, Akagera and Rwanda\'s thousand-hills landscapes.', image: '/images/wildlife-giraffe-safari.jpg', destinations: ['Volcanoes National Park', 'Nyungwe Forest', 'Akagera National Park'], highlights: ['Gorilla and golden monkey trekking', 'Chimpanzee tracking', 'Akagera game drives', 'Kigali and cultural experiences'] },
 ]
+
+export function getSafari(slug: string): Safari | undefined {
+  return safaris.find((s) => s.slug === slug)
+}
 
 export const destinations = [
   { slug: 'bwindi', name: 'Bwindi Impenetrable Forest', region: 'South-west Uganda', description: 'An ancient rainforest where gorilla trekking becomes a quiet, humbling encounter.', image: '/images/wildlife-chimp-rainforest.jpg', best: 'June to September, December to February' },
@@ -77,39 +99,115 @@ export const experiences = [
 ]
 
 export const articles = [
-  { slug: 'when-to-go-uganda', category: 'Planning', title: 'When is the best time to visit Uganda?', excerpt: 'A month-by-month guide to rainforests, savannah and gorilla trekking.', image: '/images/wildlife-sunset-acacia.jpg' },
-  { slug: 'why-travel-with-purpose', category: 'Responsible travel', title: 'Why meaningful travel matters', excerpt: 'How a safari can leave something good behind for landscapes and communities.', image: '/images/wildlife-chimp-rainforest.jpg' },
-  { slug: 'packing-for-uganda', category: 'Safari tips', title: 'What to pack for a Uganda safari', excerpt: 'Practical notes from our journey designers for a lighter, more comfortable trip.', image: '/images/wildlife-chimp-forest.jpg' },
-  { slug: 'gorilla-trekking-guide', category: 'Wildlife', title: 'A respectful guide to gorilla trekking', excerpt: 'What the forest asks of you, and what the encounter gives back.', image: '/images/wildlife-chimpanzee-close.jpg' },
-  { slug: 'tree-climbing-lions', category: 'Wildlife', title: 'The lions who climb trees', excerpt: "A closer look at Queen Elizabeth's remarkable Ishasha lions.", image: '/images/wildlife-lion-tree.jpg' },
-  { slug: 'first-safari', category: 'Travel inspiration', title: 'What your first safari feels like', excerpt: 'The sounds, stillness and small surprises that make a day in the wild.', image: '/images/wildlife-hippo-water.jpg' },
-  { slug: 'safari-photography', category: 'Photography', title: 'Making space for the light', excerpt: 'Simple fieldcraft for photographing wildlife without rushing the moment.', image: '/images/wildlife-chimp-bw.jpg' },
-  { slug: 'rwanda-uganda', category: 'Destinations', title: 'Two forests, one extraordinary journey', excerpt: "Pair Uganda's rainforest with Rwanda's volcanic landscapes.", image: '/images/wildlife-chimps-eating.jpg' },
+  // Uganda Travel Guides
+  { slug: 'when-to-go-uganda', category: 'Uganda Travel', title: 'When is the best time to visit Uganda?', excerpt: 'A month-by-month guide to rainforests, savannah and gorilla trekking.', image: '/images/wildlife-sunset-acacia.jpg' },
+  { slug: 'uganda-safari-guide', category: 'Uganda Travel', title: 'Ultimate Uganda Safari Guide', excerpt: 'Everything you need to know about planning a life-changing safari through Uganda.', image: '/images/primates/chimp-feeding-01.webp' },
+  { slug: 'uganda-national-parks', category: 'Uganda Travel', title: 'Uganda National Parks Guide', excerpt: 'Explore all of Uganda\'s protected areas: what to see, where to go, and best experiences.', image: '/images/primates/chimp-forest-portrait.jpg' },
+  { slug: 'wildlife-uganda-where-to-see', category: 'Uganda Travel', title: 'Where to See Wildlife in Uganda', excerpt: 'A guide to spotting Uganda\'s iconic animals in their natural habitats across the country.', image: '/images/big-five/buffalo-with-birds.jpg' },
+  { slug: 'uganda-gorilla-trekking-guide', category: 'Uganda Travel', title: 'Uganda Gorilla Trekking Guide', excerpt: 'Everything about tracking mountain gorillas in Bwindi\'s ancient rainforests.', image: '/images/primates/chimp-bw-portrait.jpg' },
+  { slug: 'chimpanzee-tracking-uganda', category: 'Uganda Travel', title: 'Chimpanzee Tracking in Uganda', excerpt: 'Follow the calls and trails of wild chimpanzees in Kibale Forest, the primate capital.', image: '/images/primates/young-chimp-hanging.jpg' },
+  { slug: 'murchison-falls-guide', category: 'Uganda Travel', title: 'Murchison Falls Travel Guide', excerpt: 'Discover Uganda\'s largest national park and the Nile\'s most dramatic waterfall.', image: '/images/wildlife/hippo-water.jpg' },
+  { slug: 'queen-elizabeth-national-park', category: 'Uganda Travel', title: 'Queen Elizabeth National Park Guide', excerpt: 'Tree-climbing lions, Kazinga Channel cruises, and diverse ecosystems await.', image: '/images/wildlife/antelope-01.jpg' },
+  { slug: 'bwindi-impenetrable-forest', category: 'Uganda Travel', title: 'Bwindi Impenetrable National Park Guide', excerpt: 'Experience the ancient rainforest home of half the world\'s mountain gorillas.', image: '/images/primates/chimp-with-leaves.jpg' },
+  { slug: 'kibale-forest-guide', category: 'Uganda Travel', title: 'Kibale Forest Guide', excerpt: 'East Africa\'s primate capital: chimps, monkeys, and pristine forest trails.', image: '/images/primates/young-primate.webp' },
+  { slug: 'kidepo-valley-guide', category: 'Uganda Travel', title: 'Kidepo Valley Guide', excerpt: 'Uganda\'s remote wilderness: vast valleys, wild game, and pastoral cultures.', image: '/images/wildlife/shoebill-bird.webp' },
+  { slug: 'lake-mburo-guide', category: 'Uganda Travel', title: 'Lake Mburo Guide', excerpt: 'Uganda\'s smallest national park with zebras, impalas, and aquatic adventures.', image: '/images/big-five/giraffe-single.jpg' },
+  { slug: 'ziwa-rhino-sanctuary', category: 'Uganda Travel', title: 'Ziwa Rhino Sanctuary Guide', excerpt: 'Track Uganda\'s reintroduced rhino population in this conservation success story.', image: '/images/big-five/giraffe-mother-calf.jpg' },
+  { slug: 'jinja-source-of-nile', category: 'Uganda Travel', title: 'Jinja and the Source of the Nile', excerpt: 'Adventure and spirituality at the world-famous Source of the Nile River.', image: '/images/wildlife/antelope-02.jpg' },
+  { slug: 'sipi-falls-guide', category: 'Uganda Travel', title: 'Sipi Falls Guide', excerpt: 'Three stunning waterfalls, coffee farms, and eastern Uganda\'s scenic beauty.', image: '/images/wildlife/heron-flying.jpg' },
+  { slug: 'uganda-birding-guide', category: 'Uganda Travel', title: 'Uganda Birding Guide', excerpt: 'Over 1000 bird species: a birdwatcher\'s paradise across Uganda\'s ecosystems.', image: '/images/primates/chimps-family-road.jpg' },
+  
+  // Rwanda Travel Guides
+  { slug: 'rwanda-safari-guide', category: 'Rwanda Travel', title: 'Rwanda Safari Guide', excerpt: 'The land of a thousand hills: wildlife, culture, and gorilla trekking.', image: '/images/big-five/giraffe-single.jpg' },
+  { slug: 'when-to-visit-rwanda', category: 'Rwanda Travel', title: 'Best Time to Visit Rwanda', excerpt: 'Month-by-month weather guide for planning your Rwanda adventure.', image: '/images/primates/young-primate.webp' },
+  { slug: 'gorilla-trekking-rwanda', category: 'Rwanda Travel', title: 'Gorilla Trekking in Rwanda', excerpt: 'Trek mountain gorillas in Volcanoes National Park\'s misty highlands.', image: '/images/primates/chimp-with-leaves.jpg' },
+  { slug: 'volcanoes-national-park', category: 'Rwanda Travel', title: 'Volcanoes National Park Guide', excerpt: 'Dramatic volcanic peaks, gorillas, and golden monkeys in Rwanda\'s northwest.', image: '/images/wildlife/shoebill-bird.webp' },
+  { slug: 'nyungwe-forest-guide', category: 'Rwanda Travel', title: 'Nyungwe Forest Guide', excerpt: 'Rwanda\'s ancient rainforest: chimpanzees, canopy walks, and pristine nature.', image: '/images/wildlife/antelope-02.jpg' },
+  { slug: 'akagera-national-park', category: 'Rwanda Travel', title: 'Akagera National Park Guide', excerpt: 'Big Five wildlife, game drives, and Lake Ihema\'s scenic beauty.', image: '/images/big-five/buffalo-with-birds.jpg' },
+  { slug: 'rwanda-primates-guide', category: 'Rwanda Travel', title: 'Rwanda Primates Guide', excerpt: 'Encounter gorillas, golden monkeys, and chimpanzees across Rwanda\'s forests.', image: '/images/primates/chimp-forest-portrait.jpg' },
+  { slug: 'kigali-travel-guide', category: 'Rwanda Travel', title: 'Kigali Travel Guide', excerpt: 'Rwanda\'s vibrant capital: culture, history, food, and warm hospitality.', image: '/images/big-five/giraffe-mother-calf.jpg' },
+  { slug: 'rwanda-culture', category: 'Rwanda Travel', title: 'Rwanda Culture and Experiences', excerpt: 'Discover Rwanda\'s rich heritage, communities, and authentic cultural encounters.', image: '/images/primates/chimp-bw-portrait.jpg' },
+  { slug: 'uganda-vs-rwanda-gorilla', category: 'Comparisons', title: 'Uganda vs Rwanda Gorilla Trekking', excerpt: 'Compare Bwindi and Volcanoes: which gorilla trek is right for you?', image: '/images/primates/chimp-feeding-01.webp' },
+  
+  // Gorilla Trekking Intel
+  { slug: 'what-to-expect-gorilla-trek', category: 'Gorilla Trekking', title: 'What to Expect on a Gorilla Trek', excerpt: 'A detailed walkthrough of a typical gorilla trekking day from start to finish.', image: '/images/primates/young-chimp-hanging.jpg' },
+  { slug: 'how-to-prepare-gorilla', category: 'Gorilla Trekking', title: 'How to Prepare for Gorilla Trekking', excerpt: 'Physical preparation, mental readiness, and practical tips for success.', image: '/images/wildlife/hippo-water.jpg' },
+  { slug: 'what-to-pack-gorilla', category: 'Gorilla Trekking', title: 'What to Pack for Gorilla Trekking', excerpt: 'Essential gear, clothing, and supplies for a comfortable trek.', image: '/images/wildlife/antelope-01.jpg' },
+  { slug: 'gorilla-trekking-guide', category: 'Gorilla Trekking', title: 'A Respectful Guide to Gorilla Trekking', excerpt: 'What the forest asks of you, and what the encounter gives back.', image: '/images/wildlife/antelope-02.jpg' },
+  { slug: 'gorilla-trekking-rules', category: 'Gorilla Trekking', title: 'Gorilla Trekking Rules', excerpt: 'The regulations designed to protect these incredible primates and ensure safety.', image: '/images/primates/chimp-with-leaves.jpg' },
+  { slug: 'gorilla-etiquette', category: 'Gorilla Trekking', title: 'Gorilla Trekking Etiquette', excerpt: 'How to behave respectfully during your encounter with mountain gorillas.', image: '/images/primates/young-primate.webp' },
+  { slug: 'gorilla-permits', category: 'Gorilla Trekking', title: 'Understanding Gorilla Permits', excerpt: 'What permits are, how to obtain them, and why they matter for conservation.', image: '/images/wildlife/shoebill-bird.webp' },
+  { slug: 'best-time-gorilla-trek', category: 'Gorilla Trekking', title: 'Best Time for Gorilla Trekking', excerpt: 'Seasonal guide: weather, accessibility, and gorilla activity throughout the year.', image: '/images/big-five/giraffe-single.jpg' },
+  { slug: 'gorilla-trek-day', category: 'Gorilla Trekking', title: 'What Happens on Gorilla Trekking Day', excerpt: 'Hour-by-hour breakdown of your gorilla trekking adventure.', image: '/images/big-five/giraffe-mother-calf.jpg' },
+  
+  // Safari Planning
+  { slug: 'how-to-plan-safari', category: 'Safari Planning', title: 'How to Plan an African Safari', excerpt: 'Step-by-step guide from destination selection to final preparations.', image: '/images/wildlife/heron-flying.jpg' },
+  { slug: 'uganda-safari-days', category: 'Safari Planning', title: 'How Many Days for a Uganda Safari?', excerpt: 'Different itinerary lengths and what you can realistically experience.', image: '/images/primates/chimps-family-road.jpg' },
+  { slug: 'rwanda-safari-days', category: 'Safari Planning', title: 'How Many Days for Rwanda?', excerpt: 'Recommended trip lengths based on your interests and travel style.', image: '/images/primates/chimp-forest-portrait.jpg' },
+  { slug: 'uganda-safari-costs', category: 'Safari Planning', title: 'Uganda Safari Cost Guide', excerpt: 'Budget breakdown: accommodation, guides, permits, meals, and transport.', image: '/images/primates/chimp-feeding-01.webp' },
+  { slug: 'rwanda-safari-costs', category: 'Safari Planning', title: 'Rwanda Safari Cost Guide', excerpt: 'Pricing details for safaris, gorilla permits, and experiences in Rwanda.', image: '/images/primates/young-chimp-hanging.jpg' },
+  { slug: 'budget-vs-luxury-safari', category: 'Safari Planning', title: 'Budget vs Mid-Range vs Luxury Safari', excerpt: 'Understanding the different safari experience levels and what to expect.', image: '/images/wildlife/hippo-water.jpg' },
+  { slug: 'private-vs-group-safari', category: 'Safari Planning', title: 'Private vs Group Safari', excerpt: 'Pros and cons: choose the safari style that suits your travel goals.', image: '/images/wildlife/antelope-01.jpg' },
+  { slug: 'family-safari-planning', category: 'Safari Planning', title: 'Family Safari Planning', excerpt: 'Tips for traveling with kids: age-appropriate activities and logistics.', image: '/images/wildlife/antelope-02.jpg' },
+  { slug: 'honeymoon-safari', category: 'Safari Planning', title: 'Honeymoon Safari Planning', excerpt: 'Romance, adventure, and intimate moments in the African wilderness.', image: '/images/primates/chimp-with-leaves.jpg' },
+  { slug: 'first-time-safari', category: 'Safari Planning', title: 'First-Time Safari Guide', excerpt: 'Everything a first-time visitor needs to know before their safari.', image: '/images/primates/young-primate.webp' },
+  { slug: 'what-to-pack-safari', category: 'Safari Planning', title: 'What to Pack for an African Safari', excerpt: 'Comprehensive packing list for comfort and practicality in the field.', image: '/images/wildlife/shoebill-bird.webp' },
+  
+  // Wildlife Intel
+  { slug: 'big-five-uganda', category: 'Wildlife', title: 'The Big Five in Uganda', excerpt: 'Find Uganda\'s iconic predators and large herbivores in their natural habitats.', image: '/images/big-five/giraffe-single.jpg' },
+  { slug: 'where-to-see-lions', category: 'Wildlife', title: 'Where to See Lions in Uganda', excerpt: 'Prime locations for spotting Uganda\'s impressive lion populations.', image: '/images/big-five/giraffe-mother-calf.jpg' },
+  { slug: 'where-to-see-elephants', category: 'Wildlife', title: 'Where to See Elephants in Uganda', excerpt: 'Uganda\'s elephant hotspots and the best times to encounter them.', image: '/images/wildlife/heron-flying.jpg' },
+  { slug: 'chimpanzees-uganda', category: 'Wildlife', title: 'Chimpanzees in Uganda', excerpt: 'Understanding Uganda\'s chimp populations and how to track them responsibly.', image: '/images/primates/chimps-family-road.jpg' },
+  { slug: 'gorillas-uganda-rwanda', category: 'Wildlife', title: 'Gorillas in Uganda and Rwanda', excerpt: 'Mountain gorillas: habitat, behavior, conservation, and trekking experiences.', image: '/images/primates/chimp-forest-portrait.jpg' },
+  { slug: 'uganda-wildlife', category: 'Wildlife', title: 'Uganda\'s Wildlife', excerpt: 'A comprehensive overview of Uganda\'s diverse fauna and ecosystems.', image: '/images/primates/chimp-feeding-01.webp' },
+  { slug: 'rwanda-wildlife', category: 'Wildlife', title: 'Rwanda\'s Wildlife', excerpt: 'Discover Rwanda\'s animals, birds, and reptiles across various habitats.', image: '/images/primates/young-chimp-hanging.jpg' },
+  { slug: 'uganda-birds', category: 'Wildlife', title: 'Birding in Uganda', excerpt: 'Over 1000 species make Uganda a world-class birding destination.', image: '/images/wildlife/hippo-water.jpg' },
+  { slug: 'wildlife-photography-tips', category: 'Wildlife', title: 'Wildlife Photography Tips', excerpt: 'Capture stunning safari moments with practical photography guidance.', image: '/images/wildlife/antelope-01.jpg' },
+  
+  // Travel Tips
+  { slug: 'what-to-pack', category: 'Travel Tips', title: 'What to Pack', excerpt: 'Complete packing guide for East African adventures.', image: '/images/wildlife/antelope-02.jpg' },
+  { slug: 'money-currency', category: 'Travel Tips', title: 'Money and Currency', excerpt: 'Currency, ATMs, card usage, and financial tips for Uganda and Rwanda.', image: '/images/primates/chimp-with-leaves.jpg' },
+  { slug: 'internet-connectivity', category: 'Travel Tips', title: 'Internet and Connectivity', excerpt: 'Staying connected on safari: SIM cards, data, and communication options.', image: '/images/primates/young-primate.webp' },
+  { slug: 'health-travel-prep', category: 'Travel Tips', title: 'Health and Travel Preparation', excerpt: 'Vaccinations, malaria prevention, and health precautions for East Africa.', image: '/images/wildlife/shoebill-bird.webp' },
+  { slug: 'safari-vehicle-guide', category: 'Travel Tips', title: 'Safari Vehicle Guide', excerpt: 'Understanding safari vehicles, seating, comfort, and wildlife viewing.', image: '/images/big-five/giraffe-single.jpg' },
+  { slug: 'accommodation-guide', category: 'Travel Tips', title: 'Accommodation Guide', excerpt: 'Options from luxury lodges to budget camps: what to expect and how to choose.', image: '/images/big-five/giraffe-mother-calf.jpg' },
+  { slug: 'travel-times-destinations', category: 'Travel Tips', title: 'Travel Times Between Destinations', excerpt: 'Driving times, flight options, and route planning for Uganda and Rwanda.', image: '/images/wildlife/heron-flying.jpg' },
+  { slug: 'road-travel-uganda', category: 'Travel Tips', title: 'Road Travel in Uganda', excerpt: 'Tips for overland travel: conditions, safety, and what to expect.', image: '/images/primates/chimps-family-road.jpg' },
+  { slug: 'road-travel-rwanda', category: 'Travel Tips', title: 'Road Travel in Rwanda', excerpt: 'Rwanda\'s roads, travel logistics, and getting around the country.', image: '/images/primates/chimp-forest-portrait.jpg' },
+  { slug: 'responsible-wildlife-viewing', category: 'Travel Tips', title: 'Responsible Wildlife Viewing', excerpt: 'Ethical practices for observing wildlife while protecting their wellbeing.', image: '/images/primates/chimp-feeding-01.webp' },
+  { slug: 'why-travel-with-purpose', category: 'Responsible travel', title: 'Why Meaningful Travel Matters', excerpt: 'How a safari can leave something good behind for landscapes and communities.', image: '/images/wildlife-chimp-rainforest.jpg' },
 ]
 
 export const journeyCountries = [
   {
     slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/wildlife-giraffe-safari.jpg',
     journeys: [
-      { slug: 'gorilla-chimpanzee-big-five', title: 'Gorilla, Chimpanzee & Big Five', duration: '11 days / 10 nights', image: '/images/lion-lioness-resting.jpg' },
-      { slug: 'chimpanzees-queen-elizabeth', title: 'Chimpanzees & Queen Elizabeth', duration: '4 days / 3 nights', image: '/images/baboon.jpg' },
-      { slug: 'east-uganda-waterfalls', title: 'East Uganda Waterfalls & Culture', duration: '6 days / 5 nights', image: '/images/giraffe-trees.jpg' },
-      { slug: 'chimpanzee-wildlife-adventure', title: 'Chimpanzee & Wildlife Adventure', duration: '4 days / 3 nights', image: '/images/sinza-baboon-forest.jpg' },
-      { slug: 'queen-elizabeth-kazinga', title: 'Queen Elizabeth & Kazinga Channel', duration: '3 days / 2 nights', image: '/images/sinza-boat-safari.jpg' },
-      { slug: 'eastern-uganda-waterfalls-culture', title: 'Sezibwa, Jinja, Kagulu Hill & Sipi Falls', duration: '6 days / 5 nights', image: '/images/sinza-giraffe-landscape.jpg' },
+      { slug: 'gorilla-chimpanzee-big-five', title: 'Gorilla, Chimpanzee & Big Five', duration: '11 days / 10 nights', image: '/images/primates/chimp-feeding-01.webp' },
+      { slug: 'chimpanzees-queen-elizabeth', title: 'Chimpanzees & Queen Elizabeth', duration: '4 days / 3 nights', image: '/images/primates/young-chimp-hanging.jpg' },
+      { slug: 'east-uganda-waterfalls', title: 'East Uganda Waterfalls & Culture', duration: '6 days / 5 nights', image: '/images/wildlife/antelope-01.jpg' },
+      { slug: 'chimpanzee-wildlife-adventure', title: 'Chimpanzee & Wildlife Adventure', duration: '4 days / 3 nights', image: '/images/primates/chimps-family-road.jpg' },
+      { slug: 'queen-elizabeth-kazinga', title: 'Queen Elizabeth & Kazinga Channel', duration: '3 days / 2 nights', image: '/images/big-five/buffalo-with-birds.jpg' },
+      { slug: 'eastern-uganda-waterfalls-culture', title: 'Sezibwa, Jinja, Kagulu Hill & Sipi Falls', duration: '6 days / 5 nights', image: '/images/wildlife/antelope-02.jpg' },
+      { slug: 'ziwa-rhino-tracking', title: '1 Day Ziwa Rhino Tracking Tour', duration: '1 day', image: '/images/big-five/giraffe-mother-calf.jpg' },
+      { slug: 'murchison-falls-2days', title: '2 Days Murchison Falls', duration: '2 days / 1 night', image: '/images/wildlife/hippo-water.jpg' },
+      { slug: 'bwindi-gorilla-3days', title: '3 Days Bwindi Gorilla Trekking', duration: '3 days / 2 nights', image: '/images/primates/chimp-bw-portrait.jpg' },
+      { slug: 'murchison-queen-elizabeth-5days', title: '5 Days Murchison Falls & Queen Elizabeth', duration: '5 days / 4 nights', image: '/images/big-five/giraffe-single.jpg' },
+      { slug: 'gorillas-lions-5days', title: '5 Days Gorillas & Lions Tracking', duration: '5 days / 4 nights', image: '/images/primates/young-primate.webp' },
+      { slug: 'kidepo-murchison-6days', title: '6 Days Kidepo Valley & Murchison Falls', duration: '6 days / 5 nights', image: '/images/wildlife/shoebill-bird.webp' },
+      { slug: 'best-of-uganda-11days', title: '11 Days Best of Uganda Safari', duration: '11 days / 10 nights', image: '/images/primates/chimp-with-leaves.jpg' },
+      { slug: 'uganda-wildlife-14days', title: '14 Days Uganda Wildlife Safari', duration: '14 days / 13 nights', image: '/images/primates/chimp-forest-portrait.jpg' },
     ],
   },
   {
-    slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/rhino-single.jpg',
-    journeys: [{ slug: 'volcanoes-lake-kivu', title: 'Volcanoes & Lake Kivu', duration: '8 days / 7 nights', image: '/images/rhinos-pair.jpg' }],
-  },
-  {
-    slug: 'kenya', name: 'Kenya', tagline: 'Where Safari Was Born', image: '/images/lioness-stalking.jpg',
-    journeys: [{ slug: 'masai-mara-grande', title: 'Masai Mara Grande Migration', duration: '8 days / 7 nights', image: '/images/lions-ridge.jpg' }, { slug: 'nairobi-amboseli', title: 'Nairobi & Amboseli', duration: '7 days / 6 nights', image: '/images/elephants-palms.jpg' }],
-  },
-  {
-    slug: 'tanzania', name: 'Tanzania', tagline: "Africa's Greatest Stage", image: '/images/lions-tree.jpg',
-    journeys: [{ slug: 'serengeti-ngorongoro', title: 'Serengeti & Ngorongoro', duration: '10 days / 9 nights', image: '/images/lion-lioness-ridge.jpg' }],
+    slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/big-five/giraffe-mother-calf.jpg',
+    journeys: [
+      { slug: 'volcanoes-lake-kivu', title: 'Volcanoes & Lake Kivu', duration: '8 days / 7 nights', image: '/images/big-five/giraffe-single.jpg' },
+      { slug: 'rwanda-gorilla-safari-3days', title: '3 Days Rwanda Gorilla Safari', duration: '3 days / 2 nights', image: '/images/primates/young-primate.webp' },
+      { slug: 'rwanda-primates-5days', title: '5 Days Rwanda Primates Safari', duration: '5 days / 4 nights', image: '/images/primates/chimp-with-leaves.jpg' },
+      { slug: 'rwanda-gorilla-wildlife-6days', title: '6 Days Rwanda Gorilla & Wildlife Safari', duration: '6 days / 5 nights', image: '/images/wildlife/antelope-02.jpg' },
+      { slug: 'nyungwe-forest-3days', title: '3 Days Nyungwe Forest Tour', duration: '3 days / 2 nights', image: '/images/wildlife/shoebill-bird.webp' },
+      { slug: 'uganda-gorillas-kigali-3days', title: '3 Days Uganda Gorillas from Kigali, Rwanda', duration: '3 days / 2 nights', image: '/images/primates/chimp-forest-portrait.jpg' },
+    ],
   },
 ]
 
@@ -118,9 +216,9 @@ export const journeysByRegion = Object.fromEntries(journeyCountries.map((country
 export const destinationDetails = [
   { slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/wildlife-chimp-rainforest.jpg', copy: 'Rainforest, savannah, crater lakes and the source of the Nile — Uganda is a country that rewards curious travellers.' },
   { slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/wildlife-chimpanzee-close.jpg', copy: 'Volcanoes, thoughtful conservation and warm hospitality come together in one beautifully compact country.' },
-  { slug: 'kenya', name: 'Kenya', tagline: 'Where Safari Was Born', image: '/images/wildlife-giraffe-safari.jpg', copy: 'Open plains, big skies and enduring wildlife stories across the Masai Mara and the Great Rift Valley.' },
-  { slug: 'tanzania', name: "Tanzania", tagline: "Africa's Greatest Stage", image: '/images/wildlife-sunset-acacia.jpg', copy: 'Follow the Serengeti rhythm from Ngorongoro to the coast, with time to look beyond the headline moments.' },
 ]
+
+export const galleryCategories = ['Gorilla trekking', 'Chimpanzee tracking', 'Savannah wildlife', 'Big cats', 'Elephants', 'Birdlife', 'Rivers and wetlands', 'Forest landscapes', 'Mountain horizons', 'Cultural encounters', 'Safari roads', 'Conservation stories']
 
 export const galleryImages = [
   { src: '/images/wildlife-lion-tree.jpg', alt: 'A lion resting in an acacia tree', label: 'The watchful guardian' },
@@ -139,6 +237,12 @@ export const galleryImages = [
   { src: '/images/sinza-boat-safari.jpg', alt: 'A family enjoying a guided boat safari on the Nile', label: 'On the river' },
   { src: '/images/sinza-tree-lions-tall.jpg', alt: 'Two lions resting high in a broad tree', label: 'A room with a view' },
   { src: '/images/sinza-gorilla.jpg', alt: 'A mountain gorilla surrounded by lush forest leaves', label: 'Bwindi embrace' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-961510538-612x612-fJ7jbl0ShgqSBQi5qbctlGqNKMZrxs.jpg', alt: 'Zebras gathered beside a reflective watering hole', label: 'Waterhole reflections' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-172767887-612x612-8fEU9g0zx10FnRdqLA7JKU4pBtV7aA.jpg', alt: 'Crocodile resting at the edge of a river', label: 'River guardians' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-1041790486-612x612-irR1hxcLzWaJyaamI7TTNbu4pDI2nC.jpg', alt: 'Grey crowned crane walking across rocks', label: 'Birdlife' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-543830842-612x612-CCIJrX0qaO4zDLnVsEEZMChaC7ZWpb.jpg', alt: 'Lioness looking across the savannah', label: 'Predator country' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-1307291444-612x612%20%281%29-CABtEkj1BQhLZhGF4Ddkog4FkJEtR3.jpg', alt: 'Giraffes crossing a red earth safari road', label: 'Open road' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-2206868079-612x612-sgjoA56iDANaof9IlXq1qkZ4aGDo85.jpg', alt: 'Elephants standing in a forested river', label: 'Forest waterways' },
 ]
 
 export const destByRegion = {
@@ -150,16 +254,8 @@ export const destByRegion = {
     { slug: 'kidepo', name: 'Kidepo Valley' },
     { slug: 'jinja', name: 'Jinja & Source of the Nile' },
   ],
-  'Kenya': [
-    { slug: 'masai-mara', name: 'Masai Mara' },
-    { slug: 'amboseli', name: 'Amboseli' },
-  ],
   'Rwanda': [
     { slug: 'volcanoes', name: 'Volcanoes National Park' },
-  ],
-  'Tanzania': [
-    { slug: 'serengeti', name: 'Serengeti' },
-    { slug: 'ngorongoro', name: 'Ngorongoro' },
   ],
 }
 
@@ -167,7 +263,6 @@ export const navItems = [
   ['Safaris', '/safaris'], ['Destinations', '/destinations'], ['Experiences', '/experiences'], ['About us', '/about'], ['Community', '/community'], ['Special packages', '/offers'], ['Blog', '/blog'], ['Contact', '/contact'],
 ]
 
-export function getSafari(slug: string) { return safaris.find((item) => item.slug === slug) }
 export function getDestination(slug: string) { return destinations.find((item) => item.slug === slug) ?? destinationDetails.find((item) => item.slug === slug) }
 export function getExperience(slug: string) { return experiences.find((item) => item.slug === slug) }
 export function getArticle(slug: string) { return articles.find((item) => item.slug === slug) }
