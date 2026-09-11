@@ -29,19 +29,19 @@ export const safaris: Safari[] = [
 ]
 
 export const destinations = [
-  { slug: 'bwindi', name: 'Bwindi Impenetrable Forest', region: 'South-west Uganda', description: 'An ancient rainforest where gorilla trekking becomes a quiet, humbling encounter.', image: '/images/sinza-gorilla.jpg', best: 'June to September, December to February' },
-  { slug: 'kibale', name: 'Kibale National Park', region: 'Western Uganda', description: 'The primate capital of East Africa, alive with forest calls and green trails.', image: '/images/sinza-baboon-forest.jpg', best: 'All year; drier trails June to September' },
-  { slug: 'queen-elizabeth', name: 'Queen Elizabeth National Park', region: 'Western Uganda', description: 'Crater lakes, open plains, tree-climbing lions and the life-giving Kazinga Channel.', image: '/images/sinza-tree-lions-tall.jpg', best: 'June to September and December to February' },
-  { slug: 'murchison-falls', name: 'Murchison Falls', region: 'Northern Uganda', description: 'The Nile thunders through a narrow cleft in Uganda’s largest protected area.', image: '/images/sinza-boat-safari.jpg', best: 'December to February; June to September' },
-  { slug: 'kidepo', name: 'Kidepo Valley', region: 'North-east Uganda', description: 'Remote, rugged and deeply rewarding wilderness at the edge of the Karamoja plains.', image: '/images/sinza-elephants.jpeg', best: 'June to September' },
-  { slug: 'jinja', name: 'Jinja & the Source of the Nile', region: 'Eastern Uganda', description: 'River energy, adventure and a warm welcome in Uganda’s historic adventure capital.', image: '/images/sinza-boat-safari.jpg', best: 'All year' },
+  { slug: 'bwindi', name: 'Bwindi Impenetrable Forest', region: 'South-west Uganda', description: 'An ancient rainforest where gorilla trekking becomes a quiet, humbling encounter.', image: '/images/wildlife-chimp-rainforest.jpg', best: 'June to September, December to February' },
+  { slug: 'kibale', name: 'Kibale National Park', region: 'Western Uganda', description: 'The primate capital of East Africa, alive with forest calls and green trails.', image: '/images/wildlife-chimp-forest.jpg', best: 'All year; drier trails June to September' },
+  { slug: 'queen-elizabeth', name: 'Queen Elizabeth National Park', region: 'Western Uganda', description: 'Crater lakes, open plains, tree-climbing lions and the life-giving Kazinga Channel.', image: '/images/wildlife-lion-tree.jpg', best: 'June to September and December to February' },
+  { slug: 'murchison-falls', name: 'Murchison Falls', region: 'Northern Uganda', description: 'The Nile thunders through a narrow cleft in Uganda's largest protected area.', image: '/images/wildlife-hippo-water.jpg', best: 'December to February; June to September' },
+  { slug: 'kidepo', name: 'Kidepo Valley', region: 'North-east Uganda', description: 'Remote, rugged and deeply rewarding wilderness at the edge of the Karamoja plains.', image: '/images/wildlife-elephant-tree.jpg', best: 'June to September' },
+  { slug: 'jinja', name: 'Jinja & the Source of the Nile', region: 'Eastern Uganda', description: 'River energy, adventure and a warm welcome in Uganda's historic adventure capital.', image: '/images/sinza-boat-safari.jpg', best: 'All year' },
 ]
 
 export const experiences = [
-  { slug: 'gorilla-trekking', title: 'Gorilla trekking', description: 'Walk into the ancient green of Bwindi for a rare and respectful encounter.', image: '/images/baboon.jpg' },
-  { slug: 'chimpanzee-tracking', title: 'Chimpanzee tracking', description: 'Follow bright calls and forest trails in the primate capital of Kibale.', image: '/images/lions-tree-tall.jpg' },
-  { slug: 'wildlife-safaris', title: 'Wildlife safaris', description: 'Read the tracks, follow the light and meet Uganda’s wild residents.', image: '/images/lioness-stalking.jpg' },
-  { slug: 'culture-community', title: 'Culture & community', description: 'Travel with curiosity through food, stories, craft and living traditions.', image: '/images/giraffe-portrait.jpg' },
+  { slug: 'gorilla-trekking', title: 'Gorilla trekking', description: 'Walk into the ancient green of Bwindi for a rare and respectful encounter.', image: '/images/wildlife-chimpanzee-close.jpg' },
+  { slug: 'chimpanzee-tracking', title: 'Chimpanzee tracking', description: 'Follow bright calls and forest trails in the primate capital of Kibale.', image: '/images/wildlife-chimps-eating.jpg' },
+  { slug: 'wildlife-safaris', title: 'Wildlife safaris', description: 'Read the tracks, follow the light and meet Uganda's wild residents.', image: '/images/wildlife-giraffe-safari.jpg' },
+  { slug: 'culture-community', title: 'Culture & community', description: 'Travel with curiosity through food, stories, craft and living traditions.', image: '/images/wildlife-sunset-acacia.jpg' },
 ]
 
 export const articles = [
@@ -57,7 +57,7 @@ export const articles = [
 
 export const journeyCountries = [
   {
-    slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/elephants-wetland.jpg',
+    slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/wildlife-giraffe-safari.jpg',
     journeys: [
       { slug: 'gorilla-chimpanzee-big-five', title: 'Gorilla, Chimpanzee & Big Five', duration: '11 days / 10 nights', image: '/images/lion-lioness-resting.jpg' },
       { slug: 'chimpanzees-queen-elizabeth', title: 'Chimpanzees & Queen Elizabeth', duration: '4 days / 3 nights', image: '/images/baboon.jpg' },
@@ -84,10 +84,10 @@ export const journeyCountries = [
 export const journeysByRegion = Object.fromEntries(journeyCountries.map((country) => [country.name + ' Safaris', country.journeys.map(({ slug, title }) => ({ slug, title }))]))
 
 export const destinationDetails = [
-  { slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/sinza-lion-grass.jpg', copy: 'Rainforest, savannah, crater lakes and the source of the Nile — Uganda is a country that rewards curious travellers.' },
-  { slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/sinza-gorilla.jpg', copy: 'Volcanoes, thoughtful conservation and warm hospitality come together in one beautifully compact country.' },
-  { slug: 'kenya', name: 'Kenya', tagline: 'Where Safari Was Born', image: '/images/sinza-zebra-family.jpg', copy: 'Open plains, big skies and enduring wildlife stories across the Masai Mara and the Great Rift Valley.' },
-  { slug: 'tanzania', name: "Tanzania", tagline: "Africa's Greatest Stage", image: '/images/sinza-lion-walk.jpg', copy: 'Follow the Serengeti rhythm from Ngorongoro to the coast, with time to look beyond the headline moments.' },
+  { slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/wildlife-chimp-rainforest.jpg', copy: 'Rainforest, savannah, crater lakes and the source of the Nile — Uganda is a country that rewards curious travellers.' },
+  { slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/wildlife-chimpanzee-close.jpg', copy: 'Volcanoes, thoughtful conservation and warm hospitality come together in one beautifully compact country.' },
+  { slug: 'kenya', name: 'Kenya', tagline: 'Where Safari Was Born', image: '/images/wildlife-giraffe-safari.jpg', copy: 'Open plains, big skies and enduring wildlife stories across the Masai Mara and the Great Rift Valley.' },
+  { slug: 'tanzania', name: "Tanzania", tagline: "Africa's Greatest Stage", image: '/images/wildlife-sunset-acacia.jpg', copy: 'Follow the Serengeti rhythm from Ngorongoro to the coast, with time to look beyond the headline moments.' },
 ]
 
 export const galleryImages = [
