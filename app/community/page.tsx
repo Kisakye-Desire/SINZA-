@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { SiteShell, SectionHeading, PageHero, EnquiryCta } from '@/components/site-shell'
 
+const communityHeroImage = process.env.NEXT_PUBLIC_COMMUNITY_HERO_IMAGE
+
 const communityProjects = [
   {
     title: 'Education & Scholarship',
@@ -74,7 +76,7 @@ export default function CommunityPage() {
             </>
           }
           intro="Every safari with Sinza supports meaningful community development, conservation, and local opportunity across East Africa."
-          image="/images/wildlife-sunset-acacia.jpg"
+          image={communityHeroImage}
         />
 
         <section className="section-wrap">
@@ -93,7 +95,7 @@ export default function CommunityPage() {
               We don't believe in "corporate charity" or performative giving. Our approach is straightforward: listen to communities, partner with trusted organizations, fund practical projects, and measure real impact.
             </p>
             <p>
-              When you travel with Sinza, you're directly contributing to scholarships, healthcare, water systems, wildlife protection, and dignified employment for families in Uganda, Rwanda, Kenya, and Tanzania.
+              When you travel with Sinza, you&apos;re directly contributing to scholarships, healthcare, water systems, wildlife protection, and dignified employment for families in Uganda and Rwanda.
             </p>
           </div>
         </section>

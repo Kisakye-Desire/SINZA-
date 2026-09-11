@@ -204,14 +204,6 @@ export const journeyCountries = [
       { slug: 'uganda-gorillas-kigali-3days', title: '3 Days Uganda Gorillas from Kigali, Rwanda', duration: '3 days / 2 nights', image: '/images/primates/chimp-forest-portrait.jpg' },
     ],
   },
-  {
-    slug: 'kenya', name: 'Kenya', tagline: 'Where Safari Was Born', image: '/images/lioness-stalking.jpg',
-    journeys: [{ slug: 'masai-mara-grande', title: 'Masai Mara Grande Migration', duration: '8 days / 7 nights', image: '/images/lions-ridge.jpg' }, { slug: 'nairobi-amboseli', title: 'Nairobi & Amboseli', duration: '7 days / 6 nights', image: '/images/elephants-palms.jpg' }],
-  },
-  {
-    slug: 'tanzania', name: 'Tanzania', tagline: "Africa's Greatest Stage", image: '/images/lions-tree.jpg',
-    journeys: [{ slug: 'serengeti-ngorongoro', title: 'Serengeti & Ngorongoro', duration: '10 days / 9 nights', image: '/images/lion-lioness-ridge.jpg' }],
-  },
 ]
 
 export const journeysByRegion = Object.fromEntries(journeyCountries.map((country) => [country.name + ' Safaris', country.journeys.map(({ slug, title }) => ({ slug, title }))]))
@@ -219,8 +211,6 @@ export const journeysByRegion = Object.fromEntries(journeyCountries.map((country
 export const destinationDetails = [
   { slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/wildlife-chimp-rainforest.jpg', copy: 'Rainforest, savannah, crater lakes and the source of the Nile — Uganda is a country that rewards curious travellers.' },
   { slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/wildlife-chimpanzee-close.jpg', copy: 'Volcanoes, thoughtful conservation and warm hospitality come together in one beautifully compact country.' },
-  { slug: 'kenya', name: 'Kenya', tagline: 'Where Safari Was Born', image: '/images/wildlife-giraffe-safari.jpg', copy: 'Open plains, big skies and enduring wildlife stories across the Masai Mara and the Great Rift Valley.' },
-  { slug: 'tanzania', name: "Tanzania", tagline: "Africa's Greatest Stage", image: '/images/wildlife-sunset-acacia.jpg', copy: 'Follow the Serengeti rhythm from Ngorongoro to the coast, with time to look beyond the headline moments.' },
 ]
 
 export const galleryImages = [
@@ -240,6 +230,12 @@ export const galleryImages = [
   { src: '/images/sinza-boat-safari.jpg', alt: 'A family enjoying a guided boat safari on the Nile', label: 'On the river' },
   { src: '/images/sinza-tree-lions-tall.jpg', alt: 'Two lions resting high in a broad tree', label: 'A room with a view' },
   { src: '/images/sinza-gorilla.jpg', alt: 'A mountain gorilla surrounded by lush forest leaves', label: 'Bwindi embrace' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-961510538-612x612-fJ7jbl0ShgqSBQi5qbctlGqNKMZrxs.jpg', alt: 'Zebras gathered beside a reflective watering hole', label: 'Waterhole reflections' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-172767887-612x612-8fEU9g0zx10FnRdqLA7JKU4pBtV7aA.jpg', alt: 'Crocodile resting at the edge of a river', label: 'River guardians' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-1041790486-612x612-irR1hxcLzWaJyaamI7TTNbu4pDI2nC.jpg', alt: 'Grey crowned crane walking across rocks', label: 'Birdlife' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-543830842-612x612-CCIJrX0qaO4zDLnVsEEZMChaC7ZWpb.jpg', alt: 'Lioness looking across the savannah', label: 'Predator country' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-1307291444-612x612%20%281%29-CABtEkj1BQhLZhGF4Ddkog4FkJEtR3.jpg', alt: 'Giraffes crossing a red earth safari road', label: 'Open road' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/istockphoto-2206868079-612x612-sgjoA56iDANaof9IlXq1qkZ4aGDo85.jpg', alt: 'Elephants standing in a forested river', label: 'Forest waterways' },
 ]
 
 export const destByRegion = {
@@ -251,16 +247,8 @@ export const destByRegion = {
     { slug: 'kidepo', name: 'Kidepo Valley' },
     { slug: 'jinja', name: 'Jinja & Source of the Nile' },
   ],
-  'Kenya': [
-    { slug: 'masai-mara', name: 'Masai Mara' },
-    { slug: 'amboseli', name: 'Amboseli' },
-  ],
   'Rwanda': [
     { slug: 'volcanoes', name: 'Volcanoes National Park' },
-  ],
-  'Tanzania': [
-    { slug: 'serengeti', name: 'Serengeti' },
-    { slug: 'ngorongoro', name: 'Ngorongoro' },
   ],
 }
 

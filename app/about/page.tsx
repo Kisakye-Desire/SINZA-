@@ -74,7 +74,7 @@ export default function AboutPage() {
                   Every safari we craft is a conversation—not a checklist. We listen to what moves you, where your curiosity leads, and what kind of impact you want to make. Then we design a journey that meets you there.
                 </p>
                 <p>
-                  Today, we&apos;re proud to lead private safaris across Uganda, Rwanda, Kenya, and Tanzania, with a team of field guides, conservation partners, and local specialists who live the destinations we share.
+                  Today, we&apos;re proud to lead private safaris across Uganda and Rwanda, with a team of field guides, conservation partners, and local specialists who live the destinations we share.
                 </p>
               </div>
             </div>
