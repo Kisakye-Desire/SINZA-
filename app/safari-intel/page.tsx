@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { ArrowRight, BookOpen } from 'lucide-react'
+import { ArrowRight, BookOpen, Search } from 'lucide-react'
 import { PageHero, SectionHeading, SiteShell, EnquiryCta } from '@/components/site-shell'
 import { articles } from '@/lib/safari-data'
 
@@ -18,10 +18,13 @@ const categories = [
 
 export default function SafariIntelPage() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
+  const [query, setQuery] = useState('')
 
-  const filteredArticles = activeCategory
-    ? articles.filter((article) => article.category === activeCategory)
-    : articles
+  const filteredArticles = articles.filter((article) => {
+    const matchesCategory = !activeCategory || article.category === activeCategory
+    const haystack = `${article.title} ${article.excerpt} ${article.category}`.toLowerCase()
+    return matchesCategory && haystack.includes(query.toLowerCase())
+  })
 
   const categorizedArticles = categories.map((cat) => ({
     category: cat,
@@ -58,6 +61,10 @@ export default function SafariIntelPage() {
             intro="Filter by topic to find exactly what you need for your East African journey."
           />
 
+          <div className="intel-toolbar">
+            <label className="intel-search"><Search size={16} /><span className="sr-only">Search Safari Intel</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search guides" /></label>
+            <span className="intel-result-count">{filteredArticles.length} guide{filteredArticles.length === 1 ? '' : 's'}</span>
+          </div>
           <div className="intel-category-filter">
             <button
               className={`category-pill ${activeCategory === null ? 'active' : ''}`}
