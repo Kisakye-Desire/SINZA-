@@ -13,7 +13,7 @@ const communityProjects = [
   {
     title: 'Primate Conservation',
     location: 'Bwindi, Kibale, Murchison Falls',
-    description: 'Partnering with conservation organizations to protect habitats, support anti-poaching efforts, and ensure sustainable wildlife management across Uganda's protected areas.',
+    description: "Partnering with conservation organizations to protect habitats, support anti-poaching efforts, and ensure sustainable wildlife management across Uganda's protected areas.",
     image: '/images/wildlife-chimpanzee-close.jpg',
     impact: 'Hectares protected',
   },
@@ -53,12 +53,12 @@ const impactMetrics = [
   { number: '25', label: 'Water projects completed or in progress' },
   { number: '200+', label: 'Local jobs created and supported annually' },
   { number: '45,000', label: 'Hectares of wildlife habitat supported' },
-  { number: '35+', label: 'Women\'s economic groups active' },
+  { number: '35+', label: "Women's economic groups active" },
 ]
 
 export const metadata = {
   title: 'Community Development | Sinza Safaris',
-  description: 'How Sinza Safaris creates positive impact through education, conservation, healthcare, and economic opportunity in East African communities.',
+  description: "How Sinza Safaris creates positive impact through education, conservation, healthcare, and economic opportunity in East African communities.",
 }
 
 export default function CommunityPage() {
