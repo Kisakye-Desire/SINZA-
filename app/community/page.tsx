@@ -2,17 +2,6 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { SiteShell, SectionHeading, PageHero, EnquiryCta } from '@/components/site-shell'
 
-const communityHeroImage = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-qteTc4nGuc0-unsplash-EQ4jsT7Ch4hO6w0l6paju74YCMbPQI.jpg'
-
-const communityPhotos = [
-  { src: communityHeroImage, alt: 'Families gathered outdoors for a shared community meal', label: 'Shared moments' },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bill-wegener-8ldqRkOk5oo-unsplash-LXQ6vz0BjZZPjYlcLvMC1wc8INJteu.jpg', alt: 'A student learning in a classroom', label: 'Learning together' },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/roman-nguyen-TBdSTcSwXxo-unsplash-I5IvWCVddkdZUum3BiQZeZeKJz47aS.jpg', alt: 'Children gathered at a local market', label: 'Local enterprise' },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zach-wear-zOoiOzayjK4-unsplash-nAMqmgXXB9d45lBNYAZ1XxOE8GvywF.jpg', alt: 'Children sharing time together outdoors', label: 'Young futures' },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-QeEK1g70vdQ-unsplash-16YYnYnE59XpaUe2a7XWXLIb8IQAc9.jpg', alt: 'Children gathered together in a community space', label: 'Belonging' },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/roman-nguyen-lPPkJ4NfQtQ-unsplash-DbfMlRyAybH5ZMUxzTzzKGnlkrfvyC.jpg', alt: 'Children attending a classroom lesson', label: 'Access to education' },
-]
-
 const communityProjects = [
   {
     title: 'Education & Scholarship',
@@ -85,16 +74,7 @@ export default function CommunityPage() {
             </>
           }
           intro="Every safari with Sinza supports meaningful community development, conservation, and local opportunity across East Africa."
-          image={communityHeroImage}
         />
-
-        <section className="community-hero-slot" aria-label="Community photography slot">
-          {communityHeroImage ? <img src={communityHeroImage} alt="Community development project" /> : <div><p className="eyebrow">Community photography</p><h2>A place for a verified story.</h2><p>This image slot is ready for an approved outreach or community-development photograph. No stock wildlife image is used here.</p></div>}
-        </section>
-
-        <section className="community-photo-strip" aria-label="Community stories in photographs">
-          {communityPhotos.map((photo) => <figure key={photo.label}><img src={photo.src} alt={photo.alt} /><figcaption>{photo.label}</figcaption></figure>)}
-        </section>
 
         <section className="section-wrap">
           <SectionHeading
