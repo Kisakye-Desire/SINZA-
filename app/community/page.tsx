@@ -39,9 +39,9 @@ const communityProjects = [
     impact: 'Jobs created',
   },
   {
-    title: 'Women's Economic Groups',
+    title: "Women's Economic Groups",
     location: 'Surrounding villages',
-    description: 'Supporting women's cooperatives with microfinance, craft training, and market access, enabling economic independence and entrepreneurship at the grassroots level.',
+    description: "Supporting women's cooperatives with microfinance, craft training, and market access, enabling economic independence and entrepreneurship at the grassroots level.",
     image: '/images/wildlife-hippo-water.jpg',
     impact: 'Women entrepreneurs',
   },
