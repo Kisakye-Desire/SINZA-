@@ -618,3 +618,66 @@ body { background:var(--background); }
 @media (max-width:800px) { .site-header { height:68px; }.nav-links { background:#f5f1e7; border-bottom:1px solid var(--border); display:none; flex-direction:column; left:0; margin:0; max-height:calc(100vh - 68px); overflow:auto; padding:16px 20px 28px; position:absolute; right:0; top:68px; align-items:flex-start; }.nav-links.open { display:flex; }.nav-links>a,.menu-trigger { font-size:11px; padding:14px 0; }.menu-button { display:block; margin-left:auto; margin-right:14px; }.menu-group { width:100%; }.menu-trigger { justify-content:space-between; width:100%; }.mega-menu { background:transparent; border:0; box-shadow:none; padding:5px 0 15px 15px; position:static; }.header-phone { display:none; } }
 @media (max-width:700px) { .floating-chat { height:54px; min-width:54px; padding:0; width:54px; }.floating-chat span { display:none; } }
 
+/* Responsive polish: keep every route readable and balanced on small screens. */
+:focus-visible { outline:2px solid var(--ring); outline-offset:4px; }
+.safari-card,.offer-card,.experience-feature,.article-card,.philosophy-card,.community-card,.impact-item,.team-card,.premium-offer-card { transition:transform .3s ease, box-shadow .3s ease, background .3s ease; }
+.offer-card:hover,.experience-feature:hover,.article-card:hover,.philosophy-card:hover,.community-card:hover,.impact-item:hover,.team-card:hover { box-shadow:0 18px 36px #173d2a24; transform:translateY(-5px); }
+.accordion-item:hover { border-color:var(--ring); }
+@media (max-width:900px) {
+  .experience-cards,.article-grid,.offer-grid,.philosophy-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .work-intro,.work-promise,.responsible-grid,.destination-feature,.detail-layout,.contact-section { gap:42px; grid-template-columns:1fr; }
+  .value-grid { grid-template-columns:repeat(2,1fr); }
+  .journey-country-list { grid-template-columns:repeat(2,1fr); }
+  footer { grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:600px) {
+  body { font-size:14px; overflow-x:hidden; }
+  h1 { font-size:clamp(44px,14vw,70px); line-height:.98; }
+  h2 { font-size:clamp(39px,12vw,58px); line-height:1; }
+  h3 { line-height:1.05; }
+  .brand { font-size:21px; }
+  .page-hero,.detail-hero { min-height:0; }
+  .page-hero>img,.detail-hero>img { min-height:340px; position:relative; }
+  .page-hero { display:flex; flex-direction:column; align-items:stretch; }
+  .page-hero>div { padding:64px 20px 72px; }
+  .detail-hero { display:flex; flex-direction:column; }
+  .detail-hero>div { padding:54px 20px 64px; }
+  .detail-hero h1 { font-size:clamp(44px,13vw,68px); }
+  .hero-fullbleed .hero-copy { padding:80px 20px 120px; }
+  .hero-fullbleed,.hero-fullbleed .hero-image { min-height:620px; }
+  .hero-image { min-height:350px; }
+  .section-wrap { padding:64px 20px; }
+  .section-heading { gap:18px; margin-bottom:34px; }
+  .section-heading>p,.section-intro { max-width:none; }
+  .destination-grid,.experience-cards,.article-grid,.offer-grid,.philosophy-grid,.value-grid,.journey-country-list { grid-template-columns:1fr; }
+  .destination-card { aspect-ratio:1.15; }
+  .destination-card h3 { font-size:28px; }
+  .experience-item { gap:12px; grid-template-columns:36px 1fr 18px; padding:22px 0; }
+  .experience-item h3 { font-size:28px; }
+  .safari-card h3 { font-size:30px; }
+  .large-copy,.season-copy { font-size:24px; }
+  .country-journey-grid { grid-template-columns:1fr; padding:20px; }
+  .country-journey-card { aspect-ratio:1.05; }
+  .country-journey-overlay { bottom:22px; left:22px; }
+  .country-journey-overlay h2 { font-size:44px; }
+  .gallery-category-intro,.gallery-category-list { display:block; }
+  .gallery-category-list a { padding:13px 0; }
+  .gallery-grid { gap:8px; grid-template-columns:repeat(2,1fr); }
+  .gallery-tile,.gallery-tile-0,.gallery-tile-1,.gallery-tile-2,.gallery-tile-3,.gallery-tile-4,.gallery-tile-5 { grid-column:span 1; grid-row:auto; min-height:180px; }
+  .gallery-tile-0 { grid-column:span 2; min-height:280px; }
+  .gallery-tile span { bottom:11px; font-size:10px; left:11px; }
+  .form-row { grid-template-columns:1fr; }
+  .wizard { padding:22px 16px; }
+  .wizard-progress { gap:10px; justify-content:space-between; overflow:auto; }
+  .wizard-progress span { font-size:9px; white-space:nowrap; }
+  .footer-enquire>p { font-size:29px; }
+  footer { grid-template-columns:1fr; padding-top:54px; }
+  .journey-modal { display:block; }
+  .journey-modal>img { min-height:240px; }
+  .modal-copy { padding:28px 22px; }
+  .modal-copy h2 { font-size:42px; }
+  .intel-cover { min-height:500px; padding:72px 20px; }
+  .intel-cover h1 { font-size:clamp(48px,14vw,72px); }
+  .intel-content { padding:64px 20px; }
+  .intel-sections article { grid-template-columns:28px 1fr; }
+}
