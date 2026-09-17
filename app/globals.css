@@ -377,7 +377,24 @@ footer { align-items:start; background:#20342b; color:#f3f0e8; display:grid; gap
 .review-controls button { background:transparent; border:1px solid #f3f0e866; border-radius:50%; color:#f3f0e8; height:42px; transition:background .2s; width:42px; }
 .review-controls button:hover { background:#d69a6a; border-color:#d69a6a; color:var(--primary); }
 .review-controls span { color:#d9ded5; font-size:10px; letter-spacing:.15em; }
-.intel-home-card { overflow:hidden; }
+  .intel-home-card { overflow:hidden; }
+
+  /* Homepage rhythm: use the full content measure and keep card rows visually even. */
+  .destinations-home .section-heading { align-items:flex-start; }
+  .destination-home-grid { display:grid; gap:24px; grid-template-columns:repeat(2,minmax(0,1fr)); width:100%; }
+  .destination-home-card { aspect-ratio:1.08; min-height:430px; }
+  .destination-home-card>div { padding:30px; }
+  .destination-home-card h3 { font-size:clamp(38px,5vw,64px); }
+  .experience-mosaic { align-items:stretch; grid-auto-rows:minmax(250px,1fr); min-height:540px; }
+  .experience-mosaic-card { min-height:0; }
+  .intel-home-grid { align-items:stretch; grid-auto-rows:1fr; }
+  .intel-home-card>div { min-height:250px; }
+  .mission-vision-icon { color:#a36c42; margin-bottom:22px; }
+  .mission-card,.vision-card { align-content:start; display:grid; }
+  @media (max-width:800px) {
+    .destination-home-card { min-height:360px; }
+    .experience-mosaic { min-height:0; }
+  }
 .partner-marquee-block { overflow:hidden; width:100%; }
 .partner-marquee { overflow:hidden; }
 .partner-marquee-track { align-items:center; animation:partner-scroll 28s linear infinite; display:flex; gap:55px; min-width:max-content; }
