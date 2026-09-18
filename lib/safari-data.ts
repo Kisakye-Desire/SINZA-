@@ -99,7 +99,25 @@ export const safaris: Safari[] = [
 ]
 
 export function getSafari(slug: string): Safari | undefined {
-  return safaris.find((s) => s.slug === slug)
+  const safari = safaris.find((s) => s.slug === slug)
+  if (safari) return safari
+  const journey = journeyCountries.flatMap((country) => country.journeys.map((item) => ({ ...item, country: country.name }))).find((item) => item.slug === slug)
+  if (!journey) return undefined
+  return {
+    slug: journey.slug,
+    title: journey.title,
+    duration: journey.duration,
+    category: `${journey.country} Safaris`,
+    summary: `Explore ${journey.country} with a carefully planned safari combining wildlife, landscapes and local experiences.`,
+    image: journey.image,
+    destinations: [],
+    highlights: ['Expert local guiding', 'Wildlife and landscape experiences', 'Flexible accommodation options'],
+    itinerary: [
+      { day: 'Day 1', title: 'Arrival and journey briefing', details: [`Meet your guide and begin your ${journey.country} journey.`] },
+      { day: 'Day 2', title: 'Safari experiences', details: ['Enjoy the signature activities selected for this itinerary.', 'Your guide will shape the day around conditions and your interests.'] },
+      { day: 'Final day', title: 'Return journey', details: ['Travel onward with time for a final stop or relaxed departure.'] },
+    ],
+  }
 }
 
 export const destinations = [
@@ -244,6 +262,9 @@ export const journeyCountries = [
       { slug: 'uganda-rhinos-chimpanzees-3days', title: '3 Days Rhinos & Chimpanzee Tours', duration: '3 days / 2 nights', image: '/images/primates/chimp-with-leaves.jpg' },
       { slug: 'uganda-fly-in-gorilla-4days', title: '4 Days Fly-in Gorilla Trekking', duration: '4 days / 3 nights', image: '/images/sinza-gorilla.jpg' },
       { slug: 'uganda-walking-primates-wildlife-6days', title: '6 Days Walking, Primates & Wildlife Safari', duration: '6 days / 5 nights', image: '/images/wildlife-chimp-rainforest.jpg' },
+      { slug: 'uganda-lake-mburo-queen-3days', title: '3 Days Lake Mburo & Queen Elizabeth National Parks', duration: '3 days / 2 nights', image: '/images/big-five/giraffe-single.jpg' },
+      { slug: 'uganda-lake-mburo-2days', title: '2 Days Lake Mburo Tour', duration: '2 days / 1 night', image: '/images/big-five/giraffe-mother-calf.jpg' },
+      { slug: 'uganda-queen-tour-2days', title: '2 Days Queen Elizabeth Tour', duration: '2 days / 1 night', image: '/images/big-five/giraffe-single.jpg' },
     ],
   },
   {
