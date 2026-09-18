@@ -99,25 +99,7 @@ export const safaris: Safari[] = [
 ]
 
 export function getSafari(slug: string): Safari | undefined {
-  const safari = safaris.find((s) => s.slug === slug)
-  if (safari) return safari
-  const journey = journeyCountries.flatMap((country) => country.journeys.map((item) => ({ ...item, country: country.name }))).find((item) => item.slug === slug)
-  if (!journey) return undefined
-  return {
-    slug: journey.slug,
-    title: journey.title,
-    duration: journey.duration,
-    category: `${journey.country} Safaris`,
-    summary: `Explore ${journey.country} with a carefully planned safari combining wildlife, landscapes and local experiences.`,
-    image: journey.image,
-    destinations: [],
-    highlights: ['Expert local guiding', 'Wildlife and landscape experiences', 'Flexible accommodation options'],
-    itinerary: [
-      { day: 'Day 1', title: 'Arrival and journey briefing', details: [`Meet your guide and begin your ${journey.country} journey.`] },
-      { day: 'Day 2', title: 'Safari experiences', details: ['Enjoy the signature activities selected for this itinerary.', 'Your guide will shape the day around conditions and your interests.'] },
-      { day: 'Final day', title: 'Return journey', details: ['Travel onward with time for a final stop or relaxed departure.'] },
-    ],
-  }
+  return safaris.find((s) => s.slug === slug)
 }
 
 export const destinations = [
