@@ -7,6 +7,24 @@ import { journeyCountries, getSafari } from '@/lib/safari-data'
 
 export function generateStaticParams() { return [...journeyCountries.map((country) => ({ slug: country.slug })), ...journeyCountries.flatMap((country) => country.journeys.map((journey) => ({ slug: journey.slug })))] }
 
+function buildItinerary(title: string, duration: string, country: string) {
+  const days = Number.parseInt(duration, 10)
+  const stops = title.split(/ & | and |, /).filter(Boolean)
+  const themes = ['Arrival, briefing and route orientation', 'Travel into the first destination', 'Guided wildlife and landscape experience', 'A full day in the heart of the journey', 'Cultural encounter and local communities', 'Signature safari activity and photography', 'Second wildlife experience or relaxed exploration', 'Final game drive and onward travel']
+  return Array.from({ length: days }, (_, index) => {
+    const isLast = index === days - 1
+    const theme = isLast ? 'Departure and onward travel' : themes[index % themes.length]
+    const stop = stops[index % Math.max(stops.length, 1)]
+    return {
+      day: `Day ${index + 1}`,
+      title: `${theme}${stop ? ` — ${stop}` : ''}`,
+      details: isLast
+        ? [`Enjoy a final breakfast and review the highlights of your ${title}.`, `Transfer onward from ${stop || country} with your guide.`]
+        : [`Explore ${stop || country} with an experienced local guide.`, 'Allow time for wildlife viewing, photography and rest between activities.', `Overnight near ${stop || 'the next destination'}.`],
+    }
+  })
+}
+
 export default async function SafariDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const country = journeyCountries.find((item) => item.slug === slug)
@@ -15,6 +33,6 @@ export default async function SafariDetail({ params }: { params: Promise<{ slug:
   const catalogJourney = journeyCountries.flatMap((item) => item.journeys).find((item) => item.slug === slug)
   if (!safari && !catalogJourney) notFound()
   const journeyCountry = journeyCountries.find((item) => item.journeys.some((journey) => journey.slug === slug))?.name ?? 'Uganda'
-  const detail = safari ?? { ...catalogJourney!, category: `${journeyCountry} Safaris`, summary: `${catalogJourney!.title} is a thoughtfully paced journey combining the places and experiences named in the itinerary. Expect expert guiding, comfortable stays and time to experience each destination properly.`, destinations: catalogJourney!.title.split(/ & | and |, /).slice(0, 4), highlights: ['Expert local guiding throughout', 'Wildlife, landscapes and local culture', `Signature experiences from the ${catalogJourney!.title} route`, 'Comfortable accommodation and flexible pacing'], itinerary: [{ day: 'Day 1', title: 'Arrival and journey briefing', details: ['Meet your guide, review the route and begin the journey.'] }, { day: 'Day 2', title: 'The route begins', details: [`Travel into the landscapes featured in ${catalogJourney!.title}.`, 'Enjoy a guided experience and settle into your accommodation.'] }, { day: 'Day 3', title: 'Wildlife, nature and local life', details: ['Follow the day’s highlights with your local guide.', 'Leave time for photography, rest and conversations with the communities you visit.'] }, { day: 'Day 4', title: 'Signature safari experience', details: [`Experience the main attraction of this ${catalogJourney!.duration.split(' / ')[0]} itinerary.`, 'Your guide will adapt the pace around weather, wildlife and your interests.'] }, { day: 'Final day', title: 'Return journey', details: ['Enjoy a final breakfast and departure transfer.', 'Continue to your next destination or airport.'] }] }
+  const detail = safari ?? { ...catalogJourney!, category: `${journeyCountry} Safaris`, summary: `${catalogJourney!.title} is a thoughtfully paced journey combining the places and experiences named in the itinerary. Expect expert guiding, comfortable stays and time to experience each destination properly.`, destinations: catalogJourney!.title.split(/ & | and |, /).slice(0, 4), highlights: ['Expert local guiding throughout', 'Wildlife, landscapes and local culture', `Signature experiences from the ${catalogJourney!.title} route`, 'Comfortable accommodation and flexible pacing'], itinerary: buildItinerary(catalogJourney!.title, catalogJourney!.duration, journeyCountry) }
   return <SiteShell><main><section className="detail-hero"><img src={detail.image} alt={detail.title} /><div><p className="eyebrow">{detail.duration} · {detail.category}</p><h1>{detail.title}</h1><p>{detail.summary}</p><Link href="/contact" className="button light">Enquire about this journey <ArrowRight size={16} /></Link></div></section><section className="section-wrap detail-layout"><article><p className="eyebrow">The journey</p><h2>Made around<br /><em>you.</em></h2><p className="large-copy">This considered itinerary brings together remarkable landscapes with the time and flexibility to experience them properly. Speak with our local journey designers to shape the route, lodge style and pace.</p></article><aside className="detail-aside"><p className="eyebrow">Highlights</p>{detail.highlights.map((highlight) => <p className="highlight" key={highlight}>{highlight}</p>)}</aside></section>{detail.itinerary && <section className="section-wrap itinerary-section"><div className="section-heading"><div><p className="eyebrow">Day by day</p><h2>A route with<br /><em>room to breathe.</em></h2></div><p>Use this as a starting rhythm. Your guide will adjust the pace around weather, wildlife and what you want to linger on.</p></div><ItineraryAccordion days={detail.itinerary} /></section>}<EnquiryCta /></main></SiteShell>
 }
