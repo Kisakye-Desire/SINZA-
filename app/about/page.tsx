@@ -1,6 +1,6 @@
 'use client'
 
-import { Check, Heart, Leaf, Users, Globe } from 'lucide-react'
+import { Check, Heart, Leaf, Users, Globe, Target, Eye } from 'lucide-react'
 import Link from 'next/link'
 import { SiteShell, PageHero, SectionHeading, EnquiryCta } from '@/components/site-shell'
 
@@ -90,6 +90,7 @@ export default function AboutPage() {
         <section className="section-wrap mission-vision-wrap">
           <div className="mission-vision-grid">
             <div className="mission-card">
+              <Target className="mission-vision-icon" size={34} strokeWidth={1.5} aria-hidden="true" />
               <p className="eyebrow">Our Mission</p>
               <h3>Create transformative travel experiences</h3>
               <p>
@@ -97,6 +98,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="vision-card">
+              <Eye className="mission-vision-icon" size={34} strokeWidth={1.5} aria-hidden="true" />
               <p className="eyebrow">Our Vision</p>
               <h3>Lead the future of purpose-driven tourism</h3>
               <p>
