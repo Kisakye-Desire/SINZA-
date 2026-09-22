@@ -6,7 +6,6 @@ const team = [
   { name: 'Desire Kisakye', role: 'Founder & Journey Director', bio: 'Builds thoughtful routes around Uganda’s wild places, people and possibilities.' },
   { name: 'Brian Kato', role: 'Lead Safari Guide', bio: 'A patient naturalist who reads tracks, weather and the quiet language of the bush.' },
   { name: 'Sarah Namirembe', role: 'Guest Experience Manager', bio: 'Makes every detail feel easy, from the first conversation to the final airport transfer.' },
-  { name: 'Moses Ssentongo', role: 'Community & Conservation Lead', bio: 'Connects journeys with local partners, conservation work and lasting community value.' },
 ]
 
 export function TeamSection({ compact = false }: { compact?: boolean }) {
