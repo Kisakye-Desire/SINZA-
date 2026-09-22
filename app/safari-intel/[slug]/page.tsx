@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import { PageHero, SiteShell, EnquiryCta } from '@/components/site-shell'
+import { PageHero, SiteShell } from '@/components/site-shell'
 import { articles } from '@/lib/safari-data'
 
 export function generateStaticParams() {
@@ -165,7 +165,7 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
           </section>
         )}
 
-        <EnquiryCta />
+
       </main>
     </SiteShell>
   )

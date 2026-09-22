@@ -270,6 +270,10 @@ footer { align-items:start; background:#20342b; color:#f3f0e8; display:grid; gap
   .donation-method-grid dd { margin:0; text-align:right; }
   .donation-placeholder { background:var(--cream); border-left:3px solid var(--accent); padding:14px; }
   .donation-method-grid .button { display:inline-flex; margin-top:18px; }
+  .work-promise-list { display:grid; gap:18px; list-style:none; margin:28px 0 0; padding:0; }
+  .work-promise-list li { border-top:1px solid var(--border); display:grid; gap:4px; padding-top:16px; }
+  .work-promise-list strong { font-size:16px; }
+  .work-promise-list span { color:var(--muted-foreground); line-height:1.6; }
   @media (max-width:800px) { .donation-method-grid { grid-template-columns:1fr; } }
   .park-collection-heading { display:grid; gap:10px; margin:0 0 30px; max-width:620px; }
   .park-collection-heading h2 { margin:0; }
