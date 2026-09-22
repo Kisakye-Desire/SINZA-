@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { ArrowRight, BookOpen, Search } from 'lucide-react'
-import { PageHero, SectionHeading, SiteShell, EnquiryCta } from '@/components/site-shell'
+import { PageHero, SectionHeading, SiteShell } from '@/components/site-shell'
 import { articles } from '@/lib/safari-data'
 
 const categories = [
@@ -130,7 +130,7 @@ export default function SafariIntelPage() {
           </div>
         </section>
 
-        <EnquiryCta />
+
       </main>
     </SiteShell>
   )

@@ -199,7 +199,7 @@ export default function AboutPage() {
         </section>
 
         {/* Team Teaser */}
-        <section className="section-wrap team-teaser-wrap">
+        <section id="team" className="section-wrap team-teaser-wrap">
           <div className="team-teaser">
             <SectionHeading
               eyebrow="Our Team"
@@ -212,7 +212,7 @@ export default function AboutPage() {
               }
               intro="Our team of field naturalists, conservationists, and hospitality experts bring decades of East African experience to every journey."
             />
-            <Link href="/company/team" className="button dark">
+            <Link href="#team" className="button dark">
               Meet the team
             </Link>
           </div>
