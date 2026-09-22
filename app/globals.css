@@ -257,6 +257,20 @@ footer { align-items:start; background:#20342b; color:#f3f0e8; display:grid; gap
   .donation-grid { display:grid; gap:14px; grid-template-columns:repeat(3,minmax(0,1fr)); }
   .donation-grid article { border:1px solid rgba(255,255,255,.24); padding:24px; }
   .donation-grid h3 { color:var(--accent); margin-bottom:14px; }
+  .donation-page-intro { padding-top:28px; }
+  .back-link { align-items:center; color:var(--muted-foreground); display:inline-flex; gap:8px; margin-bottom:56px; text-decoration:none; }
+  .back-link:hover { color:var(--primary); }
+  .donation-page-intro > h2 { margin:12px 0 20px; }
+  .donation-method-grid { display:grid; gap:18px; grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:52px; }
+  .donation-method-grid article { background:var(--card); border:1px solid var(--border); padding:30px; }
+  .donation-method-grid article > svg { color:var(--accent-foreground); margin-bottom:24px; }
+  .donation-method-grid h3 { font-size:22px; margin:0 0 24px; }
+  .donation-method-grid dl { display:grid; gap:8px; grid-template-columns:1fr 1fr; }
+  .donation-method-grid dt { color:var(--muted-foreground); font-size:12px; }
+  .donation-method-grid dd { margin:0; text-align:right; }
+  .donation-placeholder { background:var(--cream); border-left:3px solid var(--accent); padding:14px; }
+  .donation-method-grid .button { display:inline-flex; margin-top:18px; }
+  @media (max-width:800px) { .donation-method-grid { grid-template-columns:1fr; } }
   .park-collection-heading { display:grid; gap:10px; margin:0 0 30px; max-width:620px; }
   .park-collection-heading h2 { margin:0; }
   .park-collection-heading > p:last-child { color:var(--muted-foreground); line-height:1.7; }

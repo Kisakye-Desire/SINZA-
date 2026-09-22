@@ -1,4 +1,4 @@
 import { SiteShell, PageHero, EnquiryCta } from '@/components/site-shell'
 import { GalleryGrid } from '@/components/gallery-grid'
-import { galleryCategories, galleryImages } from '@/lib/safari-data'
-export default function GalleryPage() { return <SiteShell><main><PageHero eyebrow="Field notes" title={<>A life lived<br /><em>outside.</em></>} intro="A few frames from the roads, forests, plains and conversations that stay with us." image={galleryImages[0].src} /><section className="section-wrap gallery-section"><nav className="gallery-category-list" aria-label="Gallery categories">{galleryCategories.map((category, index) => <a href="#gallery-grid" key={category}><span>0{index + 1}</span>{category}</a>)}</nav><div id="gallery-grid"><GalleryGrid images={galleryImages} /></div></section><EnquiryCta /></main></SiteShell> }
+import { galleryImages } from '@/lib/safari-data'
+export default function GalleryPage() { return <SiteShell><main><PageHero eyebrow="Field notes" title={<>A life lived<br /><em>outside.</em></>} intro="A few frames from the roads, forests, plains and conversations that stay with us." image={galleryImages[0].src} /><section className="section-wrap gallery-section"><div id="gallery-grid"><GalleryGrid images={galleryImages} /></div></section><EnquiryCta /></main></SiteShell> }
