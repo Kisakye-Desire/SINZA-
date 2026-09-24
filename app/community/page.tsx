@@ -47,15 +47,6 @@ const communityProjects = [
   },
 ]
 
-const impactMetrics = [
-  { number: '150+', label: 'Students supported through scholarship programs' },
-  { number: '8', label: 'Healthcare clinics receiving annual support' },
-  { number: '25', label: 'Water projects completed or in progress' },
-  { number: '200+', label: 'Local jobs created and supported annually' },
-  { number: '45,000', label: 'Hectares of wildlife habitat supported' },
-  { number: '35+', label: "Women's economic groups active" },
-]
-
 export const metadata = {
   title: 'Community Development | Sinza Safaris',
   description: "How Sinza Safaris creates positive impact through education, conservation, healthcare, and economic opportunity in East African communities.",
@@ -119,27 +110,6 @@ export default function CommunityPage() {
                   <span className="community-impact-label">{project.impact}</span>
                 </div>
               </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="section-wrap community-impact">
-          <SectionHeading
-            eyebrow="Our impact"
-            title={
-              <>
-                Numbers that<br />
-                <em>represent change.</em>
-              </>
-            }
-            intro="These figures reflect real lives, families, and futures shaped by tourism that moves beyond the safari vehicle."
-          />
-          <div className="impact-grid">
-            {impactMetrics.map((metric) => (
-              <div className="impact-item" key={metric.label}>
-                <p className="impact-number">{metric.number}</p>
-                <p className="impact-label">{metric.label}</p>
-              </div>
             ))}
           </div>
         </section>
@@ -223,37 +193,6 @@ export default function CommunityPage() {
                 Ziwa Rhino Sanctuary began with zero rhinos in Uganda. Through conservation partnership and anti-poaching support, the population has grown to over 30 — creating jobs, hope, and proof that recovery is possible.
               </p>
             </article>
-          </div>
-        </section>
-
-        <section className="section-wrap community-transparency">
-          <SectionHeading
-            eyebrow="Accountability"
-            title={
-              <>
-                How we spend<br />
-                <em>your trust.</em>
-              </>
-            }
-            intro="15% of Sinza's annual income goes to community projects. Here's how we ensure that money creates real impact."
-          />
-          <div className="transparency-content">
-            <div className="transparency-block">
-              <h4>Annual reporting</h4>
-              <p>We publish an annual impact report documenting project spending, outcomes, and lessons learned. Transparency builds trust; trust builds lasting change.</p>
-            </div>
-            <div className="transparency-block">
-              <h4>On-ground verification</h4>
-              <p>Our Uganda-based team visits every project regularly. We don't fund ideas — we fund relationships and real communities.</p>
-            </div>
-            <div className="transparency-block">
-              <h4>Partner accountability</h4>
-              <p>All our partner organizations are evaluated annually. We stop funding projects that don't deliver results or lose community trust.</p>
-            </div>
-            <div className="transparency-block">
-              <h4>Your questions welcome</h4>
-              <p>Ask us anything about our community work. During your safari or after, we're happy to share impact stories and answer where your money goes.</p>
-            </div>
           </div>
         </section>
 
