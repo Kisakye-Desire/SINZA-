@@ -47,15 +47,6 @@ const communityProjects = [
   },
 ]
 
-const impactMetrics = [
-  { number: '150+', label: 'Students supported through scholarship programs' },
-  { number: '8', label: 'Healthcare clinics receiving annual support' },
-  { number: '25', label: 'Water projects completed or in progress' },
-  { number: '200+', label: 'Local jobs created and supported annually' },
-  { number: '45,000', label: 'Hectares of wildlife habitat supported' },
-  { number: '35+', label: "Women's economic groups active" },
-]
-
 export const metadata = {
   title: 'Community Development | Sinza Safaris',
   description: "How Sinza Safaris creates positive impact through education, conservation, healthcare, and economic opportunity in East African communities.",
@@ -119,27 +110,6 @@ export default function CommunityPage() {
                   <span className="community-impact-label">{project.impact}</span>
                 </div>
               </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="section-wrap community-impact">
-          <SectionHeading
-            eyebrow="Our impact"
-            title={
-              <>
-                Numbers that<br />
-                <em>represent change.</em>
-              </>
-            }
-            intro="These figures reflect real lives, families, and futures shaped by tourism that moves beyond the safari vehicle."
-          />
-          <div className="impact-grid">
-            {impactMetrics.map((metric) => (
-              <div className="impact-item" key={metric.label}>
-                <p className="impact-number">{metric.number}</p>
-                <p className="impact-label">{metric.label}</p>
-              </div>
             ))}
           </div>
         </section>
@@ -226,39 +196,6 @@ export default function CommunityPage() {
           </div>
         </section>
 
-        <section className="section-wrap community-transparency">
-          <SectionHeading
-            eyebrow="Accountability"
-            title={
-              <>
-                How we spend<br />
-                <em>your trust.</em>
-              </>
-            }
-            intro="15% of Sinza's annual income goes to community projects. Here's how we ensure that money creates real impact."
-          />
-          <div className="transparency-content">
-            <div className="transparency-block">
-              <h4>Annual reporting</h4>
-              <p>We publish an annual impact report documenting project spending, outcomes, and lessons learned. Transparency builds trust; trust builds lasting change.</p>
-            </div>
-            <div className="transparency-block">
-              <h4>On-ground verification</h4>
-              <p>Our Uganda-based team visits every project regularly. We don't fund ideas — we fund relationships and real communities.</p>
-            </div>
-            <div className="transparency-block">
-              <h4>Partner accountability</h4>
-              <p>All our partner organizations are evaluated annually. We stop funding projects that don't deliver results or lose community trust.</p>
-            </div>
-            <div className="transparency-block">
-              <h4>Your questions welcome</h4>
-              <p>Ask us anything about our community work. During your safari or after, we're happy to share impact stories and answer where your money goes.</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="donate" className="section-wrap community-donate"><SectionHeading eyebrow="Support directly" title={<>Help a project<br /><em>move forward.</em></>} intro="Donation details are shown as placeholders until the verified payment information is supplied." /><Link href="/donate" className="button dark donation-button">Donate to community work <ArrowRight size={16} /></Link><div className="donation-grid"><article><h3>Bank transfer</h3><p>Bank name: [Bank name]</p><p>Account name: [Account name]</p><p>Account number: [Account number]</p><p>Branch / SWIFT: [Branch / SWIFT]</p><p>Currency: [UGX / USD]</p></article><article><h3>Mobile money</h3><p>Network: [MTN / Airtel]</p><p>Number: [Mobile money number]</p><p>Registered name: [Registered name]</p></article><article><h3>PayPal</h3><p>For supporters outside Uganda, use:</p><p>[PayPal email or donation URL]</p></article></div></section>
-
         <section className="section-wrap community-get-involved">
           <div className="cta-block">
             <h2>Join the journey</h2>
@@ -269,8 +206,8 @@ export default function CommunityPage() {
               Want to do more? Bring a colleague, recommend Sinza to friends, or let us know if you'd like to support a specific community project during your visit.
             </p>
             <div className="button-row">
-              <Link href="/contact" className="button dark">
-                Plan a meaningful safari <ArrowRight size={16} />
+              <Link href="/donate" className="button dark">
+                Donate to community work <ArrowRight size={16} />
               </Link>
               <a href="mailto:sinzasafaris@gmail.com" className="button outline-dark">
                 Ask about community projects <ArrowRight size={16} />
@@ -279,7 +216,6 @@ export default function CommunityPage() {
           </div>
         </section>
 
-        <EnquiryCta />
       </main>
     </SiteShell>
   )

@@ -2,7 +2,7 @@
 
 import { Check, Heart, Leaf, Users, Globe, Target, Eye } from 'lucide-react'
 import Link from 'next/link'
-import { SiteShell, PageHero, SectionHeading, EnquiryCta } from '@/components/site-shell'
+import { SiteShell, PageHero, SectionHeading } from '@/components/site-shell'
 
 export default function AboutPage() {
   const values = [
@@ -67,6 +67,12 @@ export default function AboutPage() {
                 intro="Sinza Safaris began with a simple belief: that authentic, purposeful travel can change lives—for travelers and communities alike."
               />
               <div className="story-content">
+                <p>
+                  Sinza Safaris Ltd is a Ugandan-owned travel company rooted in Christian mission and community development. We believe nature is one of God&apos;s greatest gifts—meant to refresh the soul, inspire the spirit, and renew the heart. We approach travel as a blessing—for both the traveler and the communities we serve.
+                </p>
+                <p>
+                  We design more than tours—we create transformational journeys that promote sustainability, support conservation, and strengthen the people and places that make Uganda extraordinary.
+                </p>
                 <p>
                   Founded by Ugandan conservationists and hospitality experts, Sinza Safaris emerged from years of guiding, conservation work, and a deep frustration with extractive tourism. We saw travelers hungry for real connection and communities who deserved better than tourism passing them by.
                 </p>
@@ -218,7 +224,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <EnquiryCta />
       </main>
     </SiteShell>
   )
