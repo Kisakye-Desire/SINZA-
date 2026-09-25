@@ -196,8 +196,6 @@ export default function CommunityPage() {
           </div>
         </section>
 
-        <section id="donate" className="section-wrap community-donate"><SectionHeading eyebrow="Support directly" title={<>Help a project<br /><em>move forward.</em></>} intro="Donation details are shown as placeholders until the verified payment information is supplied." /><Link href="/donate" className="button dark donation-button">Donate to community work <ArrowRight size={16} /></Link><p className="donation-note">Choose mobile money, bank transfer, PayPal, or secure card payment through Stripe.</p><div className="donation-grid"><article><h3>Bank transfer</h3><p>Bank name: [Bank name]</p><p>Account name: [Account name]</p><p>Account number: [Account number]</p><p>Branch / SWIFT: [Branch / SWIFT]</p><p>Currency: [UGX / USD]</p></article><article><h3>Mobile money</h3><p>Network: [MTN / Airtel]</p><p>Number: [Mobile money number]</p><p>Registered name: [Registered name]</p></article><article><h3>PayPal</h3><p>For supporters outside Uganda, use:</p><p>[PayPal email or donation URL]</p></article></div></section>
-
         <section className="section-wrap community-get-involved">
           <div className="cta-block">
             <h2>Join the journey</h2>
@@ -208,8 +206,8 @@ export default function CommunityPage() {
               Want to do more? Bring a colleague, recommend Sinza to friends, or let us know if you'd like to support a specific community project during your visit.
             </p>
             <div className="button-row">
-              <Link href="/contact" className="button dark">
-                Plan a meaningful safari <ArrowRight size={16} />
+              <Link href="/donate" className="button dark">
+                Donate to community work <ArrowRight size={16} />
               </Link>
               <a href="mailto:sinzasafaris@gmail.com" className="button outline-dark">
                 Ask about community projects <ArrowRight size={16} />

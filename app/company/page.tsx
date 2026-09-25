@@ -4,8 +4,9 @@ import { PageHero, SectionHeading, SiteShell, EnquiryCta } from '@/components/si
 import { TeamSection } from '@/components/team-section'
 
 const chapters = [
+  ['Our Story', 'Sinza Safaris Ltd is a Ugandan-owned travel company rooted in Christian mission and community development. We design transformational journeys that promote sustainability, support conservation, and strengthen the communities that make Uganda extraordinary.', '/images/sinza-boat-safari.jpg'],
   ['Our Mission', 'Sinza Safaris Ltd exists to create unique, meaningful travel experiences across Uganda and East Africa—transforming lives and communities through responsible tourism, guided by Christian values and a heart for service.', 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20%286%29-lvA1iier3MW0omOtfIAaJRl4TUMV5S.jpg'],
-  ['Our Vision', 'To become East Africa’s leading purpose-driven travel company—transforming lives through unforgettable experiences that connect people, nature, and communities.', 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20%287%29-PN9sbQxsI5D47ZIUg4zHQyunj5AgIZ.jpg'],
+  ['Our Vision', 'To become East Africa’s leading purpose-driven travel company—transforming lives through unforgettable experiences that connect people, nature, and communities.', 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20%2839%29-1aZGCHYI0Seye4VkhwvFKf5q6SmnN9.jpg'],
 ]
 
 const coreValues = [
