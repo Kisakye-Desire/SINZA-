@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { SiteShell, SectionHeading, PageHero, EnquiryCta } from '@/components/site-shell'
@@ -47,12 +50,10 @@ const communityProjects = [
   },
 ]
 
-export const metadata = {
-  title: 'Community Development | Sinza Safaris',
-  description: "How Sinza Safaris creates positive impact through education, conservation, healthcare, and economic opportunity in East African communities.",
-}
-
 export default function CommunityPage() {
+  const [galleryPage, setGalleryPage] = useState(0)
+  const galleryPages = Array.from({ length: 4 }, (_, page) => communityProjects.map((project, index) => communityProjects[(index + page * 2) % communityProjects.length]))
+
   return (
     <SiteShell>
       <main>
@@ -198,8 +199,13 @@ export default function CommunityPage() {
 
         <section className="section-wrap community-gallery">
           <SectionHeading eyebrow="Community gallery" title={<>Small moments.<br /><em>Shared progress.</em></>} intro="A closer look at the people, places, and practical work behind Sinza’s purpose." />
-          <div className="community-gallery-grid">
-            {communityProjects.slice(0, 6).map((project, index) => <a className="community-gallery-tile" href={project.image} target="_blank" rel="noreferrer" key={project.title}><img src={project.image} alt={`${project.title} community project`} /><span>0{index + 1} · {project.title}</span></a>)}
+          <div className={`community-gallery-grid collage-page-${galleryPage + 1}`}>
+            {galleryPages[galleryPage].map((project, index) => <a className="community-gallery-tile" href={project.image} target="_blank" rel="noreferrer" key={`${project.title}-${galleryPage}-${index}`}><img src={project.image} alt={`${project.title} community project`} /><span>0{index + 1} · {project.title}</span></a>)}
+          </div>
+          <div className="gallery-pagination" aria-label="Community gallery pages">
+            <button type="button" className="gallery-arrow" onClick={() => setGalleryPage((galleryPage + 3) % 4)} aria-label="Previous gallery page">←</button>
+            {[0, 1, 2, 3].map((page) => <button type="button" className={galleryPage === page ? 'is-active' : ''} onClick={() => setGalleryPage(page)} aria-label={`Gallery page ${page + 1}`} aria-current={galleryPage === page ? 'page' : undefined} key={page}>{String(page + 1).padStart(2, '0')}</button>)}
+            <button type="button" className="gallery-arrow" onClick={() => setGalleryPage((galleryPage + 1) % 4)} aria-label="Next gallery page">→</button>
           </div>
         </section>
 
