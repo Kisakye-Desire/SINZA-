@@ -52,7 +52,7 @@ const communityProjects = [
 
 export default function CommunityPage() {
   const [galleryPage, setGalleryPage] = useState(0)
-  const galleryPages = Array.from({ length: 4 }, (_, page) => communityProjects.map((project, index) => communityProjects[(index + page * 2) % communityProjects.length]))
+  const galleryPages = Array.from({ length: 3 }, (_, page) => communityProjects.map((project, index) => communityProjects[(index + page * 2) % communityProjects.length]))
 
   return (
     <SiteShell>
@@ -115,45 +115,6 @@ export default function CommunityPage() {
           </div>
         </section>
 
-        <section className="section-wrap community-partners">
-          <SectionHeading
-            eyebrow="Our partners"
-            title={
-              <>
-                Working alongside<br />
-                <em>trusted organizations.</em>
-              </>
-            }
-            intro="We don't work alone. These partnerships ensure our community projects are informed by expertise, accountability, and lasting commitment."
-          />
-          <div className="partners-list">
-            <div className="partner-item">
-              <h4>Conservation International</h4>
-              <p>Wildlife habitat protection and biodiversity conservation across protected areas.</p>
-            </div>
-            <div className="partner-item">
-              <h4>Doctors Without Borders / Médecins Sans Frontières</h4>
-              <p>Emergency healthcare, medical training, and clinic support in remote regions.</p>
-            </div>
-            <div className="partner-item">
-              <h4>Local Primary Schools</h4>
-              <p>Direct partnership with schools near safari destinations for student scholarships and facility improvements.</p>
-            </div>
-            <div className="partner-item">
-              <h4>Uganda Wildlife Authority</h4>
-              <p>Collaborative management of protected areas and community liaison programs.</p>
-            </div>
-            <div className="partner-item">
-              <h4>Community-Based Microfinance</h4>
-              <p>Supporting women's economic groups and village entrepreneurs with loans and training.</p>
-            </div>
-            <div className="partner-item">
-              <h4>Water for All (Uganda)</h4>
-              <p>Installing and maintaining water systems and sanitation facilities in underserved communities.</p>
-            </div>
-          </div>
-        </section>
-
         <section className="section-wrap community-stories">
           <SectionHeading
             eyebrow="Stories from the field"
@@ -203,9 +164,9 @@ export default function CommunityPage() {
             {galleryPages[galleryPage].map((project, index) => <a className="community-gallery-tile" href={project.image} target="_blank" rel="noreferrer" key={`${project.title}-${galleryPage}-${index}`}><img src={project.image} alt={`${project.title} community project`} /><span>0{index + 1} · {project.title}</span></a>)}
           </div>
           <div className="gallery-pagination" aria-label="Community gallery pages">
-            <button type="button" className="gallery-arrow" onClick={() => setGalleryPage((galleryPage + 3) % 4)} aria-label="Previous gallery page">←</button>
-            {[0, 1, 2, 3].map((page) => <button type="button" className={galleryPage === page ? 'is-active' : ''} onClick={() => setGalleryPage(page)} aria-label={`Gallery page ${page + 1}`} aria-current={galleryPage === page ? 'page' : undefined} key={page}>{String(page + 1).padStart(2, '0')}</button>)}
-            <button type="button" className="gallery-arrow" onClick={() => setGalleryPage((galleryPage + 1) % 4)} aria-label="Next gallery page">→</button>
+            <button type="button" className="gallery-arrow" onClick={() => setGalleryPage((galleryPage + 2) % 3)} aria-label="Previous gallery page">←</button>
+            {[0, 1, 2].map((page) => <button type="button" className={galleryPage === page ? 'is-active' : ''} onClick={() => setGalleryPage(page)} aria-label={`Gallery page ${page + 1}`} aria-current={galleryPage === page ? 'page' : undefined} key={page}>{String(page + 1).padStart(2, '0')}</button>)}
+            <button type="button" className="gallery-arrow" onClick={() => setGalleryPage((galleryPage + 1) % 3)} aria-label="Next gallery page">→</button>
           </div>
         </section>
 
