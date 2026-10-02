@@ -163,6 +163,7 @@ export default function CommunityPage() {
           <div className={`community-gallery-grid collage-page-${galleryPage + 1}`}>
             {galleryPages[galleryPage].map((project, index) => <a className="community-gallery-tile" href={project.image} target="_blank" rel="noreferrer" key={`${project.title}-${galleryPage}-${index}`}><img src={project.image} alt={`${project.title} community project`} /><span>0{index + 1} · {project.title}</span></a>)}
           </div>
+          <p className="gallery-page-label" aria-live="polite">Page {galleryPage + 1} of 3 · Showing the community story through a different collage</p>
           <div className="gallery-pagination" aria-label="Community gallery pages">
             <button type="button" className="gallery-arrow" onClick={() => setGalleryPage((galleryPage + 2) % 3)} aria-label="Previous gallery page">←</button>
             {[0, 1, 2].map((page) => <button type="button" className={galleryPage === page ? 'is-active' : ''} onClick={() => setGalleryPage(page)} aria-label={`Gallery page ${page + 1}`} aria-current={galleryPage === page ? 'page' : undefined} key={page}>{String(page + 1).padStart(2, '0')}</button>)}

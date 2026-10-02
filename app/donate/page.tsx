@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, ArrowRight, Building2, GraduationCap, HeartHandshake, Trees } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Building2, CreditCard, GraduationCap, HeartHandshake, Smartphone, Trees } from 'lucide-react'
 import { SiteShell, PageHero } from '@/components/site-shell'
 
 const donationOptions = [
@@ -16,6 +16,7 @@ export default function DonatePage() {
   const [selected, setSelected] = useState<string | null>(null)
   const [currency, setCurrency] = useState('USD')
   const [amount, setAmount] = useState('')
+  const [givingMethod, setGivingMethod] = useState<'mobile' | 'bank' | 'card'>('mobile')
   const selectedOption = donationOptions.find((option) => option.id === selected)
   const SelectedIcon = selectedOption?.icon
 
@@ -26,6 +27,7 @@ export default function DonatePage() {
       <div className="donation-steps" aria-label="Donation steps"><span className="active">01 Choose support</span><i /><span className={selected ? 'active' : ''}>02 Choose amount</span><i /><span className={amount ? 'active' : ''}>03 Complete giving</span></div>
       <p className="eyebrow">Step {selected ? '02' : '01'} of 03</p>
       {!selected ? <>
+        <div className="donation-story-card"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bill-wegener-8ldqRkOk5oo-unsplash-LXQ6vz0BjZZPjYlcLvMC1wc8INJteu.jpg" alt="Young people connected to Sinza community development work" /><div><p className="eyebrow">Your gift reaches people</p><h3>A practical way to travel with purpose.</h3><p>Choose one focus below and we&apos;ll show the giving details for that specific work, including bank transfer and mobile money guidance.</p></div></div>
         <h2>What would you like<br /><em>to support?</em></h2>
         <p className="large-copy">Choose one area and we’ll show you the payment details that fit your gift.</p>
         <div className="donation-option-grid">{donationOptions.map(({ id, title, description, icon: Icon, suggested }) => <button type="button" className="donation-option" onClick={() => setSelected(id)} key={id}><span className="donation-option-icon"><Icon size={28} /></span><h3>{title}</h3><p>{description}</p><strong>{currency} {suggested[0]} and up <ArrowRight size={16} /></strong></button>)}</div>
@@ -35,7 +37,8 @@ export default function DonatePage() {
         <h3 className="donation-subheading">Choose your currency</h3><div className="currency-grid">{currencies.map((item) => <button type="button" className={currency === item ? 'selected' : ''} onClick={() => setCurrency(item)} key={item}>{item}</button>)}</div>
         <h3 className="donation-subheading">Enter your donation amount</h3><label className="donation-amount"><span>{currency}</span><input inputMode="decimal" value={amount} onChange={(event) => setAmount(event.target.value.replace(/[^0-9.]/g, ''))} placeholder="Enter amount" aria-label="Donation amount" /></label>
         <div className="suggested-amounts">{selectedOption?.suggested.map((value) => <button type="button" onClick={() => setAmount(String(value))} key={value}>{currency} {value}</button>)}</div>
-        <div className="donation-payment-card"><Building2 size={24} /><div><h3>Bank transfer</h3><p>Housing Finance Bank · SINZA SAFARIS LTD</p><p>Account number: <strong>1150021717840</strong></p><p>Use “{selectedOption?.title}” as your reference.</p></div></div>
+        <div className="giving-methods" role="tablist" aria-label="Ways to donate">{([['mobile', Smartphone, 'Mobile money'], ['bank', Building2, 'Bank transfer'], ['card', CreditCard, 'Card / Stripe']] as const).map(([id, Icon, label]) => <button type="button" role="tab" aria-selected={givingMethod === id} className={givingMethod === id ? 'selected' : ''} onClick={() => setGivingMethod(id)} key={id}><Icon size={18} />{label}</button>)}</div>
+        <div className="donation-payment-card">{givingMethod === 'mobile' ? <Smartphone size={24} /> : givingMethod === 'bank' ? <Building2 size={24} /> : <CreditCard size={24} />}<div>{givingMethod === 'mobile' ? <><h3>Mobile money</h3><p>MTN Mobile Money · 0773525452 · Muwaga Hannington</p><p>Airtel Money · 0702345273 · Muwaga Hannington</p><p>Send the amount above, then message us with your reference.</p></> : givingMethod === 'bank' ? <><h3>Bank transfer</h3><p>Housing Finance Bank · SINZA SAFARIS LTD</p><p>Account number: <strong>1150021717840</strong></p><p>Use “{selectedOption?.title}” as your reference.</p></> : <><h3>Card / Stripe</h3><p>Card giving is prepared with our team so we can confirm the selected cause and amount securely.</p><p>Continue by email and we&apos;ll send the verified payment link.</p></>}</div></div>
         <div className="button-row"><a className={`button dark ${!amount ? 'disabled' : ''}`} aria-disabled={!amount} href={amount ? `mailto:sinzasafaris@gmail.com?subject=${encodeURIComponent(`${selectedOption?.title} donation confirmation`)}&body=${encodeURIComponent(`I would like to donate ${currency} ${amount} to ${selectedOption?.title}.`)}` : undefined}>Continue to give <ArrowRight size={16} /></a><a className="button outline-dark" href="https://wa.me/256702970065?text=Hello%20Sinza%2C%20I%20would%20like%20to%20make%20a%20donation." target="_blank" rel="noreferrer">Message us after donating</a></div>
       </>}
     </section>
