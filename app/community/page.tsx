@@ -196,6 +196,13 @@ export default function CommunityPage() {
           </div>
         </section>
 
+        <section className="section-wrap community-gallery">
+          <SectionHeading eyebrow="Community gallery" title={<>Small moments.<br /><em>Shared progress.</em></>} intro="A closer look at the people, places, and practical work behind Sinza’s purpose." />
+          <div className="community-gallery-grid">
+            {communityProjects.slice(0, 6).map((project, index) => <a className="community-gallery-tile" href={project.image} target="_blank" rel="noreferrer" key={project.title}><img src={project.image} alt={`${project.title} community project`} /><span>0{index + 1} · {project.title}</span></a>)}
+          </div>
+        </section>
+
         <section className="section-wrap community-get-involved">
           <div className="cta-block">
             <h2>Join the journey</h2>
