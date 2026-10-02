@@ -61,6 +61,7 @@ export default function SafariIntelPage() {
             intro="Filter by topic to find exactly what you need for your East African journey."
           />
 
+          <div className="intel-stats" aria-label="Safari Intel overview"><div><strong>{articles.length}+</strong><span>field guides</span></div><div><strong>2</strong><span>countries covered</span></div><div><strong>1</strong><span>local planning team</span></div></div>
           <div className="intel-toolbar">
             <label className="intel-search"><Search size={16} /><span className="sr-only">Search Safari Intel</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search guides" /></label>
             <span className="intel-result-count">{filteredArticles.length} guide{filteredArticles.length === 1 ? '' : 's'}</span>

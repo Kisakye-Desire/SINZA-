@@ -1,7 +1,47 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, ArrowRight, Building2, CreditCard, Smartphone } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Building2, CreditCard, GraduationCap, HeartHandshake, Smartphone, Trees } from 'lucide-react'
 import { SiteShell, PageHero } from '@/components/site-shell'
 
+const donationOptions = [
+  { id: 'school', title: 'Sponsor School Fees', description: 'Help a child access school fees, supplies, and a stronger start.', icon: GraduationCap, suggested: [40, 100, 250] },
+  { id: 'conservation', title: 'Protect Nature', description: 'Support conservation, habitat protection, and the people caring for wild places.', icon: Trees, suggested: [25, 75, 150] },
+  { id: 'community', title: 'Community Care', description: 'Support healthcare, water, livelihoods, and practical community projects.', icon: HeartHandshake, suggested: [25, 50, 100] },
+]
+const currencies = ['USD', 'UGX', 'EUR']
+
 export default function DonatePage() {
-  return <SiteShell><main><PageHero eyebrow="Community development" title={<>Give with<br /><em>purpose.</em></>} intro="Your support helps Sinza’s community partners invest in education, conservation, health and opportunity across Uganda." image="/images/sinza-gorilla.jpg" /><section className="section-wrap donation-page-intro"><Link href="/community" className="back-link"><ArrowLeft size={15} /> Back to community development</Link><p className="eyebrow">Choose how to give</p><h2>Every contribution<br /><em>has a local story.</em></h2><p className="large-copy">Use the verified details below to support community-led work. These details are temporary placeholders and must be replaced with Sinza’s confirmed payment information before the page is published.</p><div className="donation-method-grid"><article><CreditCard size={25} /><h3>Card or Stripe</h3><p>Make a secure one-time donation by card through Stripe.</p><div className="button-row"><a className="button dark" href="/api/donate?amount=2500">Give $25</a><a className="button outline-dark" href="/api/donate?amount=5000">Give $50</a></div></article><article><Building2 size={25} /><h3>Bank transfer</h3><dl><dt>Bank name</dt><dd>[Bank name]</dd><dt>Account name</dt><dd>[Account name]</dd><dt>Account number</dt><dd>[Account number]</dd><dt>Branch / SWIFT</dt><dd>[Branch / SWIFT]</dd><dt>Currency</dt><dd>[UGX / USD]</dd></dl></article><article><Smartphone size={25} /><h3>Mobile money</h3><dl><dt>Network</dt><dd>[MTN / Airtel]</dd><dt>Number</dt><dd>[Mobile money number]</dd><dt>Registered name</dt><dd>[Registered name]</dd></dl></article><article><CreditCard size={25} /><h3>PayPal</h3><p>For supporters outside Uganda, use the secure PayPal option below.</p><p className="donation-placeholder">[PayPal email or donation URL]</p><a className="button dark" href="mailto:sinzasafaris@gmail.com?subject=Community donation">Ask about donating <ArrowRight size={15} /></a></article></div></section></main></SiteShell>
+  const [selected, setSelected] = useState<string | null>(null)
+  const [currency, setCurrency] = useState('USD')
+  const [amount, setAmount] = useState('')
+  const [givingMethod, setGivingMethod] = useState<'mobile' | 'bank' | 'card' | 'paypal'>('mobile')
+  const selectedOption = donationOptions.find((option) => option.id === selected)
+  const SelectedIcon = selectedOption?.icon
+  const startStripeCheckout = async () => { if (!amount || !selectedOption) return; const response = await fetch('/api/donations/checkout', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ amount: Math.round(Number(amount) * (currency === 'USD' || currency === 'EUR' ? 100 : 1)), currency, cause: selectedOption.title }) }); const result = await response.json(); if (result.url) window.location.href = result.url }
+
+
+  return <SiteShell><main className="donation-flow-page">
+    <PageHero eyebrow="Community development" title={<>Give with<br /><em>purpose.</em></>} intro="Choose what you would like to support, select your currency, and we’ll show you the clearest way to give." image="/images/community-children.png" />
+    <section className="donation-flow section-wrap">
+      <Link href="/community" className="back-link"><ArrowLeft size={15} /> Back to community development</Link>
+      <div className="donation-steps" aria-label="Donation steps"><span className="active">01 Choose support</span><i /><span className={selected ? 'active' : ''}>02 Choose amount</span><i /><span className={amount ? 'active' : ''}>03 Complete giving</span></div>
+      <p className="eyebrow">Step {selected ? '02' : '01'} of 03</p>
+      {!selected ? <>
+        <div className="donation-story-card"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bill-wegener-8ldqRkOk5oo-unsplash-LXQ6vz0BjZZPjYlcLvMC1wc8INJteu.jpg" alt="Young people connected to Sinza community development work" /><div><p className="eyebrow">Your gift reaches people</p><h3>A practical way to travel with purpose.</h3><p>Choose one focus below and we&apos;ll show the giving details for that specific work, including bank transfer and mobile money guidance.</p></div></div>
+        <h2>What would you like<br /><em>to support?</em></h2>
+        <p className="large-copy">Choose one area and we’ll show you the payment details that fit your gift.</p>
+        <div className="donation-option-grid">{donationOptions.map(({ id, title, description, icon: Icon }) => <button type="button" className="donation-option" onClick={() => setSelected(id)} key={id}><span className="donation-option-icon"><Icon size={28} /></span><h3>{title}</h3><p>{description}</p><strong>Choose this focus <ArrowRight size={16} /></strong></button>)}</div>
+      </> : <>
+        <button type="button" className="donation-change" onClick={() => { setSelected(null); setAmount('') }}><ArrowLeft size={14} /> Change support area</button>
+        <div className="donation-selected"><span className="donation-option-icon">{SelectedIcon && <SelectedIcon size={28} />}</span><div><p className="eyebrow">You are supporting</p><h2>{selectedOption?.title}</h2><p>{selectedOption?.description}</p></div></div>
+        <h3 className="donation-subheading">Choose your currency</h3><div className="currency-grid">{currencies.map((item) => <button type="button" className={currency === item ? 'selected' : ''} onClick={() => setCurrency(item)} key={item}>{item}</button>)}</div>
+        <h3 className="donation-subheading">Enter your donation amount</h3><label className="donation-amount"><span>{currency}</span><input inputMode="decimal" value={amount} onChange={(event) => setAmount(event.target.value.replace(/[^0-9.]/g, ''))} placeholder="Enter amount" aria-label="Donation amount" /></label>
+        <div className="giving-methods" role="tablist" aria-label="Ways to donate">{([['mobile', Smartphone, 'Mobile money'], ['bank', Building2, 'Bank transfer'], ['card', CreditCard, 'Card / Stripe'], ['paypal', CreditCard, 'PayPal']] as const).map(([id, Icon, label]) => <button type="button" role="tab" aria-selected={givingMethod === id} className={givingMethod === id ? 'selected' : ''} onClick={() => setGivingMethod(id)} key={id}><Icon size={18} />{label}</button>)}</div>
+        <div className="donation-payment-card">{givingMethod === 'mobile' ? <Smartphone size={24} /> : givingMethod === 'bank' ? <Building2 size={24} /> : <CreditCard size={24} />}<div>{givingMethod === 'mobile' ? <><h3>Mobile money</h3><div className="mobile-money-grid"><div className="mobile-money-card mtn"><strong>MTN Mobile Money</strong><span>0772905559</span><small>Names: Sinza Safaris</small></div><div className="mobile-money-card airtel"><strong>Airtel Money</strong><span>0752905559</span><small>Names: Sinza Safaris</small></div></div><p>Send any amount you choose, then message us with your reference.</p></> : givingMethod === 'bank' ? <><h3>Bank transfer</h3><p>Housing Finance Bank · SINZA SAFARIS LTD</p><p>Account number: <strong>1150021717840</strong></p><p>Use “{selectedOption?.title}” as your reference.</p></> : givingMethod === 'paypal' ? <><h3>PayPal</h3><p>PayPal giving opens in a secure PayPal window. Complete your donation there, then message us with the cause you selected.</p></> : <><h3>Card / Stripe</h3><p>Card giving is prepared with our team so we can confirm the selected cause and amount securely.</p><p>Continue by email and we&apos;ll send the verified payment link.</p></>}</div></div>
+        <div className="button-row"><button type="button" className={`button dark ${!amount ? 'disabled' : ''}`} aria-disabled={!amount} onClick={givingMethod === 'card' ? startStripeCheckout : givingMethod === 'paypal' ? () => { window.location.href = 'https://www.paypal.com/donate' } : undefined}>{givingMethod === 'card' ? 'Give securely with Stripe' : givingMethod === 'paypal' ? 'Give with PayPal' : 'Continue to give'} <ArrowRight size={16} /></button><a className="button outline-dark" href="https://wa.me/256702970065?text=Hello%20Sinza%2C%20I%20would%20like%20to%20make%20a%20donation." target="_blank" rel="noreferrer">Message us after donating</a></div>
+      </>}
+    </section>
+  </main></SiteShell>
 }
