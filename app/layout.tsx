@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { Cormorant_Garamond, Geist } from 'next/font/google'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import './theme-overrides.css'
 
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], variable: '--font-cormorant' })
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist' })

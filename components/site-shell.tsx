@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { ArrowRight, ArrowUp, ChevronDown, Menu, X } from 'lucide-react'
+import { ArrowRight, ArrowUp, ChevronDown, Globe, Menu, X } from 'lucide-react'
 import { destByRegion, journeysByRegion, navItems } from '@/lib/safari-data'
 
 const intelLinks = [['Safari Pricing', '/safari-pricing'], ['Packing List', '/packing-list'], ['Safari Guide', '/safari-guide'], ['Booking Terms', '/terms-conditions'], ['How We Work', '/how-we-work']]
@@ -46,8 +46,9 @@ export function Footer() { return <>
   <a href="https://wa.me/256702970065?text=Hello%20Sinza%20Safaris%2C%20I%27d%20like%20to%20plan%20a%20meaningful%20safari%20in%20Uganda." target="_blank" rel="noreferrer" className="floating-chat" aria-label="Chat with Sinza Safaris on WhatsApp"><img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/whatsapp/default.svg" alt="" width="27" height="27" /><span>Plan your safari</span></a>
 </> }
 
+function LanguageSelector() { const languages = [['en', 'English'], ['fr', 'Français'], ['de', 'Deutsch'], ['es', 'Español']] as const; const [language, setLanguage] = useState('en'); const changeLanguage = (value: string) => { setLanguage(value); if (value !== 'en') { const url = encodeURIComponent(window.location.href); window.open(`https://translate.google.com/translate?sl=auto&tl=${value}&u=${url}`, '_blank', 'noopener,noreferrer') } }; return <label className="language-selector"><Globe size={17} /><span className="sr-only">Translate this page</span><select aria-label="Translate this page" value={language} onChange={(event) => changeLanguage(event.target.value)}>{languages.map(([value, label]) => <option value={value} key={value}>{label}</option>)}</select></label> }
 function ScrollToTop() { return <button className="scroll-top" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><ArrowUp size={18} /></button> }
-export function SiteShell({ children }: { children: React.ReactNode }) { return <><Header />{children}<Footer /><ScrollToTop /></> }
+export function SiteShell({ children }: { children: React.ReactNode }) { return <><Header /><LanguageSelector />{children}<Footer /><ScrollToTop /></> }
 export function PageHero({ eyebrow, title, intro, image }: { eyebrow: string; title: React.ReactNode; intro?: string; image?: string }) { return <section className="page-hero"><div><p className="eyebrow">{eyebrow}</p><h1>{title}</h1>{intro && <p className="hero-lede">{intro}</p>}</div>{image && <img src={image} alt="" />}</section> }
 export function SectionHeading({ eyebrow, title, intro }: { eyebrow: string; title: React.ReactNode; intro?: string }) { return <div className="section-heading"><div><p className="eyebrow">{eyebrow}</p><h2>{title}</h2></div>{intro && <p className="section-intro">{intro}</p>}</div> }
 export function EnquiryCta() { return <section className="statement"><p className="eyebrow">Start with a conversation</p><h2>Let&apos;s make<br /><em>your journey.</em></h2><p>Tell us what you&apos;re imagining and our Uganda-based team will shape thoughtful ideas around you.</p><Link href="/contact" className="button light">Plan my safari <ArrowRight size={16} /></Link></section> }

@@ -1,0 +1,24 @@
+/* Sinza theme refinements */
+:root { --sinza-terracotta: #c76b3c; --sinza-sun: #d4a72c; --sinza-forest: #174f45; }
+.button.dark, .nav-cta { background: var(--sinza-terracotta); border-color: var(--sinza-terracotta); }
+.button.dark:hover, .nav-cta:hover { background: var(--sinza-sun); border-color: var(--sinza-sun); color: #17231f; }
+.button.light { background: var(--sinza-sun); color: #17231f; }
+.page-hero { background: linear-gradient(120deg, rgba(23,79,69,.12), rgba(212,167,44,.13)); }
+.intel-tip-card, .related-article-card, .destination-card, .safari-card { border-top: 4px solid var(--sinza-terracotta); }
+.eyebrow { color: var(--sinza-terracotta); }
+.text-link, .article-body a { color: var(--sinza-forest); }
+.destination-card:hover, .safari-card:hover, .related-article-card:hover { border-color: var(--sinza-sun); }
+.gallery-pagination { margin-top: 1.25rem !important; position: relative; z-index: 3; transform: translateY(0.5rem); }
+.gallery-pagination button { background: var(--sinza-forest); border: 1px solid var(--sinza-sun); color: #fff; min-width: 2.5rem; min-height: 2.5rem; }
+.gallery-pagination button.is-active, .gallery-pagination button:hover { background: var(--sinza-sun); color: #17231f; }
+.gallery-page-label { margin-bottom: 0.25rem; }
+.mobile-money-grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 1rem 0; }
+.mobile-money-card { border-left: 5px solid; display: grid; gap: 0.2rem; padding: 1rem; }
+.mobile-money-card.mtn { background: #fff4c5; border-color: #ffca05; color: #422d00; }
+.mobile-money-card.airtel { background: #ffe0df; border-color: #e4002b; color: #5d0715; }
+.mobile-money-card span { font-size: 1.4rem; font-weight: 700; letter-spacing: 0.04em; }
+.mobile-money-card small { font-size: 0.78rem; }
+.language-selector { align-items: center; background: var(--sinza-forest); border: 1px solid var(--sinza-sun); color: #fff; display: flex; gap: 0.35rem; padding: 0.45rem 0.65rem; position: fixed; right: 1rem; top: 5.25rem; z-index: 20; }
+.language-selector select { background: transparent; border: 0; color: inherit; font: inherit; outline: 0; }
+.language-selector option { color: #17231f; }
+@media (max-width: 640px) { .mobile-money-grid { grid-template-columns: 1fr; } .language-selector { right: 0.75rem; top: 4.75rem; } }
