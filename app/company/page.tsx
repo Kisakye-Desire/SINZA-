@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import type { ComponentType } from 'react'
 import { ArrowRight, Heart, Leaf, Users, ShieldCheck, Sparkles, Cross } from 'lucide-react'
 import { PageHero, SectionHeading, SiteShell, EnquiryCta } from '@/components/site-shell'
 import { TeamSection } from '@/components/team-section'
@@ -9,7 +10,7 @@ const chapters = [
   ['Our Vision', 'To become East Africa’s leading purpose-driven travel company—transforming lives through unforgettable experiences that connect people, nature, and communities.', 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20%2839%29-1aZGCHYI0Seye4VkhwvFKf5q6SmnN9.jpg'],
 ]
 
-const coreValues = [
+const coreValues: [string, string, ComponentType<{ size?: number } >][] = [
   ['Faith & Integrity', 'Grounded in Christian principles of compassion and stewardship', Cross],
   ['Sustainability', 'Promoting environmental conservation and responsible travel', Leaf],
   ['Community Empowerment', 'Supporting local lives through ethical tourism', Users],
@@ -32,7 +33,7 @@ export default function CompanyPage() {
       <SectionHeading eyebrow="Who we are" title={<>Uganda first.<br /><em>Always personal.</em></>} intro="We approach travel as a blessing—for both the traveler and the communities we serve. We design more than tours—we create transformational journeys that promote sustainability, support conservation, and strengthen the people and places that make Uganda extraordinary." />
       <div className="company-chapters">{chapters.map(([title, copy, image], index) => <article className="company-chapter" key={title}><div className="company-chapter-image"><img src={image} alt={`${title} illustration`} /><span>0{index + 1}</span></div><div><p className="eyebrow">Purpose 0{index + 1}</p><h3>{title}</h3><p>{copy}</p><Link href="/contact" className="text-link">Talk to our team <ArrowRight size={14} /></Link></div></article>)}</div>
     </section>
-    <section className="company-values section-wrap"><SectionHeading eyebrow="Core Values" title={<>What guides<br /><em>every journey.</em></>} /><div className="company-values-grid">{coreValues.map(([title, copy, Icon]) => <div key={title as string}><Icon size={24} /><h3>{title}</h3><p>{copy}</p></div>)}</div></section>
+    <section className="company-values section-wrap"><SectionHeading eyebrow="Core Values" title={<>What guides<br /><em>every journey.</em></>} /><div className="company-values-grid">{coreValues.map(([title, copy, Icon]) => { const ValueIcon = Icon as ComponentType<{ size?: number }>; return <div key={title as string}><ValueIcon size={24} /><h3>{title}</h3><p>{copy}</p></div> })}</div></section>
     <section className="section-wrap company-reasons"><SectionHeading eyebrow="Why Travel With Us?" title={<>Travel well.<br /><em>Travel with purpose.</em></>} /><div className="reasons-grid">{reasons.map(([title, copy], index) => <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
     <section className="service-list section-wrap"><SectionHeading eyebrow="What we offer" title={<>Routes made<br /><em>for you.</em></>} intro="From the misty forests to the wild north, our trips are shaped around your interests and travelling style." /><div className="service-list-grid">{['Gorilla & Chimpanzee Trekking','Big Five Game Drives','Birding Safaris','Boat Cruises','Camping Safaris','Fly-Out Safaris'].map((service, index) => <div key={service}><span>{String(index + 1).padStart(2, '0')}</span><p>{service}</p><ArrowRight size={15} /></div>)}</div></section>
     <TeamSection compact /><EnquiryCta />
