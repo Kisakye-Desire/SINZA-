@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Geist } from 'next/font/google'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import './theme-overrides.css'
+import { Header } from '@/components/site-shell'
 
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], variable: '--font-cormorant' })
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist' })
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth" className={`${cormorant.variable} ${geist.variable}`}>
       <body className="antialiased">
+        <Header />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
