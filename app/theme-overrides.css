@@ -62,6 +62,10 @@
 @media (max-width: 640px) { .mobile-money-grid, .attraction-gallery-grid { grid-template-columns: 1fr; } .attraction-gallery .section-heading { display: block; } .attraction-gallery .section-intro { margin-top: 1rem; } }
 
 /* Editorial balance and interaction refinements */
+html, body { max-width: 100%; overflow-x: hidden; }
+.site-header, main, footer, .footer-enquire, .partner-strip { max-width: 100%; }
+.footer-brand .brand-with-logo { align-self: flex-start; transform: translateY(-0.65rem); }
+
 footer { align-items: start; background: var(--sinza-forest); color: #f3f0e8; display: grid; gap: clamp(2rem, 5vw, 6rem); grid-template-columns: minmax(230px, 1.35fr) repeat(2, minmax(120px, .7fr)) minmax(220px, 1fr); padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 8vw, 8rem); }
 footer a { color: #dfe6d6; transition: color .2s ease, transform .2s ease; }
 footer a:hover { color: var(--sinza-sun); transform: translateX(3px); }
@@ -80,6 +84,16 @@ footer a:hover { color: var(--sinza-sun); transform: translateX(3px); }
 .company-values { background: #e7eadc; }
 .company-values .section-heading { align-items: flex-start; display: grid; gap: 2rem; grid-template-columns: minmax(250px, .75fr) minmax(0, 1.25fr); }
 .company-values-grid { align-items: stretch; display: grid; gap: 1px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.company-values-list { border-top: 1px solid color-mix(in srgb, var(--sinza-forest) 24%, transparent); list-style: none; margin: 0; padding: 0; }
+.company-values-list li { align-items: center; border-bottom: 1px solid color-mix(in srgb, var(--sinza-forest) 24%, transparent); display: grid; gap: 1rem; grid-template-columns: 3rem 2rem minmax(0, 1fr); padding: 1.2rem 0; transition: padding .2s ease, background .2s ease; }
+.company-values-list li:hover { background: color-mix(in srgb, var(--sinza-sun) 10%, transparent); padding-left: .75rem; padding-right: .75rem; }
+.company-values-list svg { color: var(--sinza-terracotta); }
+.company-value-number { color: var(--sinza-terracotta); font-size: .72rem; font-weight: 800; letter-spacing: .12em; }
+.company-values-list h3 { font-family: var(--font-serif); font-size: clamp(1.35rem, 2vw, 1.9rem); font-weight: 500; line-height: 1.1; margin: 0 0 .25rem; }
+.company-values-list p { color: #657067; font-size: .95rem; line-height: 1.5; margin: 0; }
+.community-gallery .gallery-collage { margin-bottom: 0; }
+.community-gallery .gallery-pagination { margin-top: 1.5rem !important; }
+@media (max-width: 640px) { .company-values-list li { grid-template-columns: 2.25rem 1.75rem minmax(0, 1fr); } }
 .company-values-grid > div { background: color-mix(in srgb, var(--sinza-cream) 74%, white); display: flex; flex-direction: column; min-height: 230px; padding: 1.65rem; transition: background .25s ease, transform .25s ease; }
 .company-values-grid > div:hover { background: #f3f0e8; transform: translateY(-5px); }
 .company-values-grid svg { color: var(--sinza-terracotta); margin-bottom: 2.4rem; }

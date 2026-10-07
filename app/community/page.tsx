@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { SiteShell, SectionHeading, PageHero, EnquiryCta } from '@/components/site-shell'
+import { GalleryGrid } from '@/components/gallery-grid'
+import { galleryImages } from '@/lib/safari-data'
 
 const communityProjects = [
   {
@@ -51,9 +52,6 @@ const communityProjects = [
 ]
 
 export default function CommunityPage() {
-  const [galleryPage, setGalleryPage] = useState(0)
-  const galleryPages = Array.from({ length: 3 }, (_, page) => communityProjects.map((project, index) => communityProjects[(index + page * 2) % communityProjects.length]))
-
   return (
     <SiteShell>
       <main>
@@ -160,15 +158,7 @@ export default function CommunityPage() {
 
         <section className="section-wrap community-gallery">
           <SectionHeading eyebrow="Community gallery" title={<>Small moments.<br /><em>Shared progress.</em></>} intro="A closer look at the people, places, and practical work behind Sinza’s purpose." />
-          <div className={`community-gallery-grid collage-page-${galleryPage + 1}`}>
-            {galleryPages[galleryPage].map((project, index) => <a className="community-gallery-tile" href={project.image} target="_blank" rel="noreferrer" key={`${project.title}-${galleryPage}-${index}`}><img src={project.image} alt={`${project.title} community project`} /><span>Activity · 0{index + 1} · {project.title}</span></a>)}
-          </div>
-          <p className="gallery-page-label" aria-live="polite">Page {galleryPage + 1} of 3 · Showing the community story through a different collage</p>
-          <div className="gallery-pagination" aria-label="Community gallery pages">
-            <button type="button" className="gallery-arrow" onClick={() => setGalleryPage((galleryPage + 2) % 3)} aria-label="Previous gallery page">←</button>
-            {[0, 1, 2].map((page) => <button type="button" className={galleryPage === page ? 'is-active' : ''} onClick={() => setGalleryPage(page)} aria-label={`Gallery page ${page + 1}`} aria-current={galleryPage === page ? 'page' : undefined} key={page}>{String(page + 1).padStart(2, '0')}</button>)}
-            <button type="button" className="gallery-arrow" onClick={() => setGalleryPage((galleryPage + 1) % 3)} aria-label="Next gallery page">→</button>
-          </div>
+          <GalleryGrid images={galleryImages} />
         </section>
 
         <section className="section-wrap community-get-involved">
