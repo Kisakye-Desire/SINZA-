@@ -38,7 +38,7 @@
 .menu-trigger:hover, .menu-trigger.active, .nav-links a:hover, .mega-menu a:hover { color: var(--sinza-leaf); }
 .language-selector { color: var(--sinza-green); }
 .brand-with-logo img { filter: none; }
-.header-contact { align-items: center; display: flex; flex: 0 0 auto; gap: 14px; order: 3; }
+.header-contact { align-items: center; display: flex; flex: 0 0 auto; gap: 14px; margin-left: 0; order: 3; } .header-phone { order: 2; } .header-contact .language-selector { order: 1; }
 .language-selector { order: -1; }
 @media (max-width: 1120px) and (min-width: 761px) { .site-header { gap: 12px; padding-left: 18px; padding-right: 18px; } .nav-links { gap: 16px; margin-right: 4px; } .nav-links > a, .menu-trigger { font-size: 10px; } .header-phone { display: none; } .header-contact { margin-left: 0; } }
 @media (max-width: 760px) { .site-header { align-items: center; gap: 10px; } .header-contact { margin-left: auto; } .header-phone { display: none; } .language-selector { display: inline-flex; } }
@@ -85,15 +85,14 @@ footer a:hover { color: var(--sinza-sun); transform: translateX(3px); }
 .company-values .section-heading { align-items: flex-start; display: grid; gap: 2rem; grid-template-columns: minmax(250px, .75fr) minmax(0, 1.25fr); }
 .company-values-grid { align-items: stretch; display: grid; gap: 1px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .company-values-list { border-top: 1px solid color-mix(in srgb, var(--sinza-forest) 24%, transparent); list-style: none; margin: 0; padding: 0; }
-.company-values-list li { align-items: center; border-bottom: 1px solid color-mix(in srgb, var(--sinza-forest) 24%, transparent); display: grid; gap: 1rem; grid-template-columns: 3rem 2rem minmax(0, 1fr); padding: 1.2rem 0; transition: padding .2s ease, background .2s ease; }
-.company-values-list li:hover { background: color-mix(in srgb, var(--sinza-sun) 10%, transparent); padding-left: .75rem; padding-right: .75rem; }
-.company-values-list svg { color: var(--sinza-terracotta); }
+.company-values-list li { align-items: start; border-bottom: 1px solid color-mix(in srgb, var(--sinza-forest) 24%, transparent); display: grid; gap: 1rem; grid-template-columns: 3rem minmax(0, 1fr); padding: 1.05rem 0; transition: padding .2s ease, background .2s ease; }
+.company-values-list li:hover { background: color-mix(in srgb, var(--sinza-sun) 10%, transparent); padding-left: .75rem; padding-right: .75rem; } .company-values-list p { max-width: 52ch; } .company-values .section-heading { margin-bottom: 1.5rem; } .community-stories { padding-top: clamp(3rem, 6vw, 5rem); } .community-gallery { padding-top: clamp(3rem, 6vw, 5rem); }
 .company-value-number { color: var(--sinza-terracotta); font-size: .72rem; font-weight: 800; letter-spacing: .12em; }
 .company-values-list h3 { font-family: var(--font-serif); font-size: clamp(1.35rem, 2vw, 1.9rem); font-weight: 500; line-height: 1.1; margin: 0 0 .25rem; }
 .company-values-list p { color: #657067; font-size: .95rem; line-height: 1.5; margin: 0; }
 .community-gallery .gallery-collage { margin-bottom: 0; }
 .community-gallery .gallery-pagination { margin-top: 1.5rem !important; }
-@media (max-width: 640px) { .company-values-list li { grid-template-columns: 2.25rem 1.75rem minmax(0, 1fr); } }
+@media (max-width: 640px) { .company-values-list li { grid-template-columns: 2.25rem minmax(0, 1fr); } }
 .company-values-grid > div { background: color-mix(in srgb, var(--sinza-cream) 74%, white); display: flex; flex-direction: column; min-height: 230px; padding: 1.65rem; transition: background .25s ease, transform .25s ease; }
 .company-values-grid > div:hover { background: #f3f0e8; transform: translateY(-5px); }
 .company-values-grid svg { color: var(--sinza-terracotta); margin-bottom: 2.4rem; }
@@ -108,7 +107,7 @@ footer a:hover { color: var(--sinza-sun); transform: translateX(3px); }
 .gallery-page-label { margin: 1.25rem 0 .75rem; }
 .gallery-pagination { gap: .45rem; margin-top: 0 !important; }
 .gallery-pagination button { border-radius: 999px; min-width: 2.75rem; }
-.donation-flow-page .donation-flow { max-width: 1120px; }
+.donation-flow-page .donation-flow { max-width: 1120px; padding-bottom: clamp(3rem, 6vw, 5rem); padding-top: clamp(3rem, 6vw, 5rem); } .donation-flow-page .donation-story-card { margin-bottom: 2rem; } .donation-flow-page .donation-option-grid { margin-top: 1.75rem; }
 .donation-option-grid { align-items: stretch; display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .donation-option { display: flex; flex-direction: column; min-height: 300px; padding: 1.5rem; text-align: left; transition: background .25s ease, box-shadow .25s ease, transform .25s ease; }
 .donation-option:hover { background: #f3f0e8; box-shadow: 0 18px 38px rgba(32,52,43,.12); transform: translateY(-6px); }
@@ -120,3 +119,11 @@ footer a:hover { color: var(--sinza-sun); transform: translateX(3px); }
 .donation-payment-card { min-height: 0; }
 @media (max-width: 900px) { footer { grid-template-columns: repeat(2, minmax(0, 1fr)); } .company-values .section-heading { display: block; } .company-values .section-heading .section-intro { margin-top: 1rem; } .company-values-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .donation-option-grid { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { footer { grid-template-columns: 1fr; } .company-values-grid { grid-template-columns: 1fr; } .company-values-grid > div { min-height: 0; } .giving-methods { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.contact-page-section { align-items: start; background: linear-gradient(110deg, color-mix(in srgb, var(--sinza-cream) 90%, var(--sinza-sun)), var(--sinza-cream)); gap: clamp(2rem, 5vw, 5rem); padding-bottom: clamp(4rem, 7vw, 7rem); padding-top: clamp(4rem, 7vw, 7rem); }
+.contact-page-section > div:first-child { max-width: 28rem; padding-top: .5rem; }
+.contact-page-section .contact-details { border-left: 3px solid var(--sinza-terracotta); padding-left: 1.25rem; }
+.contact-page-section .wizard { background: #f3f0e8; border-color: color-mix(in srgb, var(--sinza-forest) 28%, transparent); box-shadow: 0 18px 50px rgba(23,79,69,.09); max-width: 690px; }
+.contact-page-section .choice { background: color-mix(in srgb, var(--sinza-cream) 82%, white); border-color: color-mix(in srgb, var(--sinza-forest) 24%, transparent); }
+.contact-page-section .choice.active, .contact-page-section .choice:hover { background: color-mix(in srgb, var(--sinza-sun) 20%, var(--sinza-cream)); border-color: var(--sinza-terracotta); }
+@media (max-width: 900px) { .contact-page-section { grid-template-columns: 1fr; } .contact-page-section .wizard { max-width: none; } }

@@ -4,7 +4,14 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { SiteShell, SectionHeading, PageHero, EnquiryCta } from '@/components/site-shell'
 import { GalleryGrid } from '@/components/gallery-grid'
-import { galleryImages } from '@/lib/safari-data'
+const communityGalleryImages = [
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bill-wegener-8ldqRkOk5oo-unsplash-LXQ6vz0BjZZPjYlcLvMC1wc8INJteu.jpg', alt: 'Young people connected to community development work', label: 'Education and opportunity' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-QeEK1g70vdQ-unsplash-16YYnYnE59XpaUe2a7XWXLIb8IQAc9.jpg', alt: 'A community health project', label: 'Health access' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-qteTc4nGuc0-unsplash-EQ4jsT7Ch4hO6w0l6paju74YCMbPQI.jpg', alt: 'A community water project', label: 'Water and sanitation' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zach-wear-zOoiOzayjK4-unsplash-nAMqmgXXB9d45lBNYAZ1XxOE8GvywF.jpg', alt: 'A local guide at work', label: 'Local employment' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lisa-marie-theck-j9HZWSKAgrA-unsplash-aUSHIoeZdJhgb82QjPV05KV7gTRjxW.jpg', alt: 'Women building livelihoods together', label: 'Women-led enterprise' },
+]
+
 
 const communityProjects = [
   {
@@ -126,7 +133,7 @@ export default function CommunityPage() {
           <div className="stories-grid">
             <article className="story-card">
               <div className="story-image">
-                <img src="/images/wildlife-chimp-rainforest.jpg" alt="Education project" />
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bill-wegener-8ldqRkOk5oo-unsplash-LXQ6vz0BjZZPjYlcLvMC1wc8INJteu.jpg" alt="Students connected to the education project" />
               </div>
               <h4>Education Beyond the Classroom</h4>
               <p>
@@ -136,7 +143,7 @@ export default function CommunityPage() {
 
             <article className="story-card">
               <div className="story-image">
-                <img src="/images/wildlife-hippos-water.jpg" alt="Water project" />
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-qteTc4nGuc0-unsplash-EQ4jsT7Ch4hO6w0l6paju74YCMbPQI.jpg" alt="A village water project" />
               </div>
               <h4>A Well Changes Everything</h4>
               <p>
@@ -146,7 +153,7 @@ export default function CommunityPage() {
 
             <article className="story-card">
               <div className="story-image">
-                <img src="/images/wildlife-giraffe-safari.jpg" alt="Conservation project" />
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zach-wear-zOoiOzayjK4-unsplash-nAMqmgXXB9d45lBNYAZ1XxOE8GvywF.jpg" alt="A local conservation guide" />
               </div>
               <h4>Rhinos Return</h4>
               <p>
@@ -158,7 +165,7 @@ export default function CommunityPage() {
 
         <section className="section-wrap community-gallery">
           <SectionHeading eyebrow="Community gallery" title={<>Small moments.<br /><em>Shared progress.</em></>} intro="A closer look at the people, places, and practical work behind Sinza’s purpose." />
-          <GalleryGrid images={galleryImages} />
+          <GalleryGrid images={communityGalleryImages} />
         </section>
 
         <section className="section-wrap community-get-involved">
