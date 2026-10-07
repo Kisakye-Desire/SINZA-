@@ -1,9 +1,17 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { SiteShell, SectionHeading, PageHero, EnquiryCta } from '@/components/site-shell'
+import { GalleryGrid } from '@/components/gallery-grid'
+const communityGalleryImages = [
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bill-wegener-8ldqRkOk5oo-unsplash-LXQ6vz0BjZZPjYlcLvMC1wc8INJteu.jpg', alt: 'Young people connected to community development work', label: 'Education and opportunity' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-QeEK1g70vdQ-unsplash-16YYnYnE59XpaUe2a7XWXLIb8IQAc9.jpg', alt: 'A community health project', label: 'Health access' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-qteTc4nGuc0-unsplash-EQ4jsT7Ch4hO6w0l6paju74YCMbPQI.jpg', alt: 'A community water project', label: 'Water and sanitation' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zach-wear-zOoiOzayjK4-unsplash-nAMqmgXXB9d45lBNYAZ1XxOE8GvywF.jpg', alt: 'A local guide at work', label: 'Local employment' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lisa-marie-theck-j9HZWSKAgrA-unsplash-aUSHIoeZdJhgb82QjPV05KV7gTRjxW.jpg', alt: 'Women building livelihoods together', label: 'Women-led enterprise' },
+]
+
 
 const communityProjects = [
   {
@@ -51,9 +59,6 @@ const communityProjects = [
 ]
 
 export default function CommunityPage() {
-  const [galleryPage, setGalleryPage] = useState(0)
-  const galleryPages = Array.from({ length: 3 }, (_, page) => communityProjects.map((project, index) => communityProjects[(index + page * 2) % communityProjects.length]))
-
   return (
     <SiteShell>
       <main>
@@ -128,7 +133,7 @@ export default function CommunityPage() {
           <div className="stories-grid">
             <article className="story-card">
               <div className="story-image">
-                <img src="/images/wildlife-chimp-rainforest.jpg" alt="Education project" />
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bill-wegener-8ldqRkOk5oo-unsplash-LXQ6vz0BjZZPjYlcLvMC1wc8INJteu.jpg" alt="Students connected to the education project" />
               </div>
               <h4>Education Beyond the Classroom</h4>
               <p>
@@ -138,7 +143,7 @@ export default function CommunityPage() {
 
             <article className="story-card">
               <div className="story-image">
-                <img src="/images/wildlife-hippos-water.jpg" alt="Water project" />
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-qteTc4nGuc0-unsplash-EQ4jsT7Ch4hO6w0l6paju74YCMbPQI.jpg" alt="A village water project" />
               </div>
               <h4>A Well Changes Everything</h4>
               <p>
@@ -148,7 +153,7 @@ export default function CommunityPage() {
 
             <article className="story-card">
               <div className="story-image">
-                <img src="/images/wildlife-giraffe-safari.jpg" alt="Conservation project" />
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zach-wear-zOoiOzayjK4-unsplash-nAMqmgXXB9d45lBNYAZ1XxOE8GvywF.jpg" alt="A local conservation guide" />
               </div>
               <h4>Rhinos Return</h4>
               <p>
@@ -160,15 +165,7 @@ export default function CommunityPage() {
 
         <section className="section-wrap community-gallery">
           <SectionHeading eyebrow="Community gallery" title={<>Small moments.<br /><em>Shared progress.</em></>} intro="A closer look at the people, places, and practical work behind Sinza’s purpose." />
-          <div className={`community-gallery-grid collage-page-${galleryPage + 1}`}>
-            {galleryPages[galleryPage].map((project, index) => <a className="community-gallery-tile" href={project.image} target="_blank" rel="noreferrer" key={`${project.title}-${galleryPage}-${index}`}><img src={project.image} alt={`${project.title} community project`} /><span>0{index + 1} · {project.title}</span></a>)}
-          </div>
-          <p className="gallery-page-label" aria-live="polite">Page {galleryPage + 1} of 3 · Showing the community story through a different collage</p>
-          <div className="gallery-pagination" aria-label="Community gallery pages">
-            <button type="button" className="gallery-arrow" onClick={() => setGalleryPage((galleryPage + 2) % 3)} aria-label="Previous gallery page">←</button>
-            {[0, 1, 2].map((page) => <button type="button" className={galleryPage === page ? 'is-active' : ''} onClick={() => setGalleryPage(page)} aria-label={`Gallery page ${page + 1}`} aria-current={galleryPage === page ? 'page' : undefined} key={page}>{String(page + 1).padStart(2, '0')}</button>)}
-            <button type="button" className="gallery-arrow" onClick={() => setGalleryPage((galleryPage + 1) % 3)} aria-label="Next gallery page">→</button>
-          </div>
+          <GalleryGrid images={communityGalleryImages} />
         </section>
 
         <section className="section-wrap community-get-involved">
