@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { ArrowRight, ArrowUp, ChevronDown, Globe, Menu, X } from 'lucide-react'
 import { destByRegion, journeysByRegion, navItems } from '@/lib/safari-data'
@@ -10,8 +11,10 @@ const companyLinks = [['About Sinza', '/company'], ['Community Development', '/c
 
 function MenuGroup({ label, children }: { label: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+  useEffect(() => { setOpen(false) }, [pathname])
   useEffect(() => { if (!open) return; const close = (event: MouseEvent) => { if (!(event.target as HTMLElement).closest('.menu-group')) setOpen(false) }; document.addEventListener('click', close); return () => document.removeEventListener('click', close) }, [open])
-  return <div className="menu-group"><button type="button" aria-expanded={open} className={open ? 'menu-trigger active' : 'menu-trigger'} onClick={() => setOpen((value) => !value)}>{label}<ChevronDown size={13} className={open ? 'rotate-180' : ''} /></button>{open && <div className="mega-menu compact-menu">{children}</div>}</div>
+  return <div className="menu-group"><button type="button" aria-expanded={open} className={open ? 'menu-trigger active' : 'menu-trigger'} onClick={() => setOpen((value) => !value)}>{label}<ChevronDown size={13} className={open ? 'rotate-180' : ''} /></button>{open && <div className="mega-menu compact-menu" onClick={(event) => { if ((event.target as HTMLElement).closest('a')) setOpen(false) }}>{children}</div>}</div>
 }
 
 function CompactRegion({ region, items, hrefBase, labelKey = 'title' }: { region: string; items: { slug: string; title?: string; name?: string }[]; hrefBase: string; labelKey?: 'title' | 'name' }) {
