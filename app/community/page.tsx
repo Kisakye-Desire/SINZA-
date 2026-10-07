@@ -161,7 +161,7 @@ export default function CommunityPage() {
         <section className="section-wrap community-gallery">
           <SectionHeading eyebrow="Community gallery" title={<>Small moments.<br /><em>Shared progress.</em></>} intro="A closer look at the people, places, and practical work behind Sinza’s purpose." />
           <div className={`community-gallery-grid collage-page-${galleryPage + 1}`}>
-            {galleryPages[galleryPage].map((project, index) => <a className="community-gallery-tile" href={project.image} target="_blank" rel="noreferrer" key={`${project.title}-${galleryPage}-${index}`}><img src={project.image} alt={`${project.title} community project`} /><span>0{index + 1} · {project.title}</span></a>)}
+            {galleryPages[galleryPage].map((project, index) => <a className="community-gallery-tile" href={project.image} target="_blank" rel="noreferrer" key={`${project.title}-${galleryPage}-${index}`}><img src={project.image} alt={`${project.title} community project`} /><span>Activity · 0{index + 1} · {project.title}</span></a>)}
           </div>
           <p className="gallery-page-label" aria-live="polite">Page {galleryPage + 1} of 3 · Showing the community story through a different collage</p>
           <div className="gallery-pagination" aria-label="Community gallery pages">
