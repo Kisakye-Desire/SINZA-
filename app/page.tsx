@@ -3,7 +3,7 @@ import { ArrowRight, MoveUpRight } from 'lucide-react'
 import { SiteShell, SectionHeading, EnquiryCta } from '@/components/site-shell'
 import { HeroCarousel } from '@/components/safari-ui'
 import { ReviewMarquee } from '@/components/review-marquee'
-import { articles, destinations, experiences, journeyCountries } from '@/lib/safari-data'
+import { destinations, experiences, journeyCountries } from '@/lib/safari-data'
 
 const reviews = [
   { quote: "Sinza made every day feel considered, unhurried and completely ours.", name: 'Maya & Daniel', detail: 'Private Uganda journey', rating: 5 },
@@ -27,8 +27,6 @@ export default function Home() {
     <section className="section-wrap journey-home"><SectionHeading eyebrow="Signature journeys" title={<>Safari, <em>your way.</em></>} intro="Thoughtfully designed routes for curious travellers who want more than a checklist." /><div className="journey-feature-grid">{[...destinations.slice(0, 3)].map((place, index) => <Link href={`/destinations/${place.slug}`} className="journey-feature-card" key={place.slug}><img src={place.image} alt={place.name} /><div><p className="eyebrow">{index === 0 ? 'Most loved' : index === 1 ? 'Forest & wildlife' : 'A slower route'}</p><h3>{place.name}</h3><p>{place.description}</p><span className="card-link">Explore the journey <ArrowRight size={15} /></span></div></Link>)}</div><Link href="/safaris" className="button outline-dark centered-button">View all journeys <ArrowRight size={15} /></Link></section>
 
     <section className="review-home"><div className="review-overlay"><p className="eyebrow">Real experiences, real travellers</p><h2>Our guests <em>remember.</em></h2></div><ReviewMarquee reviews={reviews} /></section>
-
-    <section className="section-wrap intel-home"><SectionHeading eyebrow="Safari Intel" title={<>Notes from<br /><em>East Africa.</em></>} intro="Practical advice, destination insight and stories shaped by the people who live and work across the region." /><div className="intel-home-grid">{articles.slice(0, 6).map((article) => <Link href={`/blog/${article.slug}`} className="intel-home-card" key={article.slug}><img src={article.image} alt="" /><div><p className="eyebrow">{article.category}</p><h3>{article.title}</h3><p>{article.excerpt}</p><span className="card-link">Read story <ArrowRight size={15} /></span></div></Link>)}</div><Link href="/safari-intel" className="button outline-dark centered-button">Explore Safari Intel <ArrowRight size={15} /></Link></section>
 
     <EnquiryCta />
   </main></SiteShell>

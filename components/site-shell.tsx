@@ -4,9 +4,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { ArrowRight, ArrowUp, ChevronDown, Globe, Menu, X } from 'lucide-react'
-import { destByRegion, journeysByRegion, navItems } from '@/lib/safari-data'
+import { destByRegion, journeysByRegion } from '@/lib/safari-data'
 
-const intelLinks = [['Safari Pricing', '/safari-pricing'], ['What to Pack', '/packing-list'], ['Safari Guide', '/safari-guide'], ['Booking Terms', '/terms-conditions'], ['How We Work', '/how-we-work']]
 const companyLinks = [['About Sinza', '/company'], ['Community Development', '/community'], ['Conservation', '/company/conservation'], ['DMC', '/dmc']]
 
 function MenuGroup({ label, children }: { label: string; children: React.ReactNode }) {
@@ -33,7 +32,6 @@ export function Header() {
       <MenuGroup label="Destinations"><div className="compact-menu-inner"><p className="mega-heading">Choose a country</p><Link className="compact-all-link" href="/destinations">All Destinations <ArrowRight size={14} /></Link>{Object.entries(destByRegion).map(([region, items]) => <CompactRegion key={region} region={region} items={items.slice(0, 5)} hrefBase="/destinations" labelKey="name" />)}<Link className="compact-plan-link" href="/contact">Plan around me <ArrowRight size={14} /></Link></div></MenuGroup>
       <Link href="/offers" onClick={() => setMobile(false)}>Special Offers</Link><Link href="/gallery" onClick={() => setMobile(false)}>Gallery</Link>
       <MenuGroup label="Company"><div className="mega-columns compact"><div><p className="mega-heading">Our story</p>{companyLinks.slice(0, 4).map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</div></div></MenuGroup>
-      <MenuGroup label="Safari Intel"><div className="mega-columns compact"><div><p className="mega-heading">Useful information</p>{intelLinks.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</div><div className="mega-feature"><p className="mega-heading">The field notes</p><p>Practical answers and thoughtful context for your time in East Africa.</p><Link href="/safari-intel">Explore Safari Intel <ArrowRight size={14} /></Link></div></div></MenuGroup>
       <Link href="/blog" onClick={() => setMobile(false)}>Blog</Link><Link className="nav-cta" href="/contact" onClick={() => setMobile(false)}>Enquire <ArrowRight size={15} /></Link>
     </nav>
     <div className="header-contact"><a className="header-phone" href="https://wa.me/256702970065">+256 702 970065</a><LanguageSelector /></div>

@@ -5,11 +5,11 @@ import { ArrowRight } from 'lucide-react'
 import { SiteShell, SectionHeading, PageHero, EnquiryCta } from '@/components/site-shell'
 import { GalleryGrid } from '@/components/gallery-grid'
 const communityGalleryImages = [
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bill-wegener-8ldqRkOk5oo-unsplash-LXQ6vz0BjZZPjYlcLvMC1wc8INJteu.jpg', alt: 'Young people connected to community development work', label: 'Education and opportunity' },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-QeEK1g70vdQ-unsplash-16YYnYnE59XpaUe2a7XWXLIb8IQAc9.jpg', alt: 'A community health project', label: 'Health access' },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-qteTc4nGuc0-unsplash-EQ4jsT7Ch4hO6w0l6paju74YCMbPQI.jpg', alt: 'A community water project', label: 'Water and sanitation' },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zach-wear-zOoiOzayjK4-unsplash-nAMqmgXXB9d45lBNYAZ1XxOE8GvywF.jpg', alt: 'A local guide at work', label: 'Local employment' },
-  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lisa-marie-theck-j9HZWSKAgrA-unsplash-aUSHIoeZdJhgb82QjPV05KV7gTRjxW.jpg', alt: 'Women building livelihoods together', label: 'Women-led enterprise' },
+  { src: '/images/community-children.png', alt: 'Young people connected to community development work', label: 'Education and opportunity' },
+  { src: '/images/wildlife-hippo-water.jpg', alt: 'A community health project', label: 'Health access' },
+  { src: '/images/elephants-wetland.jpg', alt: 'A community water project', label: 'Water and sanitation' },
+  { src: '/images/sinza-baboon-family.jpg', alt: 'A local guide at work', label: 'Local employment' },
+  { src: '/images/sinza-zebra-family.jpg', alt: 'Women building livelihoods together', label: 'Women-led enterprise' },
 ]
 
 
@@ -18,7 +18,7 @@ const communityProjects = [
     title: 'Education & Scholarship',
     location: 'Kibale and Queen Elizabeth regions',
     description: 'Supporting local youth through education initiatives, scholarship programs, and skills training that create lasting opportunity in communities near our safari destinations.',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bill-wegener-8ldqRkOk5oo-unsplash-LXQ6vz0BjZZPjYlcLvMC1wc8INJteu.jpg',
+    image: '/images/community-children.png',
     impact: 'Scholarships awarded',
   },
   {
@@ -32,28 +32,28 @@ const communityProjects = [
     title: 'Healthcare Access',
     location: 'Remote communities',
     description: 'Funding medical clinics and health awareness programs in areas where safari tourism has limited infrastructure, bringing basic healthcare and emergency services to underserved populations.',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-QeEK1g70vdQ-unsplash-16YYnYnE59XpaUe2a7XWXLIb8IQAc9.jpg',
+    image: '/images/wildlife-hippo-water.jpg',
     impact: 'Communities served',
   },
   {
     title: 'Water & Sanitation',
     location: 'Village communities',
     description: 'Installing fresh water systems and sanitation facilities in villages, reducing waterborne disease and improving quality of life for families living near protected areas.',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-qteTc4nGuc0-unsplash-EQ4jsT7Ch4hO6w0l6paju74YCMbPQI.jpg',
+    image: '/images/elephants-wetland.jpg',
     impact: 'Wells installed',
   },
   {
     title: 'Local Guide Employment',
     location: 'Across Uganda',
     description: 'Training and employing local guides, rangers, and hospitality staff, creating dignified employment and ensuring communities directly benefit from tourism revenue.',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zach-wear-zOoiOzayjK4-unsplash-nAMqmgXXB9d45lBNYAZ1XxOE8GvywF.jpg',
+    image: '/images/sinza-baboon-family.jpg',
     impact: 'Jobs created',
   },
   {
     title: "Women's Economic Groups",
     location: 'Surrounding villages',
     description: "Supporting women's cooperatives with microfinance, craft training, and market access, enabling economic independence and entrepreneurship at the grassroots level.",
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lisa-marie-theck-j9HZWSKAgrA-unsplash-aUSHIoeZdJhgb82QjPV05KV7gTRjxW.jpg',
+    image: '/images/sinza-zebra-family.jpg',
     impact: 'Women entrepreneurs',
   },
 ]
@@ -133,7 +133,7 @@ export default function CommunityPage() {
           <div className="stories-grid">
             <article className="story-card">
               <div className="story-image">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bill-wegener-8ldqRkOk5oo-unsplash-LXQ6vz0BjZZPjYlcLvMC1wc8INJteu.jpg" alt="Students connected to the education project" />
+                <img src="/images/community-children.png" alt="Students connected to the education project" />
               </div>
               <h4>Education Beyond the Classroom</h4>
               <p>
@@ -143,7 +143,7 @@ export default function CommunityPage() {
 
             <article className="story-card">
               <div className="story-image">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/andrew-s-qteTc4nGuc0-unsplash-EQ4jsT7Ch4hO6w0l6paju74YCMbPQI.jpg" alt="A village water project" />
+                <img src="/images/elephants-wetland.jpg" alt="A village water project" />
               </div>
               <h4>A Well Changes Everything</h4>
               <p>
@@ -153,7 +153,7 @@ export default function CommunityPage() {
 
             <article className="story-card">
               <div className="story-image">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/zach-wear-zOoiOzayjK4-unsplash-nAMqmgXXB9d45lBNYAZ1XxOE8GvywF.jpg" alt="A local conservation guide" />
+                <img src="/images/sinza-baboon-family.jpg" alt="A local conservation guide" />
               </div>
               <h4>Rhinos Return</h4>
               <p>
