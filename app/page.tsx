@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { ArrowRight, MoveUpRight } from 'lucide-react'
 import { SiteShell, SectionHeading, EnquiryCta } from '@/components/site-shell'
-import { HeroCarousel, PurposeExplorer } from '@/components/safari-ui'
+import { HeroCarousel } from '@/components/safari-ui'
 import { ReviewMarquee } from '@/components/review-marquee'
 import { articles, destinations, experiences, journeyCountries } from '@/lib/safari-data'
 
@@ -21,8 +21,6 @@ export default function Home() {
     <section id="escape" className="escape-section"><div className="escape-copy"><p className="eyebrow">Your Uganda & Rwanda escape</p><h2>Travel slowly.<br /><em>Look closely.</em></h2><div className="rule" /><p>From the quiet green of Bwindi to the wide skies of the savannah, we create journeys that feel personal from the first conversation to the final sundowner.</p><p>A gorilla encounter in <Link href="/destinations/bwindi">Uganda</Link>. A chimpanzee trail in <Link href="/destinations/kibale">Kibale</Link>. The Nile, the crater lakes, and the people who make every place feel alive.</p><Link href="/about" className="text-link">Why Sinza <ArrowRight size={15} /></Link></div><div className="escape-image"><img src="/images/big-five/giraffe-mother-calf.jpg" alt="African giraffe and calf" /><span>Not a template. Not a brochure. Just you and Africa as it really is.</span></div></section>
 
     <section className="section-wrap destinations-home"><SectionHeading eyebrow="Our destinations" title={<>Wild places,<br /><em>one continent.</em></>} intro="Uganda and Rwanda. Each with a character entirely its own." /><div className="destination-home-grid">{journeyCountries.map((country, index) => <Link className={`destination-home-card destination-home-card-${index}`} href={`/destinations/${country.slug}`} key={country.slug}><img src={country.image} alt={country.name} /><div><p>{String(index + 1).padStart(2, '0')} · {country.tagline}</p><h3>{country.name}</h3><span>Explore country <ArrowRight size={15} /></span></div></Link>)}</div><Link href="/destinations" className="button outline-dark centered-button">Discover all destinations <ArrowRight size={15} /></Link></section>
-
-    <section className="purpose-section"><div className="section-wrap"><SectionHeading eyebrow="Built around your purpose" title={<>Travel with <em>meaning.</em></>} intro="Since 2015, our Uganda-based team has shaped tailor-made journeys that connect nature, culture and community." /><PurposeExplorer /></div></section>
 
     <section className="experiences-home"><div className="section-wrap"><SectionHeading eyebrow="What awaits you" title={<>The experiences that<br /><em>stay with you.</em></>} intro="Not highlights on a brochure. These are mornings you will never stop talking about." /><div className="experience-mosaic">{experiences.map((experience, index) => <Link className={`experience-mosaic-card experience-mosaic-${index}`} href={`/experiences/${experience.slug}`} key={experience.slug}><img src={experience.image} alt={experience.title} /><div><p>0{index + 1}</p><h3>{experience.title}</h3><span>{experience.description}</span></div></Link>)}</div></div></section>
 
