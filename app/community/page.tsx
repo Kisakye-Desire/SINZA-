@@ -25,7 +25,7 @@ const communityProjects = [
     title: 'Primate Conservation',
     location: 'Bwindi, Kibale, Murchison Falls',
     description: "Partnering with conservation organizations to protect habitats, support anti-poaching efforts, and ensure sustainable wildlife management across Uganda's protected areas.",
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/roman-nguyen-TBdSTcSwXxo-unsplash-I5IvWCVddkdZUum3BiQZeZeKJz47aS.jpg',
+    image: '/images/community-children.png',
     impact: 'Hectares protected',
   },
   {
@@ -181,7 +181,7 @@ export default function CommunityPage() {
               <Link href="/donate" className="button dark">
                 Donate to community work <ArrowRight size={16} />
               </Link>
-              <a href="mailto:sinzasafaris@gmail.com" className="button outline-dark">
+              <a href="mailto:support@sinzasafaries.com" className="button outline-dark">
                 Ask about community projects <ArrowRight size={16} />
               </a>
             </div>

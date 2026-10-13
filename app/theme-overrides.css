@@ -27,8 +27,22 @@
 #google_translate_element { min-width: 0; width: 0; }
 #google_translate_element .goog-te-gadget { font-size: 0; }
 #google_translate_element select.goog-te-combo { appearance: none; background: transparent; border: 0; cursor: pointer; inset: 0; opacity: .01; outline: 0; position: absolute; width: 100%; z-index: 2; }
-.goog-te-banner-frame, .skiptranslate iframe { display: none !important; }
-body { top: 0 !important; }
+  .goog-te-banner-frame, .skiptranslate iframe { display: none !important; }
+  #google_translate_element .goog-te-gadget > span, #google_translate_element .goog-te-gadget > div:not(:has(select)) { display: none !important; }
+  body { top: 0 !important; }
+  .general-inquiry-card { background: color-mix(in srgb, var(--sinza-cream) 72%, white); border: 1px solid color-mix(in srgb, var(--sinza-forest) 22%, transparent); box-shadow: 0 18px 44px rgba(23,79,69,.08); margin-top: 1.5rem; padding: clamp(1.25rem, 3vw, 2rem); }
+  .general-inquiry-card h3 { color: var(--sinza-forest); font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2rem); margin: .25rem 0 .5rem; }
+  .general-inquiry-card p:not(.eyebrow) { color: #657067; line-height: 1.55; margin: 0 0 1rem; }
+  .company-chapter, .community-card, .story-card, .reasons-grid article, .service-list-grid > div, .value-grid > div { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .company-chapter:hover, .community-card:hover, .story-card:hover, .reasons-grid article:hover, .service-list-grid > div:hover, .value-grid > div:hover { box-shadow: 0 18px 36px rgba(23,79,69,.12); transform: translateY(-5px); }
+  .company-chapters { gap: clamp(1rem, 2vw, 1.5rem); }
+  .company-chapter { min-height: 0; }
+  .donation-story-card { align-items: center; background: #e7eadc; border: 1px solid color-mix(in srgb, var(--sinza-forest) 14%, transparent); display: grid; gap: clamp(1.25rem, 3vw, 2.5rem); grid-template-columns: minmax(180px, 270px) minmax(0, 1fr); padding: clamp(1rem, 2vw, 1.5rem); }
+  .donation-story-card img { aspect-ratio: 1 / 1; display: block; object-fit: cover; width: 100%; }
+  .donation-payment-card { background: #e7eadc; border: 1px solid color-mix(in srgb, var(--sinza-forest) 18%, transparent); display: grid; gap: 1rem; grid-template-columns: auto minmax(0, 1fr); padding: clamp(1rem, 3vw, 2rem); }
+  .donation-payment-card-icon { color: var(--sinza-terracotta); }
+  .community-card img { object-fit: cover; }
+  @media (max-width: 640px) { .donation-story-card { grid-template-columns: 1fr; } .donation-story-card img { aspect-ratio: 16 / 9; max-height: 220px; } .general-inquiry-card .button-row { align-items: stretch; flex-direction: column; } .general-inquiry-card .button { width: 100%; } }
 .brand-with-logo { align-items: center; display: inline-flex; flex: 0 0 auto; }
 .brand-with-logo img { border: 0 !important; box-shadow: none !important; display: block; height: 70px; object-fit: contain; outline: 0 !important; width: 92px; }
 .footer-brand .brand-with-logo img { height: 78px; width: 185px; }
