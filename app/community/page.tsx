@@ -71,6 +71,7 @@ export default function CommunityPage() {
             </>
           }
           intro="Every safari with Sinza supports meaningful community development, conservation, and local opportunity across East Africa."
+          image="/images/hero-gorilla-family.jpg"
         />
 
         <section className="section-wrap">
