@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react'
 import { SiteShell, SectionHeading, PageHero, EnquiryCta } from '@/components/site-shell'
 import { GalleryGrid } from '@/components/gallery-grid'
 const communityGalleryImages = [
-  { src: '/images/community-children.png', alt: 'Young people connected to community development work', label: 'Education and opportunity' },
+  { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20%281%29-JJ18Q9s5xyKVdIdpBDy4VCU2ahHjHa.jpg', alt: 'Young people connected to community development work', label: 'Education and opportunity' },
   { src: '/images/wildlife-hippo-water.jpg', alt: 'A community health project', label: 'Health access' },
   { src: '/images/elephants-wetland.jpg', alt: 'A community water project', label: 'Water and sanitation' },
   { src: '/images/sinza-baboon-family.jpg', alt: 'A local guide at work', label: 'Local employment' },
@@ -18,14 +18,14 @@ const communityProjects = [
     title: 'Education & Scholarship',
     location: 'Kibale and Queen Elizabeth regions',
     description: 'Supporting local youth through education initiatives, scholarship programs, and skills training that create lasting opportunity in communities near our safari destinations.',
-    image: '/images/community-children.png',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20%281%29-JJ18Q9s5xyKVdIdpBDy4VCU2ahHjHa.jpg',
     impact: 'Scholarships awarded',
   },
   {
     title: 'Primate Conservation',
     location: 'Bwindi, Kibale, Murchison Falls',
     description: "Partnering with conservation organizations to protect habitats, support anti-poaching efforts, and ensure sustainable wildlife management across Uganda's protected areas.",
-    image: '/images/community-children.png',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images%20%281%29-JJ18Q9s5xyKVdIdpBDy4VCU2ahHjHa.jpg',
     impact: 'Hectares protected',
   },
   {
