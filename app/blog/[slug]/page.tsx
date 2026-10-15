@@ -1,14 +1,5 @@
-import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { articles } from '@/lib/safari-data'
 import { SiteShell, EnquiryCta } from '@/components/site-shell'
 export function generateStaticParams() { return articles.map((item) => ({ slug: item.slug })) }
-
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params
-  const article = articles.find((entry) => entry.slug === slug)
-  if (!article) return {}
-  return { title: article.title, description: article.excerpt, alternates: { canonical: `/blog/${slug}` }, openGraph: { title: article.title, description: article.excerpt, type: 'article' } }
-}
-
 export default async function ArticleDetail({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const article = articles.find((entry) => entry.slug === slug); if (!article) notFound(); return <SiteShell><main><section className="detail-hero"><img src={article.image} alt="" /><div><p className="eyebrow">{article.category}</p><h1>{article.title}</h1><p>{article.excerpt}</p></div></section><article className="article-body"><p className="eyebrow">Field notes from Sinza</p><h2>The details make<br /><em>the difference.</em></h2><p>Uganda rewards travellers who leave space for discovery. The best route is not always the fastest one; it is the one that gives you time to notice the light, listen to a guide and meet a place on its own terms.</p><p>Our journey designers combine practical knowledge with a deep respect for the landscapes and communities that make East Africa extraordinary. Use this story as a starting point, then let’s shape the rest around you.</p></article><EnquiryCta /></main></SiteShell> }
