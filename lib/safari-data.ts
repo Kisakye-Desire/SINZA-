@@ -280,7 +280,7 @@ export const articles = [
 
 export const journeyCountries = [
   {
-    slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/giraffe-trees.jpg',
+    slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/sinza-giraffe-monochrome.jpg',
     journeys: [
       { slug: 'gorilla-chimpanzee-big-five', title: 'Gorilla, Chimpanzee & Big Five', duration: '11 days / 10 nights', image: '/images/primates/chimp-feeding-01.webp' },
       { slug: 'chimpanzees-queen-elizabeth', title: 'Chimpanzees & Queen Elizabeth', duration: '4 days / 3 nights', image: '/images/primates/young-chimp-hanging.jpg' },
@@ -323,7 +323,7 @@ export const journeyCountries = [
     ],
   },
   {
-    slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/big-five/giraffe-mother-calf.jpg',
+    slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/sinza-gorilla.jpg',
     journeys: [
       { slug: 'volcanoes-lake-kivu', title: 'Volcanoes & Lake Kivu', duration: '8 days / 7 nights', image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6wbpG6Jeh3fqFcu4bsCqBLtZUV7fs4.png' },
       { slug: 'rwanda-gorilla-safari-3days', title: '3 Days Rwanda Gorilla Safari', duration: '3 days / 2 nights', image: '/images/primates/young-primate.webp' },
