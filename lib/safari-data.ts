@@ -280,7 +280,7 @@ export const articles = [
 
 export const journeyCountries = [
   {
-    slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/wildlife-giraffe-safari.jpg',
+    slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/giraffe-trees.jpg',
     journeys: [
       { slug: 'gorilla-chimpanzee-big-five', title: 'Gorilla, Chimpanzee & Big Five', duration: '11 days / 10 nights', image: '/images/primates/chimp-feeding-01.webp' },
       { slug: 'chimpanzees-queen-elizabeth', title: 'Chimpanzees & Queen Elizabeth', duration: '4 days / 3 nights', image: '/images/primates/young-chimp-hanging.jpg' },
@@ -343,7 +343,7 @@ export const journeysByRegion = Object.fromEntries(journeyCountries.map((country
 
 export const destinationDetails = [
   { slug: 'uganda', name: 'Uganda', tagline: 'The Pearl of Africa', image: '/images/wildlife-chimp-rainforest.jpg', copy: 'Rainforest, savannah, crater lakes and the source of the Nile — Uganda is a country that rewards curious travellers.' },
-  { slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/wildlife-chimpanzee-close.jpg', copy: 'Volcanoes, thoughtful conservation and warm hospitality come together in one beautifully compact country.' },
+  { slug: 'rwanda', name: 'Rwanda', tagline: 'Land of a Thousand Hills', image: '/images/giraffe-portrait.jpg', copy: 'Volcanoes, thoughtful conservation and warm hospitality come together in one beautifully compact country.' },
 ]
 
 export const galleryCategories = ['Gorilla trekking', 'Chimpanzee tracking', 'Savannah wildlife', 'Big cats', 'Elephants', 'Birdlife', 'Rivers and wetlands', 'Forest landscapes', 'Mountain horizons', 'Cultural encounters', 'Safari roads', 'Conservation stories']
