@@ -140,7 +140,8 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY
-  const senderDomain = EXPECTED_RESEND_DOMAIN
+  const configuredSenderDomain = process.env.RESEND_EMAIL_DOMAIN?.trim().toLowerCase().replace(/\.$/, '')
+  const senderDomain = configuredSenderDomain === EXPECTED_RESEND_DOMAIN ? configuredSenderDomain : EXPECTED_RESEND_DOMAIN
   if (!apiKey) {
     return NextResponse.json({ error: 'The enquiry email service is still being set up. Please email our team directly.' }, { status: 503 })
   }
