@@ -71,7 +71,7 @@ export default function CommunityPage() {
             </>
           }
           intro="Every safari with Sinza supports meaningful community development, conservation, and local opportunity across East Africa."
-          image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo-1555251255-e9a095d6eb9d-S0edDtNGotjU1iV3O0tuE8kRbNEW9u.avif"
+          image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo-1632215861513-130b66fe97f4-n9zvFIssJ3ffesM8bfcBETy5egvjfn.avif"
         />
 
         <section className="section-wrap">

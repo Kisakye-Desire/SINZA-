@@ -60,7 +60,7 @@
 .header-contact { align-items: center; display: flex; flex: 0 0 auto; gap: 14px; margin-left: 0; order: 3; } .header-phone { order: 2; } .header-contact .language-selector { order: 1; }
 .language-selector { order: -1; }
 @media (max-width: 1120px) and (min-width: 761px) { .site-header { gap: 12px; padding-left: 18px; padding-right: 18px; } .nav-links { gap: 16px; margin-right: 4px; } .nav-links > a, .menu-trigger { font-size: 10px; } .header-phone { display: none; } .header-contact { margin-left: 0; } }
-@media (max-width: 760px) { .site-header { align-items: center; gap: 8px; } .header-contact { margin-left: auto; margin-right: 8px; } .header-phone { display: inline; font-size: 10px; } .language-selector { display: inline-flex; } }
+@media (max-width: 760px) { .site-header { align-items: center; gap: 6px; } .header-contact { margin-left: 0; margin-right: 2px; } .header-phone { display: inline; font-size: 9px; letter-spacing: -.02em; } .language-selector { display: inline-flex; } }
 .nav-links { align-items: center; flex: 1 1 auto; gap: clamp(18px, 2.8vw, 42px); justify-content: flex-end; margin-right: 18px; }
 .nav-links > a, .menu-trigger { font-size: 12px; letter-spacing: .045em; }
 .menu-trigger { padding: 30px 0; }
