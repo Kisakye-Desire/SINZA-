@@ -44,7 +44,7 @@ export default function SafariIntelPage() {
             </>
           }
           intro="A practical, visual guide to travelling well through East Africa ,  from the first question to the final campfire. Explore our comprehensive collection of travel guides, destination information, and safari preparation resources."
-          image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo-1582307811683-75b18a39ab71-cR2plZvgsWYloS86zG2mtTKOa0bcRg.avif"
+          image="/images/primates/chimp-forest-portrait.jpg"
         />
 
         {/* Category Filter */}
