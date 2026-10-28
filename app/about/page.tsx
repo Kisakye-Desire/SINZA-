@@ -16,7 +16,7 @@ export default function AboutPage() {
     {
       icon: Heart,
       title: 'Meaningful Connection',
-      text: 'We believe safaris are more than wildlife viewing—they&apos;re about genuine connection with people, places, and nature.',
+      text: 'We believe safaris are about more than wildlife viewing. They create genuine connection with people, places, and nature.',
     },
     {
       icon: Leaf,
@@ -64,20 +64,20 @@ export default function AboutPage() {
                     <em>heart of Uganda.</em>
                   </>
                 }
-                intro="Sinza Safaris began with a simple belief: that authentic, purposeful travel can change lives—for travelers and communities alike."
+                intro="Sinza Safaris began with a simple belief: authentic, purposeful travel can change lives for travelers and communities alike."
               />
               <div className="story-content">
                 <p>
-                  Sinza Safaris Ltd is a Ugandan-owned travel company rooted in Christian mission and community development. We believe nature is one of God&apos;s greatest gifts—meant to refresh the soul, inspire the spirit, and renew the heart. We approach travel as a blessing—for both the traveler and the communities we serve.
+                  Sinza Safaris Ltd is a Ugandan-owned travel company rooted in Christian mission and community development. We believe nature is one of God&apos;s greatest gifts, meant to refresh the soul, inspire the spirit, and renew the heart. We approach travel as a blessing, for both the traveler and the communities we serve.
                 </p>
                 <p>
-                  We design more than tours—we create transformational journeys that promote sustainability, support conservation, and strengthen the people and places that make Uganda extraordinary.
+                  We design more than tours. We create transformational journeys that promote sustainability, support conservation, and strengthen the people and places that make Uganda extraordinary.
                 </p>
                 <p>
                   Founded by Ugandan conservationists and hospitality experts, Sinza Safaris emerged from years of guiding, conservation work, and a deep frustration with extractive tourism. We saw travelers hungry for real connection and communities who deserved better than tourism passing them by.
                 </p>
                 <p>
-                  Every safari we craft is a conversation—not a checklist. We listen to what moves you, where your curiosity leads, and what kind of impact you want to make. Then we design a journey that meets you there.
+                  Every safari we craft is a conversation, not a checklist. We listen to what moves you, where your curiosity leads, and what kind of impact you want to make. Then we design a journey that meets you there.
                 </p>
                 <p>
                   Today, we&apos;re proud to lead private safaris across Uganda and Rwanda, with a team of field guides, conservation partners, and local specialists who live the destinations we share.
@@ -108,7 +108,7 @@ export default function AboutPage() {
               <p className="eyebrow">Our Vision</p>
               <h3>Lead the future of purpose-driven tourism</h3>
               <p>
-                To become East Africa&apos;s most trusted safari company—known for transformative experiences, genuine community partnership, and unwavering commitment to conservation and sustainability.
+                To become East Africa&apos;s most trusted safari company, known for transformative experiences, genuine community partnership, and unwavering commitment to conservation and sustainability.
               </p>
             </div>
           </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
                     <em>core to everything.</em>
                   </>
                 }
-                intro="Our commitment to East Africa&apos;s ecosystems isn&apos;t separate from our business—it is our business."
+                intro="Our commitment to East Africa&apos;s ecosystems isn&apos;t separate from our business. It is our business."
               />
               <div className="responsible-content">
                 <div className="responsible-item">

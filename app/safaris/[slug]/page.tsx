@@ -20,7 +20,7 @@ function itineraryForCatalogJourney(title: string, duration: string) {
     add('Top of the Falls and Scenic Transfer', ['Visit the Top of Murchison Falls, where the Nile is forced through a narrow gorge.', 'Continue through the Albertine Rift and western Uganda towards your next destination, with scenic and community stops where time allows.'])
   }
   if (route.includes('kibale') || route.includes('chimp')) {
-    add('Kibale Forest and Chimpanzee Tracking', ['Attend the ranger briefing at the designated visitor centre before entering the forest.', 'Track a habituated chimpanzee community for approximately 2–5 hours, with up to one hour of viewing once the animals are located.', 'Look for red-tailed monkeys, colobus monkeys, baboons, forest birds and butterflies.'])
+    add('Kibale Forest and Chimpanzee Tracking', ['Attend the ranger briefing at the designated visitor centre before entering the forest.', 'Track a habituated chimpanzee community for approximately 2 to 5 hours, with up to one hour of viewing once the animals are located.', 'Look for red-tailed monkeys, colobus monkeys, baboons, forest birds and butterflies.'])
     add('Bigodi Wetland and Forest Communities', ['Join an optional guided Bigodi wetland walk for birdwatching, primates and wetland ecology.', 'Meet local community guides and learn about crafts, farming and community-based tourism before continuing to your lodge.'])
   }
   if (route.includes('semuliki')) add('Semuliki National Park and Sempaya Hot Springs', ['Travel into Semuliki’s lowland tropical forest, a distinctive Albertine Rift ecosystem with rich birdlife and primates.', 'Take a guided nature walk to Sempaya Hot Springs and learn about their geology, forest ecology and cultural significance.'])
@@ -30,7 +30,7 @@ function itineraryForCatalogJourney(title: string, duration: string) {
   }
   if (route.includes('gorilla') || route.includes('bwindi')) {
     add('Travel to Bwindi Impenetrable Forest', ['Travel through the hills and highlands of south-western Uganda to the lodge nearest your confirmed trekking sector.', 'Receive a trek briefing, prepare waterproof hiking gear and rest before the early start.'])
-    add('Mountain Gorilla Trekking', ['Attend the Uganda Wildlife Authority briefing before entering the forest with ranger guides and trackers.', 'The trek may take approximately 2–7 hours over steep, muddy and uneven terrain; observe the habituated family according to current park rules.', 'Return to the lodge for lunch and rest after this exceptional forest encounter.'])
+    add('Mountain Gorilla Trekking', ['Attend the Uganda Wildlife Authority briefing before entering the forest with ranger guides and trackers.', 'The trek may take approximately 2 to 7 hours over steep, muddy and uneven terrain; observe the habituated family according to current park rules.', 'Return to the lodge for lunch and rest after this exceptional forest encounter.'])
   }
   if (route.includes('mburo')) add('Lake Mburo Wildlife and Water', ['Explore Lake Mburo’s savannah on a game drive or guided nature walk, looking for zebra, impala, eland, topi, giraffe, buffalo and warthog.', 'Enjoy an optional boat cruise for hippos, crocodiles and wetland birds.'])
   if (route.includes('kidepo')) add('Kidepo Valley Wilderness', ['Explore the Narus and Kidepo valleys across remote Karamoja landscapes.', 'Search for elephants, buffaloes, lions, giraffes, zebras, cheetahs, ostriches and other northern savannah species, with an optional respectful community experience.'])
