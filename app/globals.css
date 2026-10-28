@@ -550,6 +550,8 @@ h1:hover em,h2:hover em { color:#d69a6a; letter-spacing:.005em; }
 .wizard-contact label { color:var(--foreground); font-weight:700; letter-spacing:.08em; }
 .wizard-contact input { border-radius:.55rem; margin-top:.2rem; }
 .wizard-actions { border-top:1px solid var(--border); margin-top:3rem; padding-top:1.5rem; }
+.email-error { background:#f7e7e3; border-left:3px solid #9b3e2d; color:#702c20; margin:0; padding:1rem 1.25rem; }
+.email-status { color:var(--primary); font-size:.95rem; margin:0; }
 .gallery-tile img,.gallery-collage-tile img { filter:none !important; opacity:1 !important; }
 .lightbox-prev,.lightbox-next { align-items:center; background:transparent; border:1px solid color-mix(in srgb, var(--background) 55%, transparent); border-radius:50%; color:var(--background); cursor:pointer; display:flex; justify-content:center; padding:.7rem; position:absolute; top:50%; transform:translateY(-50%); }
 .lightbox-prev { left:1.5rem; }.lightbox-next { right:1.5rem; }
