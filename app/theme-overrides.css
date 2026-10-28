@@ -3,7 +3,7 @@
 .button.dark, .nav-cta { background: var(--sinza-terracotta); border-color: var(--sinza-terracotta); }
 .button.dark:hover, .nav-cta:hover { background: var(--sinza-sun); border-color: var(--sinza-sun); color: #17231f; }
 .button.light { background: var(--sinza-sun); color: #17231f; }
-.page-hero { background: linear-gradient(120deg, rgba(23,79,69,.12), rgba(212,167,44,.13)); }
+.page-hero { background: linear-gradient(120deg, rgba(23,79,69,.12), rgba(212,167,44,.13)); } .company-page-hero > div::after { display: none; } .company-page-hero > img { opacity: 1; }
 .intel-tip-card, .related-article-card, .destination-card, .safari-card { border-top: 4px solid var(--sinza-terracotta); }
 .eyebrow { color: var(--sinza-terracotta); }
 .text-link, .article-body a { color: var(--sinza-forest); }
@@ -60,7 +60,7 @@
 .header-contact { align-items: center; display: flex; flex: 0 0 auto; gap: 14px; margin-left: 0; order: 3; } .header-phone { order: 2; } .header-contact .language-selector { order: 1; }
 .language-selector { order: -1; }
 @media (max-width: 1120px) and (min-width: 761px) { .site-header { gap: 12px; padding-left: 18px; padding-right: 18px; } .nav-links { gap: 16px; margin-right: 4px; } .nav-links > a, .menu-trigger { font-size: 10px; } .header-phone { display: none; } .header-contact { margin-left: 0; } }
-@media (max-width: 760px) { .site-header { align-items: center; gap: 10px; } .header-contact { margin-left: auto; } .header-phone { display: inline; font-size: 10px; } .language-selector { display: inline-flex; } }
+@media (max-width: 760px) { .site-header { align-items: center; gap: 8px; } .header-contact { margin-left: auto; margin-right: 8px; } .header-phone { display: inline; font-size: 10px; } .language-selector { display: inline-flex; } }
 .nav-links { align-items: center; flex: 1 1 auto; gap: clamp(18px, 2.8vw, 42px); justify-content: flex-end; margin-right: 18px; }
 .nav-links > a, .menu-trigger { font-size: 12px; letter-spacing: .045em; }
 .menu-trigger { padding: 30px 0; }
