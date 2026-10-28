@@ -49,8 +49,10 @@ function consumeRateLimit(ip: string) {
 function isSameOrigin(request: Request) {
   const origin = request.headers.get('origin')
   if (!origin) return true
+  const host = request.headers.get('x-forwarded-host')?.split(',')[0]?.trim() || request.headers.get('host')
+  if (!host) return false
   try {
-    return new URL(origin).origin === new URL(request.url).origin
+    return new URL(origin).host.toLowerCase() === host.toLowerCase()
   } catch {
     return false
   }

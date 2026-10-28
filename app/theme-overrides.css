@@ -148,4 +148,4 @@ footer a:hover { color: var(--sinza-sun); transform: translateX(3px); }
 .contact-page-section .wizard button:disabled { cursor: not-allowed; opacity: .58; }
 .contact-page-section .choice { background: color-mix(in srgb, var(--sinza-cream) 82%, white); border-color: color-mix(in srgb, var(--sinza-forest) 24%, transparent); }
 .contact-page-section .choice.active, .contact-page-section .choice:hover { background: color-mix(in srgb, var(--sinza-sun) 20%, var(--sinza-cream)); border-color: var(--sinza-terracotta); }
-@media (max-width: 900px) { .contact-page-section { grid-template-columns: 1fr; } .contact-page-section .wizard { max-width: none; } body:has(.contact-page-section) .floating-chat { display: none; } }
+@media (max-width: 900px) { .contact-page-section { grid-template-columns: 1fr; } .contact-page-section .wizard { max-width: none; } body:has(.contact-page-section) .floating-chat, body:has(.contact-page-section) .scroll-top { display: none; } }
