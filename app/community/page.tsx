@@ -71,7 +71,7 @@ export default function CommunityPage() {
             </>
           }
           intro="Every safari with Sinza supports meaningful community development, conservation, and local opportunity across East Africa."
-          image="/images/hero-gorilla-family.jpg"
+          image="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo-1632215861513-130b66fe97f4-n9zvFIssJ3ffesM8bfcBETy5egvjfn.avif"
         />
 
         <section className="section-wrap">
@@ -158,7 +158,7 @@ export default function CommunityPage() {
               </div>
               <h4>Rhinos Return</h4>
               <p>
-                Ziwa Rhino Sanctuary began with zero rhinos in Uganda. Through conservation partnership and anti-poaching support, the population has grown to over 30 — creating jobs, hope, and proof that recovery is possible.
+                Ziwa Rhino Sanctuary began with zero rhinos in Uganda. Through conservation partnership and anti-poaching support, the population has grown to over 30, creating jobs, hope, and proof that recovery is possible.
               </p>
             </article>
           </div>
@@ -173,7 +173,7 @@ export default function CommunityPage() {
           <div className="cta-block">
             <h2>Join the journey</h2>
             <p>
-              Your safari with Sinza supports community development. You don't need to do anything extra — simply traveling thoughtfully means you're investing in education, conservation, healthcare, and opportunity.
+              Your safari with Sinza supports community development. You don't need to do anything extra. Simply traveling thoughtfully means you're investing in education, conservation, healthcare, and opportunity.
             </p>
             <p>
               Want to do more? Bring a colleague, recommend Sinza to friends, or let us know if you'd like to support a specific community project during your visit.

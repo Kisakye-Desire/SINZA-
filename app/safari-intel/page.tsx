@@ -43,7 +43,7 @@ export default function SafariIntelPage() {
               <em>before you go.</em>
             </>
           }
-          intro="A practical, visual guide to travelling well through East Africa — from the first question to the final campfire. Explore our comprehensive collection of travel guides, destination information, and safari preparation resources."
+          intro="A practical, visual guide to travelling well through East Africa ,  from the first question to the final campfire. Explore our comprehensive collection of travel guides, destination information, and safari preparation resources."
           image="/images/primates/chimp-forest-portrait.jpg"
         />
 
