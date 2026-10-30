@@ -1,9 +1,8 @@
 import { NextResponse } from 'next/server'
-import { Resend } from 'resend'
+import nodemailer from 'nodemailer'
 import {
   clientEnquiryEmail,
   enquiryConfirmationEmail,
-  EXPECTED_RESEND_DOMAIN,
   SUPPORT_EMAIL,
   type SafariEnquiryEmailData,
 } from '@/lib/email-templates'
@@ -141,10 +140,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Please check the enquiry details and try again.' }, { status: 400 })
   }
 
-  const apiKey = process.env.RESEND_API_KEY
-  const configuredSenderDomain = process.env.RESEND_EMAIL_DOMAIN?.trim().toLowerCase().replace(/\.$/, '')
-  const senderDomain = configuredSenderDomain === EXPECTED_RESEND_DOMAIN ? configuredSenderDomain : EXPECTED_RESEND_DOMAIN
-  if (!apiKey) {
+  const gmailUser = process.env.GMAIL_USER?.trim()
+  const gmailPassword = process.env.GMAIL_APP_PASSWORD?.trim()
+  const supportInbox = process.env.GMAIL_TO?.trim() || SUPPORT_EMAIL
+  if (!gmailUser || !gmailPassword) {
     return NextResponse.json({ error: 'The enquiry email service is still being set up. Please email our team directly.' }, { status: 503 })
   }
 
@@ -166,34 +165,34 @@ export async function POST(request: Request) {
     source,
     notes,
   }
-  const sender = `Sinza Safaris <journeys@${senderDomain}>`
   const notification = clientEnquiryEmail(enquiry)
   const confirmation = enquiryConfirmationEmail(enquiry)
-  const resend = new Resend(apiKey)
-  const { error } = await resend.batch.send(
-    [
-      {
-        from: sender,
-        to: [SUPPORT_EMAIL],
-        replyTo: email,
-        subject: 'New safari enquiry - Sinza Safaris',
-        html: notification.html,
-        text: notification.text,
-      },
-      {
-        from: sender,
-        to: [email],
-        replyTo: SUPPORT_EMAIL,
-        subject: 'Your Sinza Safaris enquiry is with us',
-        html: confirmation.html,
-        text: confirmation.text,
-      },
-    ],
-    { idempotencyKey: `batch-safari-enquiry/${requestId}` },
-  )
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: { user: gmailUser, pass: gmailPassword },
+  })
 
-  if (error) {
-    console.error('[enquiries] Resend rejected the email batch', { errorName: error.name })
+  try {
+    await transporter.sendMail({
+      from: `Sinza Safaris <${gmailUser}>`,
+      to: supportInbox,
+      replyTo: email,
+      subject: 'New safari enquiry - Sinza Safaris',
+      html: notification.html,
+      text: notification.text,
+      headers: { 'X-Entity-Ref-ID': `safari-enquiry/${requestId}` },
+    })
+    await transporter.sendMail({
+      from: `Sinza Safaris <${gmailUser}>`,
+      to: email,
+      replyTo: supportInbox,
+      subject: 'Your Sinza Safaris enquiry is with us',
+      html: confirmation.html,
+      text: confirmation.text,
+      headers: { 'X-Entity-Ref-ID': `safari-confirmation/${requestId}` },
+    })
+  } catch (error) {
+    console.error('[enquiries] Gmail rejected the email', { errorName: error instanceof Error ? error.name : 'UnknownError' })
     return NextResponse.json({ error: 'The enquiry email could not be sent. Please try again or email our team.' }, { status: 502 })
   }
 
