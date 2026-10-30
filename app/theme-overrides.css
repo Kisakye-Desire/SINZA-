@@ -32,6 +32,16 @@
   body { top: 0 !important; }
   .general-inquiry-card { background: color-mix(in srgb, var(--sinza-cream) 72%, white); border: 1px solid color-mix(in srgb, var(--sinza-forest) 22%, transparent); box-shadow: 0 18px 44px rgba(23,79,69,.08); margin-top: 1.5rem; padding: clamp(1.25rem, 3vw, 2rem); }
   .general-inquiry-card h3 { color: var(--sinza-forest); font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2rem); margin: .25rem 0 .5rem; }
+ .email-preview { background: rgba(255,255,255,.7); border: 1px solid color-mix(in srgb, var(--sinza-forest) 16%, transparent); margin-top: 1.5rem; overflow: hidden; box-shadow: 0 16px 36px rgba(23,79,69,.08); }
+ .email-preview-toolbar { align-items: center; background: var(--sinza-forest); color: rgba(255,255,255,.78); display: flex; font-size: .68rem; font-weight: 700; justify-content: space-between; letter-spacing: .12em; padding: .75rem 1rem; text-transform: uppercase; }
+ .email-preview-paper { background: #fffdf8; padding: clamp(1.25rem, 4vw, 2rem); }
+ .email-preview-brand { color: var(--sinza-forest); font-family: var(--font-serif); font-size: 1.05rem; font-weight: 800; letter-spacing: .16em; }
+ .email-preview-brand span { color: var(--sinza-terracotta); font-weight: 500; }
+ .email-preview-kicker { color: var(--sinza-terracotta); font-size: .68rem; font-weight: 800; letter-spacing: .14em; margin: 2rem 0 .55rem; text-transform: uppercase; }
+ .email-preview-paper h3 { color: var(--sinza-forest); font-family: var(--font-serif); font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.05; margin: 0 0 .8rem; }
+ .email-preview-paper > p:not(.email-preview-kicker):not(.email-preview-footer) { color: #5d6962; font-size: .9rem; line-height: 1.65; margin: 0; }
+ .email-preview-rule { background: var(--sinza-terracotta); height: 2px; margin: 1.4rem 0 1rem; width: 2.5rem; }
+ .email-preview-footer { color: #7a847d; font-size: .68rem; letter-spacing: .04em; line-height: 1.5; margin: 0; }
   .general-inquiry-card p:not(.eyebrow) { color: #657067; line-height: 1.55; margin: 0 0 1rem; }
   .company-chapter, .community-card, .story-card, .reasons-grid article, .service-list-grid > div, .value-grid > div { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
   .company-chapter:hover, .community-card:hover, .story-card:hover, .reasons-grid article:hover, .service-list-grid > div:hover, .value-grid > div:hover { box-shadow: 0 18px 36px rgba(23,79,69,.12); transform: translateY(-5px); }
