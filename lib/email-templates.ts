@@ -146,7 +146,46 @@ export function clientEnquiryEmail(data: SafariEnquiryEmailData): EmailContent {
   return { html, text }
 }
 
-export function enquiryConfirmationEmail(data: SafariEnquiryEmailData): EmailContent {
+export type GeneralInquiryEmailData = {
+  name: string
+  email: string
+  phone: string
+  subject: string
+  message: string
+}
+
+export function generalInquiryEmail(data: GeneralInquiryEmailData): EmailContent {
+  const safeName = escapeHtml(data.name)
+  const safeMessage = escapeHtml(data.message).replace(/\\r?\\n/g, '<br>')
+  const html = emailLayout(
+    `<tr>
+      <td style="padding:38px 32px 18px">
+        <p style="margin:0 0 10px;color:#9b7421;font-size:11px;font-weight:bold;letter-spacing:2px;text-transform:uppercase">General enquiry</p>
+        <h1 style="margin:0;color:${BRAND_GREEN};font-family:Georgia,'Times New Roman',serif;font-size:32px;font-weight:normal;line-height:1.15">A new conversation has arrived.</h1>
+        <p style="margin:14px 0 0;color:${BRAND_MUTED};font-size:14px;line-height:1.7">A visitor has contacted Sinza Safaris through the general enquiry channel.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:0 32px 36px;color:${BRAND_GREEN};font-size:14px;line-height:1.8">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+          ${detailRow('Name', data.name)}
+          ${detailRow('Email', data.email)}
+          ${detailRow('Phone', data.phone)}
+          ${detailRow('Subject', data.subject)}
+        </table>
+        <div style="margin-top:22px;padding:20px 22px;background:${BRAND_CREAM};border-left:3px solid ${BRAND_GOLD}">
+          <p style="margin:0 0 8px;color:#9b7421;font-size:10px;font-weight:bold;letter-spacing:1.8px;text-transform:uppercase">Message</p>
+          <p style="margin:0;color:${BRAND_GREEN};font-size:14px;line-height:1.8">${safeMessage}</p>
+        </div>
+      </td>
+    </tr>`,
+    `General enquiry from ${data.name}`,
+  )
+  const text = [`General enquiry from ${data.name}`, '', `Name: ${data.name}`, `Email: ${data.email}`, `Phone: ${data.phone || 'Not provided'}`, `Subject: ${data.subject || 'General enquiry'}`, '', data.message].join('\\n')
+  return { html, text }
+}
+
+export function enquiryConfirmationEmail(data: SafariEnquiryEmailData) {
   const name = fullName(data)
   const summaryRows: Array<[string, string]> = [
     ['Destination', data.where.join(', ')],
