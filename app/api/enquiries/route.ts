@@ -19,7 +19,7 @@ const lengths = ['3 to 5 days', '6 to 9 days', '10 to 14 days', '15+ days']
 const travellers = ['Just Me', 'Two of Us', 'Family', 'Group']
 const budgets = ['Comfort', 'Premium', 'Luxury', 'Not sure yet']
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000
-const RATE_LIMIT_MAX = 3
+const RATE_LIMIT_MAX = 10
 const rateLimitBuckets = new Map<string, { count: number; expiresAt: number }>()
 
 function getClientIp(request: Request) {
@@ -107,10 +107,6 @@ export async function POST(request: Request) {
 
   const honeypot = typeof parsedBody.website === 'string' ? parsedBody.website.trim() : ''
   if (honeypot) return NextResponse.json({ ok: true }, { status: 202 })
-  if (!consumeRateLimit(getClientIp(request))) {
-    return NextResponse.json({ error: 'Too many enquiries from this connection. Please try again later.' }, { status: 429, headers: { 'Retry-After': String(RATE_LIMIT_WINDOW_MS / 1000) } })
-  }
-
   const firstName = readText(parsedBody.firstName, 80)
   const lastName = readText(parsedBody.lastName, 80)
   const email = readText(parsedBody.email, 254)
@@ -138,6 +134,10 @@ export async function POST(request: Request) {
     !requestId || !/^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(requestId)
   ) {
     return NextResponse.json({ error: 'Please check the enquiry details and try again.' }, { status: 400 })
+  }
+
+  if (!consumeRateLimit(getClientIp(request))) {
+    return NextResponse.json({ error: 'Too many enquiries from this connection. Please try again later.' }, { status: 429, headers: { 'Retry-After': String(RATE_LIMIT_WINDOW_MS / 1000) } })
   }
 
   const gmailUser = process.env.GMAIL_USER?.trim()
